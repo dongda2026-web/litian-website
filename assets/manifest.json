@@ -1,0 +1,22 @@
+{
+  "name": "Litian Group — Industrial Packaging Solutions",
+  "short_name": "Litian Group",
+  "description": "Smart valve bags, FIBCs, woven bags. 500M+ annual capacity. Aksu + Samarkand dual bases.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B3A5C",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "img/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "litian-b2b-brand-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:sites": "node scripts/build-sites.mjs"
+  }
+}

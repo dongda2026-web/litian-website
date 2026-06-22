@@ -1,0 +1,22 @@
+{
+  "project": "litian-website",
+  "current_version": "1.1.0",
+  "version_history": [
+    {"version": "0.1.0", "date": "2026-06-16", "phase": "P0", "description": "项目初始化，品牌色系，信息汇总"},
+    {"version": "1.0.0", "date": "2026-06-20", "phase": "P1-P3", "description": "7 页 SPA，8 语言，AI 客服，Cloudflare Pages 部署"},
+    {"version": "1.1.0", "date": "2026-06-22", "phase": "P4-P5", "description": "安全加固，图片去重，SEO 完善，上线 SOP"}
+  ],
+  "engines_used": ["claude-code", "codex", "workbuddy"],
+  "phases_completed": ["P0", "P1", "P2", "P3", "P4", "P5"],
+  "files_delivered": [
+    "index.html",
+    "_headers",
+    "_redirects",
+    "CHANGELOG.md",
+    "VERSION.json",
+    "LAUNCH_SOP.md",
+    "audit_report.json",
+    "workers/ai-service-worker.js",
+    "assets/img/cases/*.jpg (12 unique)"
+  ]
+}
