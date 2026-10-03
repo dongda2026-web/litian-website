@@ -1,10 +1,12 @@
 const DEFAULT_SALES_EMAIL = "ynakobka@dongdaltd.com";
 
-function corsHeaders() {
+function corsHeaders(env = {}) {
+  const origin = env.ALLOWED_ORIGIN || "*";
   return {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization"
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Vary": "Origin"
   };
 }
 
@@ -79,20 +81,52 @@ async function sendResendEmail(env, message) {
   return response.json();
 }
 
+async function forwardLeadWebhook(env, payload, reply) {
+  if (!env.LEADS_WEBHOOK_URL) {
+    return { skipped: true, reason: "LEADS_WEBHOOK_URL is not configured" };
+  }
+  const response = await fetch(env.LEADS_WEBHOOK_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(env.LEADS_WEBHOOK_TOKEN ? { "Authorization": `Bearer ${env.LEADS_WEBHOOK_TOKEN}` } : {})
+    },
+    body: JSON.stringify({ ...payload, assistant_reply: reply })
+  });
+  if (!response.ok) {
+    throw new Error(`Lead webhook failed: ${response.status} ${await response.text()}`);
+  }
+  return { ok: true };
+}
+
+function normalizePayload(payload, request) {
+  return {
+    ...payload,
+    type: payload.type || "website-lead",
+    source: "litian-website",
+    received_at: new Date().toISOString(),
+    request_url: request.url
+  };
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders() });
+      return new Response(null, { headers: corsHeaders(env) });
     }
     if (request.method !== "POST") {
-      return new Response("Method Not Allowed", { status: 405, headers: corsHeaders() });
+      return new Response("Method Not Allowed", { status: 405, headers: corsHeaders(env) });
     }
 
     let payload;
     try {
-      payload = await request.json();
+      payload = normalizePayload(await request.json(), request);
     } catch (error) {
-      return Response.json({ ok: false, error: "Invalid JSON" }, { status: 400, headers: corsHeaders() });
+      return Response.json({ ok: false, error: "Invalid JSON" }, { status: 400, headers: corsHeaders(env) });
+    }
+
+    if (!payload.email && !payload.phone && !payload.contact) {
+      return Response.json({ ok: false, error: "Missing contact details" }, { status: 422, headers: corsHeaders(env) });
     }
 
     const salesEmail = env.SALES_TO_EMAIL || DEFAULT_SALES_EMAIL;
@@ -100,15 +134,16 @@ export default {
     const reply = assistantReply(payload);
     const subject = `Litian AI RFQ - ${payload.product || payload.company || "Website Lead"}`;
 
-    await sendResendEmail(env, {
+    const salesResult = await sendResendEmail(env, {
       from: fromEmail,
       to: [salesEmail],
       subject,
       text: emailText(payload, reply)
     });
 
+    let customerResult = { skipped: true };
     if (payload.email) {
-      await sendResendEmail(env, {
+      customerResult = await sendResendEmail(env, {
         from: fromEmail,
         to: [payload.email],
         subject: "Litian Group received your inquiry",
@@ -116,6 +151,8 @@ export default {
       });
     }
 
-    return Response.json({ ok: true, reply }, { headers: corsHeaders() });
+    const webhookResult = await forwardLeadWebhook(env, payload, reply);
+
+    return Response.json({ ok: true, reply, salesResult, customerResult, webhookResult }, { headers: corsHeaders(env) });
   }
 };

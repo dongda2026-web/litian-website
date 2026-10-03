@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fibc-bulk-bags",
+    "code": "FIBC",
+    "name": {
+      "zh": "集装袋 / 吨袋",
+      "en": "FIBC Bulk Bags",
+      "ru": "FIBC биг-бэги"
+    },
+    "summary": {
+      "zh": "用于粉体、颗粒和大宗物流的重型集装袋。",
+      "en": "Heavy-duty bulk bags for powders, granules and high-volume logistics.",
+      "ru": "Прочные биг-бэги для порошков, гранул и крупнотоннажной логистики."
+    },
+    "image": "assets/img/products/cement-ton-bag.jpg",
+    "industries": ["cement", "chemicals", "grain", "mining", "logistics"],
+    "specs": ["500-2000 kg", "SF 5:1 / 6:1", "4-loop / 2-loop", "liner optional"],
+    "cmsStatus": "ready"
+  },
+  {
+    "id": "valve-bags",
+    "code": "VB",
+    "name": {
+      "zh": "阀口袋",
+      "en": "Valve Bags",
+      "ru": "Клапанные мешки"
+    },
+    "summary": {
+      "zh": "适配水泥、矿物和化工粉体的高效灌装包装。",
+      "en": "Efficient filling and reliable discharge for cement, minerals and chemicals.",
+      "ru": "Эффективное наполнение и стабильная выгрузка для цемента, минералов и химии."
+    },
+    "image": "assets/img/products/cement-valve-bag.jpg",
+    "industries": ["cement", "minerals", "chemicals", "construction materials"],
+    "specs": ["10-50 kg", "70-120 gsm", "patent dosing control", "custom print"],
+    "cmsStatus": "ready"
+  },
+  {
+    "id": "pp-woven-bags",
+    "code": "PP",
+    "name": {
+      "zh": "PP 编织袋",
+      "en": "PP Woven Bags",
+      "ru": "PP тканые мешки"
+    },
+    "summary": {
+      "zh": "服务农业、食品、化工和工业场景的通用编织包装。",
+      "en": "Versatile woven sacks for agriculture, food, chemicals and industrial use.",
+      "ru": "Универсальные мешки для сельского хозяйства, пищевой, химической и промышленной сфер."
+    },
+    "image": "assets/img/cases/case_04.jpg",
+    "industries": ["agriculture", "food", "fertilizer", "feed", "industrial"],
+    "specs": ["5-50 kg", "60-120 gsm", "moisture resistant", "multi-color print"],
+    "cmsStatus": "ready"
+  },
+  {
+    "id": "materials-construction",
+    "code": "MAT",
+    "name": {
+      "zh": "材料与结构",
+      "en": "Materials & Construction",
+      "ru": "Материалы и конструкция"
+    },
+    "summary": {
+      "zh": "PP 基材、内衬和复膜结构，用于强度、防潮与品牌呈现。",
+      "en": "Premium PP fabrics, liners and lamination for strength, barrier and branding.",
+      "ru": "PP ткани, вкладыши и ламинация для прочности, барьера и брендинга."
+    },
+    "image": "assets/img/img_303d639a4a.jpg",
+    "industries": ["packaging materials", "barrier packaging", "custom engineering"],
+    "specs": ["Virgin PP", "UV stabilized", "lamination", "liner optional"],
+    "cmsStatus": "ready"
+  }
+]

@@ -17,13 +17,20 @@ for (const item of [
   "public",
   "_headers",
   "_redirects",
+  "robots.txt",
+  "sitemap.xml",
   "site-manifest.json",
   "DEPLOYMENT.md",
+  "ALIYUN_DEPLOYMENT.md",
+  "ALIYUN_DYNAMIC_API.md",
+  "content",
   "workers"
 ]) {
   await cp(join(root, item), join(client, item), { recursive: true });
 }
 
+await cp(join(root, "assets", "img"), join(client, "img"), { recursive: true });
+await cp(join(root, "assets", "manifest.json"), join(client, "manifest.json"));
 await cp(join(root, ".openai", "hosting.json"), join(dist, ".openai", "hosting.json"));
 
 await writeFile(join(server, "index.js"), `

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "2026-10-02",
+  "leadTypes": ["inquiry", "quote-calculator", "ai-customer-service"],
+  "required": ["type", "company", "contact", "email", "product"],
+  "optional": [
+    "leadId",
+    "phone",
+    "productId",
+    "quantity",
+    "specifications",
+    "estimatedPrice",
+    "notes",
+    "language",
+    "page",
+    "timestamp",
+    "transcript",
+    "source",
+    "website",
+    "honeypot"
+  ],
+  "limits": {
+    "company": 120,
+    "contact": 120,
+    "email": 160,
+    "phone": 80,
+    "product": 160,
+    "productId": 80,
+    "quantity": 80,
+    "specifications": 1200,
+    "notes": 2400,
+    "page": 500
+  },
+  "fallback": {
+    "salesEmail": "ynakobka@dongdaltd.com",
+    "localStorageKey": "dongda_inquiries"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schemaVersion": "2026-10-02",
+  "site": {
+    "name": "DongDa",
+    "legalName": "DongDa",
+    "canonical": "https://china-litian.pages.dev/",
+    "targetHosting": "Alibaba Cloud OSS + CDN"
+  },
+  "contacts": {
+    "salesEmail": "ynakobka@dongdaltd.com",
+    "whatsappDisplay": "8 707 559 0188",
+    "whatsappLink": "https://wa.me/77075590188"
+  },
+  "counts": {
+    "products": 4,
+    "news": 3,
+    "companyBases": 4,
+    "companyJourney": 4,
+    "records": 15
+  },
+  "records": [
+    {
+      "type": "product",
+      "id": "product:fibc-bulk-bags",
+      "slug": "products#fibc-bulk-bags",
+      "title": {
+        "zh": "集装袋 / 吨袋",
+        "en": "FIBC Bulk Bags",
+        "ru": "FIBC биг-бэги"
+      },
+      "summary": {
+        "zh": "用于粉体、颗粒和大宗物流的重型集装袋。",
+        "en": "Heavy-duty bulk bags for powders, granules and high-volume logistics.",
+        "ru": "Прочные биг-бэги для порошков, гранул и крупнотоннажной логистики."
+      },
+      "image": "assets/img/products/cement-ton-bag.jpg",
+      "keywords": [
+        "FIBC",
+        "cement",
+        "chemicals",
+        "grain",
+        "mining",
+        "logistics",
+        "500-2000 kg",
+        "SF 5:1 / 6:1",
+        "4-loop / 2-loop",
+        "liner optional"
+      ],
+      "titleText": "FIBC Bulk Bags",
+      "summaryText": "Heavy-duty bulk bags for powders, granules and high-volume logistics."
+    },
+    {
+      "type": "product",
+      "id": "product:valve-bags",
+      "slug": "products#valve-bags",
+      "title": {
+        "zh": "阀口袋",
+        "en": "Valve Bags",
+        "ru": "Клапанные мешки"
+      },
+      "summary": {
+        "zh": "适配水泥、矿物和化工粉体的高效灌装包装。",
+        "en": "Efficient filling and reliable discharge for cement, minerals and chemicals.",
+        "ru": "Эффективное наполнение и стабильная выгрузка для цемента, минералов и химии."
+      },
+      "image": "assets/img/products/cement-valve-bag.jpg",
+      "keywords": [
+        "VB",
+        "cement",
+        "minerals",
+        "chemicals",
+        "construction materials",
+        "10-50 kg",
+        "70-120 gsm",
+        "patent dosing control",
+        "custom print"
+      ],
+      "titleText": "Valve Bags",
+      "summaryText": "Efficient filling and reliable discharge for cement, minerals and chemicals."
+    },
+    {
+      "type": "product",
+      "id": "product:pp-woven-bags",
+      "slug": "products#pp-woven-bags",
+      "title": {
+        "zh": "PP 编织袋",
+        "en": "PP Woven Bags",
+        "ru": "PP тканые мешки"
+      },
+      "summary": {
+        "zh": "服务农业、食品、化工和工业场景的通用编织包装。",
+        "en": "Versatile woven sacks for agriculture, food, chemicals and industrial use.",
+        "ru": "Универсальные мешки для сельского хозяйства, пищевой, химической и промышленной сфер."
+      },
+      "image": "assets/img/cases/case_04.jpg",
+      "keywords": [
+        "PP",
+        "agriculture",
+        "food",
+        "fertilizer",
+        "feed",
+        "industrial",
+        "5-50 kg",
+        "60-120 gsm",
+        "moisture resistant",
+        "multi-color print"
+      ],
+      "titleText": "PP Woven Bags",
+      "summaryText": "Versatile woven sacks for agriculture, food, chemicals and industrial use."
+    },
+    {
+      "type": "product",
+      "id": "product:materials-construction",
+      "slug": "products#materials-construction",
+      "title": {
+        "zh": "材料与结构",
+        "en": "Materials & Construction",
+        "ru": "Материалы и конструкция"
+      },
+      "summary": {
+        "zh": "PP 基材、内衬和复膜结构，用于强度、防潮与品牌呈现。",
+        "en": "Premium PP fabrics, liners and lamination for strength, barrier and branding.",
+        "ru": "PP ткани, вкладыши и ламинация для прочности, барьера и брендинга."
+      },
+      "image": "assets/img/img_303d639a4a.jpg",
+      "keywords": [
+        "MAT",
+        "packaging materials",
+        "barrier packaging",
+        "custom engineering",
+        "Virgin PP",
+        "UV stabilized",
+        "lamination",
+        "liner optional"
+      ],
+      "titleText": "Materials & Construction",
+      "summaryText": "Premium PP fabrics, liners and lamination for strength, barrier and branding."
+    },
+    {
+      "type": "news",
+      "id": "news:central-asia-expansion-2025",
+      "slug": "news#central-asia-expansion-2025",
+      "title": {
+        "en": "Dongda Kazakhstan deepens Central Asia footprint"
+      },
+      "summary": {
+        "en": "The Astana service hub supports strategic procurement cooperation with cement and chemical enterprises across Kazakhstan and Uzbekistan."
+      },
+      "keywords": [
+        "Market Expansion",
+        "2025"
+      ],
+      "titleText": "Dongda Kazakhstan deepens Central Asia footprint",
+      "summaryText": "The Astana service hub supports strategic procurement cooperation with cement and chemical enterprises across Kazakhstan and Uzbekistan."
+    },
+    {
+      "type": "news",
+      "id": "news:samarkand-expansion-2024",
+      "slug": "news#samarkand-expansion-2024",
+      "title": {
+        "en": "Samarkand production base expansion completed"
+      },
+      "summary": {
+        "en": "New automated lines strengthen dual-base production and support global demand for industrial packaging."
+      },
+      "keywords": [
+        "Capacity Growth",
+        "2024"
+      ],
+      "titleText": "Samarkand production base expansion completed",
+      "summaryText": "New automated lines strengthen dual-base production and support global demand for industrial packaging."
+    },
+    {
+      "type": "news",
+      "id": "news:valve-bag-certification-2023",
+      "slug": "news#valve-bag-certification-2023",
+      "title": {
+        "en": "High-strength valve bags pass cement industry certification"
+      },
+      "summary": {
+        "en": "The valve bag line supports stable bulk supply for cement and mineral powder customers."
+      },
+      "keywords": [
+        "Product",
+        "2023"
+      ],
+      "titleText": "High-strength valve bags pass cement industry certification",
+      "summaryText": "The valve bag line supports stable bulk supply for cement and mineral powder customers."
+    },
+    {
+      "type": "company-base",
+      "id": "company-base:china-hq",
+      "slug": "about#global-presence",
+      "title": {
+        "en": "Wenzhou / Shanghai"
+      },
+      "summary": {
+        "en": "Group headquarters and strategic command center"
+      },
+      "keywords": [
+        "base",
+        "factory",
+        "service",
+        "Wenzhou / Shanghai"
+      ],
+      "titleText": "Wenzhou / Shanghai",
+      "summaryText": "Group headquarters and strategic command center"
+    },
+    {
+      "type": "company-base",
+      "id": "company-base:aksu",
+      "slug": "about#global-presence",
+      "title": {
+        "en": "Aksu, Xinjiang"
+      },
+      "summary": {
+        "en": "Jiangsu New Materials smart manufacturing base"
+      },
+      "keywords": [
+        "base",
+        "factory",
+        "service",
+        "Aksu, Xinjiang"
+      ],
+      "titleText": "Aksu, Xinjiang",
+      "summaryText": "Jiangsu New Materials smart manufacturing base"
+    },
+    {
+      "type": "company-base",
+      "id": "company-base:samarkand",
+      "slug": "about#global-presence",
+      "title": {
+        "en": "Samarkand, Uzbekistan"
+      },
+      "summary": {
+        "en": "BOXIN localized production base"
+      },
+      "keywords": [
+        "base",
+        "factory",
+        "service",
+        "Samarkand, Uzbekistan"
+      ],
+      "titleText": "Samarkand, Uzbekistan",
+      "summaryText": "BOXIN localized production base"
+    },
+    {
+      "type": "company-base",
+      "id": "company-base:astana",
+      "slug": "about#global-presence",
+      "title": {
+        "en": "Astana, Kazakhstan"
+      },
+      "summary": {
+        "en": "Dongda Trade regional service hub"
+      },
+      "keywords": [
+        "base",
+        "factory",
+        "service",
+        "Astana, Kazakhstan"
+      ],
+      "titleText": "Astana, Kazakhstan",
+      "summaryText": "Dongda Trade regional service hub"
+    },
+    {
+      "type": "company-journey",
+      "id": "company-journey:1987-1991",
+      "slug": "about#timeline",
+      "title": {
+        "en": "1987-1991 Industrial foundation"
+      },
+      "summary": {
+        "en": "Started from wire drawing and woven packaging, then expanded the domestic sales network."
+      },
+      "keywords": [
+        "history",
+        "journey",
+        "1987-1991"
+      ],
+      "titleText": "1987-1991 Industrial foundation",
+      "summaryText": "Started from wire drawing and woven packaging, then expanded the domestic sales network."
+    },
+    {
+      "type": "company-journey",
+      "id": "company-journey:2000-2015",
+      "slug": "about#timeline",
+      "title": {
+        "en": "2000-2015 Scale and diversification"
+      },
+      "summary": {
+        "en": "Built larger production bases, packaging printing, textile and new material capabilities."
+      },
+      "keywords": [
+        "history",
+        "journey",
+        "2000-2015"
+      ],
+      "titleText": "2000-2015 Scale and diversification",
+      "summaryText": "Built larger production bases, packaging printing, textile and new material capabilities."
+    },
+    {
+      "type": "company-journey",
+      "id": "company-journey:2016-2023",
+      "slug": "about#timeline",
+      "title": {
+        "en": "2016-2023 Smart manufacturing"
+      },
+      "summary": {
+        "en": "Launched packaging culture, circular economy and intelligent production systems."
+      },
+      "keywords": [
+        "history",
+        "journey",
+        "2016-2023"
+      ],
+      "titleText": "2016-2023 Smart manufacturing",
+      "summaryText": "Launched packaging culture, circular economy and intelligent production systems."
+    },
+    {
+      "type": "company-journey",
+      "id": "company-journey:2024-2026",
+      "slug": "about#timeline",
+      "title": {
+        "en": "2024-2026 Central Asia expansion"
+      },
+      "summary": {
+        "en": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers."
+      },
+      "keywords": [
+        "history",
+        "journey",
+        "2024-2026"
+      ],
+      "titleText": "2024-2026 Central Asia expansion",
+      "summaryText": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers."
+    }
+  ]
+}

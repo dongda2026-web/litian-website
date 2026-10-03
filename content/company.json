@@ -1,0 +1,52 @@
+{
+  "facts": [
+    { "label": "Founded", "value": "1991" },
+    { "label": "Team members", "value": "3000+" },
+    { "label": "Annual capacity", "value": "500M+" },
+    { "label": "Markets served", "value": "30+" }
+  ],
+  "bases": [
+    {
+      "id": "china-hq",
+      "name": "Wenzhou / Shanghai",
+      "role": "Group headquarters and strategic command center"
+    },
+    {
+      "id": "aksu",
+      "name": "Aksu, Xinjiang",
+      "role": "Jiangsu New Materials smart manufacturing base"
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand, Uzbekistan",
+      "role": "BOXIN localized production base"
+    },
+    {
+      "id": "astana",
+      "name": "Astana, Kazakhstan",
+      "role": "Dongda Trade regional service hub"
+    }
+  ],
+  "journey": [
+    {
+      "year": "1987-1991",
+      "title": "Industrial foundation",
+      "summary": "Started from wire drawing and woven packaging, then expanded the domestic sales network."
+    },
+    {
+      "year": "2000-2015",
+      "title": "Scale and diversification",
+      "summary": "Built larger production bases, packaging printing, textile and new material capabilities."
+    },
+    {
+      "year": "2016-2023",
+      "title": "Smart manufacturing",
+      "summary": "Launched packaging culture, circular economy and intelligent production systems."
+    },
+    {
+      "year": "2024-2026",
+      "title": "Central Asia expansion",
+      "summary": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "name": "DongDa",
+    "legalName": "DongDa",
+    "tagline": "Industrial Packaging Group",
+    "primaryMarkets": ["China", "Central Asia", "CIS", "Middle East", "Eastern Europe", "Turkey"]
+  },
+  "contacts": {
+    "salesEmail": "ynakobka@dongdaltd.com",
+    "whatsappDisplay": "8 707 559 0188",
+    "whatsappLink": "https://wa.me/77075590188"
+  },
+  "seo": {
+    "canonical": "https://china-litian.pages.dev/",
+    "title": "DongDa | Industrial Packaging Solutions",
+    "description": "Smart valve bags, FIBCs and woven bags with 500M+ annual capacity and export-ready supply."
+  },
+  "deployment": {
+    "target": "Alibaba Cloud OSS + CDN",
+    "webRoot": "dist/client",
+    "staticFirst": true,
+    "dynamicPhase": "products, news, company history, inquiry and AI service"
+  }
+}

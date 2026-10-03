@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026-10-02",
+  "mode": "static",
+  "endpoints": {
+    "inquiry": "",
+    "aiService": "",
+    "products": "",
+    "news": ""
+  },
+  "features": {
+    "hydrateProductsFromJson": true,
+    "leadFallback": "mailto-localStorage"
+  }
+}

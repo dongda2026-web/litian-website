@@ -4,6 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:sites": "node scripts/build-sites.mjs"
+    "build:content": "node scripts/build-content-index.mjs",
+    "build:sites": "node scripts/build-sites.mjs",
+    "audit:launch": "node scripts/audit-launch.mjs",
+    "validate:content": "node scripts/validate-content.mjs",
+    "preflight:aliyun": "npm run build:content && npm run validate:content && npm run build:sites && npm run audit:launch",
+    "optimize:assets": "python3 scripts/optimize-hero-assets.py",
+    "preflight:wordpress": "node scripts/wordpress-theme-preflight.mjs",
+    "sync:wordpress": "node scripts/sync-wordpress-theme.mjs"
   }
 }

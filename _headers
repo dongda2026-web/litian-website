@@ -1,13 +1,26 @@
 /*
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.resend.com https://china-litian.pages.dev; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:;
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; media-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https:; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:;
 
 /index.html
   Cache-Control: no-store
 
+/manifest.json
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: no-store
+
+/assets/manifest.json
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: no-store
+
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/workers/*
+  X-Robots-Tag: noindex
