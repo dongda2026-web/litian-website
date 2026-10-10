@@ -1,0 +1,4 @@
+.dd-field-error{display:block;max-width:100%;min-width:0;margin:6px 0 0;color:#9a2825;font-size:13px;line-height:1.55;letter-spacing:0;overflow-wrap:anywhere}
+.dd-field-error[hidden]{display:none!important}
+#iform [aria-invalid="true"],#page-quote [aria-invalid="true"],#page-rfq [aria-invalid="true"],#sample-form [aria-invalid="true"]{border-color:#9a2825}
+.sample-ack+.dd-field-error{margin:6px 0 16px}

@@ -27,7 +27,7 @@ function corsHeaders(origin, env = {}) {
   return {
     "Access-Control-Allow-Origin": isAllowed ? origin : "null",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, Idempotency-Key",
     "Vary": "Origin",
     "Content-Type": "application/json; charset=utf-8"
   };
@@ -48,7 +48,7 @@ function textValue(value, limit) {
 }
 
 function normalizeLead(input, event = {}) {
-  const leadId = input.leadId || `litian-${Date.now()}-${Math.random().toString(16).slice(2, 10)}`;
+  const leadId = input.leadId || `dongda-${Date.now()}-${Math.random().toString(16).slice(2, 10)}`;
   return {
     leadId,
     type: textValue(input.type || "inquiry", 40),
@@ -59,14 +59,14 @@ function normalizeLead(input, event = {}) {
     product: textValue(input.product, FIELD_LIMITS.product),
     productId: textValue(input.productId, FIELD_LIMITS.productId),
     quantity: textValue(input.quantity, FIELD_LIMITS.quantity),
-    specifications: textValue(input.specifications, FIELD_LIMITS.specifications),
-    estimatedPrice: input.estimatedPrice || "",
+    specifications: input.specifications && typeof input.specifications === "object" ? input.specifications : textValue(input.specifications, FIELD_LIMITS.specifications),
+    quantityUnit: textValue(input.quantityUnit, 16),
     notes: textValue(input.notes, FIELD_LIMITS.notes),
     language: textValue(input.language, 20),
     page: textValue(input.page, FIELD_LIMITS.page),
     timestamp: input.timestamp || new Date().toISOString(),
     transcript: Array.isArray(input.transcript) ? input.transcript.slice(-30) : [],
-    source: "litian-website",
+    source: "dongda-website",
     requestId: event.requestContext?.requestId || event.requestId || ""
   };
 }
@@ -96,22 +96,28 @@ function parseEvent(event = {}) {
   return { method, headers, origin, payload };
 }
 
-async function forwardLead(env = {}, lead) {
+async function forwardLead(env = {}, lead, requestKey, origin) {
   if (!env.LEADS_WEBHOOK_URL) {
-    return { skipped: true, reason: "LEADS_WEBHOOK_URL is not configured" };
+    throw new Error("Lead storage is not configured");
   }
   const result = await fetch(env.LEADS_WEBHOOK_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Idempotency-Key": requestKey,
+      "Origin": origin,
       ...(env.LEADS_WEBHOOK_TOKEN ? { "Authorization": `Bearer ${env.LEADS_WEBHOOK_TOKEN}` } : {})
     },
-    body: JSON.stringify(lead)
+    body: JSON.stringify(lead),
+    redirect: "error",
+    signal: AbortSignal.timeout(10000)
   });
   if (!result.ok) {
-    throw new Error(`Lead webhook failed: ${result.status} ${await result.text()}`);
+    throw new Error("Lead storage did not acknowledge reception");
   }
-  return { ok: true };
+  const data = await result.json();
+  if (data.ok !== true || data.persisted !== true || !/^DD-[A-Z0-9-]{8,80}$/.test(data.leadId || "")) throw new Error("Durable reception not confirmed");
+  return data;
 }
 
 export async function handler(event = {}, context = {}) {
@@ -128,8 +134,17 @@ export async function handler(event = {}, context = {}) {
   if (request.method !== "POST") return response(405, { ok: false, error: "Method not allowed" }, headers);
 
   const allowedOrigins = parseAllowedOrigins(env);
-  if (allowedOrigins.length && !allowedOrigins.includes(request.origin)) {
+  if (!(allowedOrigins.length ? allowedOrigins : DEFAULT_ALLOWED_ORIGINS).includes(request.origin)) {
     return response(403, { ok: false, error: "Origin not allowed" }, headers);
+  }
+  if (!env.LEADS_WEBHOOK_URL) return response(503, { ok: false, error: "Lead storage not configured" }, headers);
+  if (!request.payload || typeof request.payload !== "object" || Array.isArray(request.payload)) return response(422, { ok: false, error: "Invalid payload" }, headers);
+  const requestKey = request.headers["idempotency-key"] || request.headers["Idempotency-Key"] || "";
+  if (!/^[A-Za-z0-9_-]{16,100}$/.test(requestKey)) return response(422, { ok: false, error: "Idempotency key required" }, headers);
+  for (const [field, limit] of Object.entries(FIELD_LIMITS)) {
+    if (request.payload[field] != null && (field !== "specifications" && typeof request.payload[field] !== "string" && !(field === "quantity" && Number.isSafeInteger(request.payload[field])) || textValue(request.payload[field], 20000).length > limit)) {
+      return response(422, { ok: false, error: "Invalid field", field }, headers);
+    }
   }
 
   const lead = normalizeLead(request.payload, event);
@@ -140,16 +155,16 @@ export async function handler(event = {}, context = {}) {
 
   let webhookResult;
   try {
-    webhookResult = await forwardLead(env, lead);
+    webhookResult = await forwardLead(env, lead, requestKey, request.origin);
   } catch (error) {
-    return response(502, { ok: false, leadId: lead.leadId, error: error.message }, headers);
+    return response(502, { ok: false, error: "Lead reception not confirmed" }, headers);
   }
 
   return response(200, {
     ok: true,
-    leadId: lead.leadId,
-    salesToEmail: env.SALES_TO_EMAIL || "",
-    webhookResult
+    persisted: true,
+    leadId: webhookResult.leadId,
+    duplicate: webhookResult.duplicate === true
   }, headers);
 }
 

@@ -1,0 +1,41 @@
+(function(root){
+  'use strict';
+  var version='2026.10.09-company-v1',languages=['en','zh','ru'],historyLanguages=['zh','en','ru','kk','ky','tg','tk','uz'];
+  var copy={
+    en:{company:'DongDa',history:'Company History',entry:'Explore the full history',overview:'Company overview',home:'Home',period:'Decade',all:'All milestones',archive:'Company image archive',note:'Historical company records. Dates, scale, locations and technical claims await verification.',count:'milestones',description:'Company overview and historical records of DongDa.',unavailable:'Company history is currently unavailable.'},
+    zh:{company:'东大（DongDa）',history:'企业历程',entry:'查看完整企业历程',overview:'企业介绍',home:'首页',period:'年代',all:'全部节点',archive:'企业影像档案',note:'历史企业记录。年份、规模、地点及技术声明仍待核实。',count:'个历史节点',description:'东大企业介绍与历史记录。',unavailable:'企业历程暂不可用。'},
+    ru:{company:'DongDa',history:'История компании',entry:'Полная история компании',overview:'О компании',home:'Главная',period:'Десятилетие',all:'Все события',archive:'Фотоархив компании',note:'Исторические записи компании. Даты, масштабы, адреса и технические заявления ожидают проверки.',count:'событий',description:'Информация о компании DongDa и её исторические записи.',unavailable:'История компании временно недоступна.'}
+  };
+  function freeze(value){if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;}
+  function exact(value,keys){if(!value||typeof value!=='object'||Array.isArray(value)||![Object.prototype,null].includes(Object.getPrototypeOf(value))||Object.keys(value).sort().join('|')!==keys.slice().sort().join('|'))throw new TypeError('Invalid company history fields');}
+  function safeText(value){if(typeof value!=='string'||!value.trim()||value.length>2400||/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(value))throw new TypeError('Invalid company history text');return value;}
+  function create(input){
+    exact(input,['schemaVersion','languages','provenance','reviewStatus','milestones']);
+    if(input.schemaVersion!==version||input.reviewStatus!=='legacy-pending'||!Array.isArray(input.languages)||input.languages.join('|')!==historyLanguages.join('|')||!Array.isArray(input.milestones)||input.milestones.length!==20)throw new TypeError('Invalid company history envelope');
+    exact(input.provenance,['source','sourceSha256']);if(input.provenance.source!=='legacy-index-timeline'||!/^[a-f0-9]{64}$/.test(input.provenance.sourceSha256))throw new TypeError('Invalid history provenance');
+    var last=0,seen=new Set(),rows=input.milestones.map(function(row){
+      exact(row,['id','year','title','description']);if(!Number.isInteger(row.year)||row.year<1900||row.year>2100||row.year<=last||row.id!=='milestone-'+row.year||seen.has(row.id))throw new TypeError('Invalid milestone identity');last=row.year;seen.add(row.id);
+      exact(row.title,historyLanguages);exact(row.description,historyLanguages);
+      var title={},description={};historyLanguages.forEach(function(l){title[l]=safeText(row.title[l]);description[l]=safeText(row.description[l]);});return{id:row.id,year:row.year,title,description};
+    });
+    var data=freeze({schemaVersion:version,languages:historyLanguages.slice(),provenance:{source:input.provenance.source,sourceSha256:input.provenance.sourceSha256},reviewStatus:'legacy-pending',milestones:rows});
+    var periods=freeze(['all'].concat(Array.from(new Set(rows.map(function(row){return String(Math.floor(row.year/10)*10);})))));
+    return freeze({data,periods,filter:function(period){if(!periods.includes(period))throw new TypeError('Invalid history period');return rows.filter(function(row){return period==='all'||String(Math.floor(row.year/10)*10)===period;});},resolve:function(id){return rows.find(function(row){return row.id===id;})||null;}});
+  }
+  function language(value){return languages.includes(value)?value:'en';}
+  function text(key,l){if(!Object.hasOwn(copy.en,key))throw new TypeError('Unknown company copy');return copy[language(l)][key];}
+  function localized(value,l){return value[historyLanguages.includes(l)?l:'en'];}
+  function path(kind,l){if(!['overview','history'].includes(kind))throw new TypeError('Invalid company route');return'/'+language(l)+'/company/'+(kind==='history'?'history/':'');}
+  function parsePath(value){var match=/^\/(en|zh|ru)\/company\/(history\/)?(?:index\.html)?$/.exec(value);return match?{language:match[1],kind:match[2]?'history':'overview'}:null;}
+  function readPeriod(search,registry){var params=new URLSearchParams(search);return params.getAll('period').length===1&&registry.periods.includes(params.get('period'))?params.get('period'):'all';}
+  function target(kind,l,period,anchor){var value=path(kind,l);if(kind==='history'&&period&&period!=='all'){if(!/^(19|20)\d0$/.test(period))throw new TypeError('Invalid company target period');value+='?period='+period;}if(anchor){if(kind!=='history'||!/^milestone-(19|20)\d{2}$/.test(anchor))throw new TypeError('Invalid company anchor');value+='#'+anchor;}return value;}
+  function escape(value){return String(value).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function metadata(kind,l,base){var origin=new URL(base);if(!['https:','http:'].includes(origin.protocol)||origin.username||origin.password)throw new TypeError('Invalid company origin');l=language(l);return{language:l,title:(kind==='history'?text('history',l)+' | ':'')+text('company',l),description:text('description',l),robots:'noindex,follow',canonical:origin.origin+path(kind,l),locale:l,image:null,schema:null,alternates:languages.map(function(v){return{language:v,href:origin.origin+path(kind,v)};})};}
+  function timeline(registry,l,period){return registry.filter(period||'all').map(function(row){return'<article class="company-milestone" id="'+row.id+'"><a class="company-year" href="'+target('history',l,period,row.id)+'" aria-label="'+escape(row.year+' '+localized(row.title,l))+'">'+row.year+'</a><div><h2>'+escape(localized(row.title,l))+'</h2><p>'+escape(localized(row.description,l))+'</p></div></article>';}).join('');}
+  function inlineTimeline(registry,l){return registry.data.milestones.map(function(row){return'<div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">'+row.year+'</div><div class="tl-card-title">'+escape(localized(row.title,l))+'</div><div class="tl-card-desc">'+escape(localized(row.description,l))+'</div></div></div>';}).join('');}
+  function historyPage(registry,l,period){
+    period=registry.periods.includes(period)?period:'all';var rows=registry.filter(period),options=registry.periods.map(function(value){return'<option value="'+value+'"'+(value===period?' selected':'')+'>'+escape(value==='all'?text('all',l):value+'- '+(Number(value)+9))+'</option>';}).join('');
+    return'<div class="company-history-hero"><img src="/assets/img/factory_panorama.jpg" alt="'+escape(text('archive',l))+'" fetchpriority="high"><div class="W"><nav class="company-crumb" aria-label="'+escape(text('overview',l))+'"><a href="/">'+escape(text('home',l))+'</a><span>/</span><a href="'+path('overview',l)+'" data-company-link="overview" onclick="event.preventDefault();nav(\'about\')">'+escape(text('overview',l))+'</a></nav><p class="company-wordmark">'+escape(text('company',l))+'</p><h1 tabindex="-1">'+escape(text('history',l))+'</h1></div></div><div class="W company-history-content"><div class="company-history-tools"><label for="company-period">'+escape(text('period',l))+'</label><select id="company-period" onchange="setCompanyPeriod(this.value)">'+options+'</select><p id="company-history-count" role="status">'+rows.length+' '+escape(text('count',l))+'</p></div><p class="company-history-note">'+escape(text('note',l))+'</p><div id="company-timeline">'+timeline(registry,l,period)+'</div><a class="company-history-entry" href="'+path('overview',l)+'" data-company-link="overview" onclick="event.preventDefault();nav(\'about\')">'+escape(text('overview',l))+'</a></div><noscript><style>.company-history-tools{display:none}</style></noscript>';
+  }
+  root.DongDaCompany=freeze({version,languages,historyLanguages,copy,create,language,text,localized,path,parsePath,readPeriod,target,escape,metadata,timeline,inlineTimeline,historyPage});
+})(typeof globalThis==='object'?globalThis:this);

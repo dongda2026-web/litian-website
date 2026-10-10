@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {companyLegacy} from './company-legacy.mjs';
+import {nodes,attribute,plainText} from './build-product-pages.mjs';
+import '../assets/js/company-profile-core.js';
+const source=await readFile(new URL('../index.html',import.meta.url),'utf8'),legacy=companyLegacy(source),core=globalThis.DongDaCompanyProfile;
+const active=nodes(legacy.document,node=>attribute(node,'id')==='page-about')[0];
+const factSection=nodes(active,node=>(attribute(node,'class')||'').split(' ').includes('company-facts'))[0];
+const facts=factSection.childNodes.filter(node=>node.tagName==='div').map(node=>({id:attribute(nodes(node,n=>attribute(n,'data-i')?.startsWith('company_fact_'))[0],'data-i'),value:plainText(nodes(node,n=>n.tagName==='b')[0])}));
+const periods=nodes(active,node=>(attribute(node,'class')||'').split(' ').includes('journey-card')).map(node=>plainText(nodes(node,n=>n.tagName==='b')[0]));
+const input={schemaVersion:core.version,id:core.id,reviewStatus:'legacy-pending',provenance:{source:'legacy-index-company',sourceSha256:createHash('sha256').update(source).digest('hex')},copy:Object.fromEntries(core.keys.map(key=>[key,Object.fromEntries(core.languages.map(l=>[l,legacy.T[l][key]??legacy.T.en[key]]))])),capabilities:legacy.CAPS.en.map((row,i)=>({id:'cap-'+(i+1),marker:row[0],text:Object.fromEntries(core.editableLanguages.map(l=>[l,legacy.CAPS[l][i][1]]))})),pillars:legacy.ABOUT_PILLARS.map((row,i)=>({id:'pillar-'+(i+1),code:row.code,tag:row.tag,title:row.title,desc:row.desc})),protected:{brand:'DongDa',facts,periods,image:'assets/img/factory_panorama.jpg'}};
+const data=core.create(input).data;
+await writeFile(new URL('../content/company-profile.json',import.meta.url),JSON.stringify(data,null,2)+'\n',{flag:'wx'});
+process.stdout.write('Company profile seeded from literals: 21 text keys, 5 capabilities, 4 pillars; all facts remain pending.\n');

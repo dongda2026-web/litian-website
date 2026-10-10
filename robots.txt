@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
-Sitemap: https://china-litian.pages.dev/sitemap.xml
+Sitemap: https://cn-dongda.com/sitemap.xml

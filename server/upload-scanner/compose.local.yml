@@ -1,0 +1,22 @@
+services:
+  scanner:
+    image: clamav/clamav@sha256:ebec5bc138401b36ae987caa1a3fa3c3b2a21ed3d51f0bfa5852825e663e67b0
+    container_name: dongda-website-upload-av-a12
+    environment:
+      TZ: UTC
+    labels:
+      dongda.task: website-a12
+    ports:
+      - "127.0.0.1:43310:3310"
+    volumes:
+      - ./clamd.conf:/etc/clamav/clamd.conf:ro
+      - ./freshclam.conf:/etc/clamav/freshclam.conf:ro
+      - ../../var/private-uploads-a12/signatures:/var/lib/clamav
+    mem_limit: 4g
+    cpus: 1.5
+    healthcheck:
+      test: ["CMD", "clamdscan", "--config-file=/etc/clamav/clamd.conf", "--ping=1"]
+      start_period: 360s
+      interval: 30s
+      timeout: 5s
+      retries: 3

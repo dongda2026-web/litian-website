@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "2026.10.09-company-v1",
+  "languages": [
+    "zh",
+    "en",
+    "ru",
+    "kk",
+    "ky",
+    "tg",
+    "tk",
+    "uz"
+  ],
+  "provenance": {
+    "source": "legacy-index-timeline",
+    "sourceSha256": "ed988f21ec25921b951092c51ec28059e2afa5a12716c7d508c628a067faf65d"
+  },
+  "reviewStatus": "legacy-pending",
+  "milestones": [
+    {
+      "id": "milestone-1987",
+      "year": 1987,
+      "title": {
+        "zh": "温州创业",
+        "en": "Founded in Wenzhou",
+        "ru": "Основание в Вэньчжоу",
+        "kk": "Вэньчжоуда құрылды",
+        "ky": "Вэньчжоуда түзүлдү",
+        "tg": "Таъсис дар Вэнчжоу",
+        "tk": "Wençjouda döredildi",
+        "uz": "Wenjouda tashkil etilgan"
+      },
+      "description": {
+        "zh": "集团前身萧江河头垟村拉丝厂始创，正式开启创业之路。",
+        "en": "Established the predecessor — Xiaojiang wire-drawing factory, officially beginning the entrepreneurial journey.",
+        "ru": "Предприятие-предшественник — фабрика по производству нитей в Сяоцзян, начало предпринимательского пути.",
+        "kk": "Алдынғы кәсіпорын — Сяоцзян жіп шығару зауыты, кәсіпкерлік жолының басталуы.",
+        "ky": "Алдынкы ишкана — Сяоцзян жип чыгаруу заводу, ишкердик жолунун башталышы.",
+        "tg": "Корхонаи пешин — заводи истеҳсоли риштаи Сяоцзян, оғози роҳи соҳибкорӣ.",
+        "tk": "Öňki kärhana — Sýaojzian süýüm çykarýan zawod, telekeçilik ýolunyň başy.",
+        "uz": "Avvalgi korxona — Syaojzian ip chiqarish zavodi, tadbirkorlik yolining boshlanishi."
+      }
+    },
+    {
+      "id": "milestone-1991",
+      "year": 1991,
+      "title": {
+        "zh": "首次扩容",
+        "en": "First Expansion",
+        "ru": "Первое расширение",
+        "kk": "Бірінші кеңейту",
+        "ky": "Биринчи кеңейтүү",
+        "tg": "Аввалин васеъшавӣ",
+        "tk": "Ilkinji giňeldme",
+        "uz": "Birinchi kengaytirish"
+      },
+      "description": {
+        "zh": "获批3亩产业用地，更名平阳县塑料十厂，主营塑编包装制品。",
+        "en": "Secured 3-mu industrial land, renamed Pingyang No.10 Plastics Factory, specializing in woven packaging.",
+        "ru": "Получен земельный участок 3 му, переименован в Пинъянскую фабрику №10, специализация — плетёная упаковка.",
+        "kk": "3 му жер алынды, Пинъян №10 пластик фабрикасы болып өзгертілді.",
+        "ky": "3 му жер алынды, Пинъян №10 пластик фабрикасы болуп өзгөртүлдү.",
+        "tg": "3 му замин гирифта шуд, ба Фабрикаи пластмассаи №10 Пинъян номгузорӣ карда шуд.",
+        "tk": "3 mu ýer alyndy, Pýinýan №10 plastik fabriky diýlip üýtgedildi.",
+        "uz": "3 mu yer olindi, Pinyin №10 plastik fabrikasi deb ozgartirildi."
+      }
+    },
+    {
+      "id": "milestone-1993",
+      "year": 1993,
+      "title": {
+        "zh": "进军东北",
+        "en": "Northeast Market Entry",
+        "ru": "Выход на северо-восток",
+        "kk": "Солтүстік-Шығыс нарығы",
+        "ky": "Түндүк-Чыгыш рыногу",
+        "tg": "Бозори Шимолу Шарқӣ",
+        "tk": "Demirgazyk-Gündogar bazar",
+        "uz": "Shimoliy-Sharqiy bozor"
+      },
+      "description": {
+        "zh": "挺进东北市场，成为东北三省多家企业定点包装供应商。",
+        "en": "Expanded into Northeast China, becoming the designated packaging supplier for multiple enterprises.",
+        "ru": "Расширение на северо-восток Китая, назначенный поставщик упаковки для нескольких предприятий.",
+        "kk": "Қытайдың солтүстік-шығысына кеңейту, бірнеше кәсіпорынның тағайындалған жабдықтаушысы.",
+        "ky": "Кытайдын түндүк-чыгышына кеңейтүү, бир нече ишкананын дайындалган жабдыктоочусу.",
+        "tg": "Вусъат ба Шимолу Шарқи Хитой, таъминкунандаи таъиншудаи якчанд корхона.",
+        "tk": "Hytaýyň demirgazyk-gündogaryna giňeldme, birnäçe kärhananyň bellenen üpjün ediji.",
+        "uz": "Xitoyning shimoliy-sharqiga kengaytirish, bir necha korxonaning belgilangan taminotchisi."
+      }
+    },
+    {
+      "id": "milestone-1997",
+      "year": 1997,
+      "title": {
+        "zh": "南方营销中心",
+        "en": "Southern Marketing Hub",
+        "ru": "Южный маркетинговый центр",
+        "kk": "Оңтүстік маркетингтік орталық",
+        "ky": "Түштүк маркетингдик борбор",
+        "tg": "Маркази маркетинги Ҷанубӣ",
+        "tk": "Günorta marketing merkezi",
+        "uz": "Janubiy marketing markazi"
+      },
+      "description": {
+        "zh": "于苍南设立南方区域营销中心，完善国内市场布局。",
+        "en": "Established the Southern regional marketing center in Cangnan, completing the domestic market layout.",
+        "ru": "Открыт южный региональный маркетинговый центр в Цаннане, завершена внутренняя рыночная экспансия.",
+        "kk": "Цаннанда оңтүстік аймақтық маркетингтік орталық ашылды.",
+        "ky": "Цаннанда түштүк аймактык маркетингдик борбор ачылды.",
+        "tg": "Маркази маркетинги минтақавии ҷанубӣ дар Цаннан кушода шуд.",
+        "tk": "Çangnanda günorta sebit marketing merkezi açyldy.",
+        "uz": "Cangnanda janubiy mintaqa marketing markazi ochildi."
+      }
+    },
+    {
+      "id": "milestone-2001",
+      "year": 2001,
+      "title": {
+        "zh": "规模化成型",
+        "en": "Scale-up & Incorporation",
+        "ru": "Масштабирование",
+        "kk": "Масштабтандыру",
+        "ky": "Масштабдоо",
+        "tg": "Масштабонӣ",
+        "tk": "Masshtablandyryş",
+        "uz": "Masshtablashtirish"
+      },
+      "description": {
+        "zh": "萧江征地50亩扩建，成立浙江立天塑业有限公司，规模化生产成型。",
+        "en": "Acquired 50-mu land, founded Zhejiang Litian Plastics Co., Ltd., achieving scaled production.",
+        "ru": "Приобретён участок 50 му, основана Zhejiang Litian Plastics Co., Ltd., масштабное производство.",
+        "kk": "50 му жер алынды, Zhejiang Litian Plastics Co., Ltd. құрылды.",
+        "ky": "50 му жер алынды, Zhejiang Litian Plastics Co., Ltd. түзүлдү.",
+        "tg": "50 му замин гирифта шуд, Zhejiang Litian Plastics Co., Ltd. таъсис ёфт.",
+        "tk": "50 mu ýer alyndy, Zhejiang Litian Plastics Co., Ltd. döredildi.",
+        "uz": "50 mu yer olindi, Zhejiang Litian Plastics Co., Ltd. tashkil etildi."
+      }
+    },
+    {
+      "id": "milestone-2004",
+      "year": 2004,
+      "title": {
+        "zh": "多元布局",
+        "en": "Diversification",
+        "ru": "Диверсификация",
+        "kk": "Диверсификация",
+        "ky": "Диверсификация",
+        "tg": "Диверсификатсия",
+        "tk": "Diversifikasiýa",
+        "uz": "Diversifikatsiya"
+      },
+      "description": {
+        "zh": "拓宽产业赛道，布局棉纺、包装印刷、进出口贸易，填补平阳棉纺产业空白。",
+        "en": "Expanded into cotton spinning, packaging printing, and import-export trade.",
+        "ru": "Расширение в хлопкопрядение, печатную упаковку и внешнюю торговлю.",
+        "kk": "Мата тоқу, баспа жабдықтау және сыртқы саудаға кеңейту.",
+        "ky": "Кездеме токуу, басма жабдыктоо жана сырткы соодага кеңейтүү.",
+        "tg": "Вусъат ба ресмонфузӣ, бастабандии чопӣ ва савдои хориҷӣ.",
+        "tk": "Mata dokmak, basma gaplamak we daşary söwda giňeldildi.",
+        "uz": "Mato toqish, bosma qadoqlash va tashqi savdoga kengaytirish."
+      }
+    },
+    {
+      "id": "milestone-2006",
+      "year": 2006,
+      "title": {
+        "zh": "核心专利",
+        "en": "Core Patent",
+        "ru": "Ключевой патент",
+        "kk": "Негізгі патент",
+        "ky": "Негизги патент",
+        "tg": "Патенти асосӣ",
+        "tk": "Esasy patent",
+        "uz": "Asosiy patent"
+      },
+      "description": {
+        "zh": "成功研发长短纤维混纺无结纯棉纱工艺，斩获核心发明专利。",
+        "en": "Developed long-short fiber blended knot-free pure cotton yarn process, earning a core invention patent.",
+        "ru": "Разработана технология blended knot-free пряжи, получен базовый патент на изобретение.",
+        "kk": "Аралас жіп технологиясы әзірленді, негізгі патент алынды.",
+        "ky": "Аралаш жип технологиясы иштелип чыкты, негизги патент алынды.",
+        "tg": "Технологияи риштаи омехта коркард карда шуд, патенти асосӣ гирифта шуд.",
+        "tk": "Aralaş süýüm tehnologiýasy işlenip düzüldi, esasy patent alyndy.",
+        "uz": "Aralash ip texnologiyasi ishlab chiqildi, asosiy patent olindi."
+      }
+    },
+    {
+      "id": "milestone-2009",
+      "year": 2009,
+      "title": {
+        "zh": "集团成立",
+        "en": "Group Formation",
+        "ru": "Создание группы",
+        "kk": "Топтың құрылуы",
+        "ky": "Топтун түзүлүшү",
+        "tg": "Таъсиси Гуруҳ",
+        "tk": "Toparyň döredilişi",
+        "uz": "Guruhning tashkil etilishi"
+      },
+      "description": {
+        "zh": "正式升格成立东大有限公司，构建多元产业化格局；同步进军家纺领域。",
+        "en": "Officially upgraded to DongDa Co., Ltd.; launched eco-home textile business.",
+        "ru": "Официальное преобразование в DongDa Co., Ltd.; запуск эко-домашнего текстиля.",
+        "kk": "DongDa Co., Ltd. ресми құрылды; экологиялық үй мата тоқуы басталды.",
+        "ky": "DongDa Co., Ltd. расмий түзүлдү; экологиялык үй кездеме токуу башталды.",
+        "tg": "DongDa Co., Ltd. расман таъсис ёфт; матоъи хонагии экологӣ оғоз ёфт.",
+        "tk": "DongDa Co., Ltd. resmi döredildi; ekologiýa öý mata dokuw başlandy.",
+        "uz": "DongDa Co., Ltd. rasmiy tashkil etildi; ekologik uy mato toqish boshlandi."
+      }
+    },
+    {
+      "id": "milestone-2010",
+      "year": 2010,
+      "title": {
+        "zh": "援疆拓业",
+        "en": "Xinjiang Aid Mission",
+        "ru": "Миссия в Синьцзян",
+        "kk": "Шыңжаң миссиясы",
+        "ky": "Шинжаң миссиясы",
+        "tg": "Вазифаи Синьцзян",
+        "tk": "Sinýzýan missiýasy",
+        "uz": "Sintszyan missiyasi"
+      },
+      "description": {
+        "zh": "响应国家援疆号召，入驻阿克苏纺织工业城，成立新疆立天纺织股份有限公司。",
+        "en": "Responded to national Xinjiang aid initiative, entered Aksu Textile Industrial City, founding Xinjiang Litian Textile.",
+        "ru": "Отклик на национальную программу помощи Синьцзяну, вход в Аксу, основание Xinjiang Litian Textile.",
+        "kk": "Аксуға кіру, Xinjiang Litian Textile құру.",
+        "ky": "Аксугө кирүү, Xinjiang Litian Textile түзүү.",
+        "tg": "Вуруд ба Аксу, таъсиси Xinjiang Litian Textile.",
+        "tk": "Aksuga girmek, Xinjiang Litian Textile döretmek.",
+        "uz": "Aksuga kirish, Xinjiang Litian Textile tashkil etish."
+      }
+    },
+    {
+      "id": "milestone-2012",
+      "year": 2012,
+      "title": {
+        "zh": "原料基地",
+        "en": "Raw Material Base",
+        "ru": "Сырьевая база",
+        "kk": "Шикізат базасы",
+        "ky": "Чийки зат базасы",
+        "tg": "Базаи ашёи хом",
+        "tk": "Çig mal bazasy",
+        "uz": "Xom ashyo bazasi"
+      },
+      "description": {
+        "zh": "自建3万亩棉花种植基地与两座自动化轧花厂，筑牢优质原料供应链。",
+        "en": "Built 30,000-mu cotton planting base and two automated ginning mills, securing the supply chain.",
+        "ru": "Создана хлопковая плантация 30 000 му и два автоматизированных хлопкоочистительных завода.",
+        "kk": "30 000 ма мақта егістігі және екі автоматтандырылған мақта тазарту зауыты салынды.",
+        "ky": "30 000 му кебирди айыл чарба жана эки автоматташтырылган кебирди тазарту заводу курулду.",
+        "tg": "30 000 му плантатсияи пахта ва ду заводи автоматии тозакунии пахта сохта шуд.",
+        "tk": "30 000 mu paga ekin meýdany we iki awtomatik paga arassalaýyş zawody guruldy.",
+        "uz": "30 000 mu paxta ekish maydoni va ikki avtomatik paxta tozalash zavodi qurildi."
+      }
+    },
+    {
+      "id": "milestone-2015",
+      "year": 2015,
+      "title": {
+        "zh": "棉被博物馆",
+        "en": "Cotton Museum",
+        "ru": "Музей хлопка",
+        "kk": "Мақта мұражайы",
+        "ky": "Кебирди музейи",
+        "tg": "Осорхонаи пахта",
+        "tk": "Paga muzeýi",
+        "uz": "Paxta muzeyi"
+      },
+      "description": {
+        "zh": "全国首家企业级棉花被家纺博物馆落成开馆。",
+        "en": "China's first enterprise-level cotton quilt home textile museum opened.",
+        "ru": "Открыт первый в Китае корпоративный музей хлопкового одеяла и домашнего текстиля.",
+        "kk": "Қытайдың алғашқы кәсіпорын мақта жамылғы мұражайы ашылды.",
+        "ky": "Кытайдын алгачкы ишкана кебирди жабуу музейи ачылды.",
+        "tg": "Аввалин осорхонаи корпоративии куҷаи пахтаи Хитой кушода шуд.",
+        "tk": "Hytaýyň ilkinji kärhana paga örtük muzeýi açyldy.",
+        "uz": "Xitoyning birinchi korporativ paxta korpa muzeyi ochildi."
+      }
+    },
+    {
+      "id": "milestone-2017",
+      "year": 2017,
+      "title": {
+        "zh": "西北龙头",
+        "en": "Northwest Scale Leader",
+        "ru": "Лидер Северо-Запада",
+        "kk": "Солтүстік-Батыс көшбасшысы",
+        "ky": "Түндүк-Батыш жетекчиси",
+        "tg": "Роҳбари Шимолу Ғарб",
+        "tk": "Demirgazyk-Günbaryň ýolbaşçysy",
+        "uz": "Shimoliy-Garb yetakchisi"
+      },
+      "description": {
+        "zh": "成立疆塑新材料，引进智能产线，跃升西北最大塑编塑包企业。",
+        "en": "Founded Jiangsu New Materials, introduced smart production lines, becoming the largest woven packaging enterprise in Northwest China.",
+        "ru": "Основана Jiangsu New Materials, развернуты интеллектуальные линии, крупнейшее предприятие плетёной упаковки Северо-Западного Китая.",
+        "kk": "Jiangsu New Materials құрылды, Солтүстік-Батыс Қытайдың ең ірі тоқылған жабдықтау кәсіпорны.",
+        "ky": "Jiangsu New Materials түзүлдү, Түндүк-Батыш Кытайдын эң ири токулган жабдыктоо ишканасы.",
+        "tg": "Jiangsu New Materials таъсис ёфт, калонтарин корхонаи бастабандии тоқимаи Шимолу Ғарби Хитой.",
+        "tk": "Jiangsu New Materials döredildi, Demirgazyk-Günbary Hytaýyň iň uly tokuma gaplamak kärhanasy.",
+        "uz": "Jiangsu New Materials tashkil etildi, Shimoliy-Garbiy Xitoyning eng yirik toqilgan qadoqlash korxonasi."
+      }
+    },
+    {
+      "id": "milestone-2019",
+      "year": 2019,
+      "title": {
+        "zh": "包装文化馆",
+        "en": "Packaging Culture Museum",
+        "ru": "Музей упаковки",
+        "kk": "Жабдықтау мәдениеті мұражайы",
+        "ky": "Жабдыктоо маданияты музейи",
+        "tg": "Осорхонаи маданияти бастабандӣ",
+        "tk": "Gaplamak medeniýeti muzeýi",
+        "uz": "Qadoqlash madaniyati muzeyi"
+      },
+      "description": {
+        "zh": "全国首家企业塑包文化博物馆落成，传承产业文化。",
+        "en": "China's first enterprise packaging culture museum completed.",
+        "ru": "Открыт первый в Китае корпоративный музей культуры упаковки.",
+        "kk": "Қытайдың алғашқы жабдықтау мәдениеті мұражайы ашылды.",
+        "ky": "Кытайдын алгачкы жабдыктоо маданияты музейи ачылды.",
+        "tg": "Аввалин осорхонаи маданияти бастабандии корпоративии Хитой кушода шуд.",
+        "tk": "Hytaýyň ilkinji gaplamak medeniýeti muzeýi açyldy.",
+        "uz": "Xitoyning birinchi qadoqlash madaniyati muzeyi ochildi."
+      }
+    },
+    {
+      "id": "milestone-2020",
+      "year": 2020,
+      "title": {
+        "zh": "循环经济",
+        "en": "Circular Economy",
+        "ru": "Циркулярная экономика",
+        "kk": "Айналым экономикасы",
+        "ky": "Айланма экономика",
+        "tg": "Иқтисоди даврӣ",
+        "tk": "Aýlanma ykdysadyýet",
+        "uz": "Aylanma iqtisodiyot"
+      },
+      "description": {
+        "zh": "新天科技公司投产，发力循环再生产业，打造绿色棉纺产业链。",
+        "en": "Xintian Technology launched, focusing on recycling and circular economy for a green supply chain.",
+        "ru": "Запуск Xintian Technology, переработка и циркулярная экономика для зелёной цепочки поставок.",
+        "kk": "Xintian Technology іске қосылды, жасыл жабдықтау тізбегі үшін қайта өңдеу.",
+        "ky": "Xintian Technology ишке киргизилди, жашыл жабдыктоо тизмеги үчүн кайра иштетүү.",
+        "tg": "Xintian Technology ба кор даромад, барои занҷири таъминоти сабз коркарди такрорӣ.",
+        "tk": "Xintian Technology işe girizildi, ýaşyl üpjün etik zynjyry üçin gaýtadan işleme.",
+        "uz": "Xintian Technology ishga tushirildi, yashil taminot zanjiri uchun qayta ishlash."
+      }
+    },
+    {
+      "id": "milestone-2021",
+      "year": 2021,
+      "title": {
+        "zh": "智能制造",
+        "en": "Smart Manufacturing",
+        "ru": "Умное производство",
+        "kk": "Ақылды өндіріс",
+        "ky": "Акылдуу өндүрүш",
+        "tg": "Истеҳсоли зирак",
+        "tk": "Akylly öndüriş",
+        "uz": "Aqlli ishlab chiqarish"
+      },
+      "description": {
+        "zh": "国内首套智能塑包生产线投产，迈入智能智造新阶段。",
+        "en": "China's first smart woven packaging production line commissioned.",
+        "ru": "Введена первая в Китае интеллектуальная линия плетёной упаковки.",
+        "kk": "Қытайдың алғашқы ақылды тоқылған жабдықтау желісі іске қосылды.",
+        "ky": "Кытайдын алгачкы акылдуу токулган жабдыктоо линиясы ишке киргизилди.",
+        "tg": "Аввалин хати истеҳсоли бастабандии тоқимаи зираки Хитой ба кор даромад.",
+        "tk": "Hytaýyň ilkinji akylly tokuma gaplamak hnaty işe girizildi.",
+        "uz": "Xitoyning birinchi aqlli toqilgan qadoqlash liniyasi ishga tushirildi."
+      }
+    },
+    {
+      "id": "milestone-2022",
+      "year": 2022,
+      "title": {
+        "zh": "新材料研发",
+        "en": "New Material R&D",
+        "ru": "НИОКР новых материалов",
+        "kk": "Жаңа материалдар ЖЗӨ",
+        "ky": "Жаңы материалдар ИЗЗ",
+        "tg": "Тадқиқоти маводди нав",
+        "tk": "Täze maddalar YHY",
+        "uz": "Yangi materiallar TTF"
+      },
+      "description": {
+        "zh": "环保抗氧化新型包装材料研发成功并推向市场。",
+        "en": "Eco-friendly anti-oxidation packaging material developed and launched.",
+        "ru": "Разработан и запущен экологичный антиоксидантный упаковочный материал.",
+        "kk": "Экологиялық антиоксиданттық жабдықтау материалы әзірленді.",
+        "ky": "Экологиялык антиоксиданттык жабдыктоо материалы иштелип чыкты.",
+        "tg": "Маводи бастабандии антиоксидантии экологӣ коркард карда шуд.",
+        "tk": "Ekologiýa antinoksidi gaplamak maddasy işlenip düzüldi.",
+        "uz": "Ekologik antioksidant qadoqlash materiali ishlab chiqildi."
+      }
+    },
+    {
+      "id": "milestone-2023",
+      "year": 2023,
+      "title": {
+        "zh": "产学研攻坚",
+        "en": "R&D Task Force",
+        "ru": "НИОКР-команда",
+        "kk": "ЖЗӨ тобы",
+        "ky": "ИЗЗ тобу",
+        "tg": "Гуруҳи ТТД",
+        "tk": "YHY topary",
+        "uz": "TTF guruhi"
+      },
+      "description": {
+        "zh": "组建产学研专项团队，攻坚环保高强包装材料核心技术。",
+        "en": "Established industry-university-research team, tackling core technologies for eco-friendly high-strength packaging.",
+        "ru": "Создана команда индустрия-наука-исследования для разработки экологичной высокопрочной упаковки.",
+        "kk": "Экологиялық жоғары берікті жабдықтау технологияларын әзірлеу үшін ЖЗӨ тобы құрылды.",
+        "ky": "Экологиялык жогорку бекемдик жабдыктоо технологияларын иштетүү үчүн ИЗЗ тобу түзүлдү.",
+        "tg": "Гуруҳи ТТД барои коркади технологияи бастабандии баландқувватии экологӣ таъсис ёфт.",
+        "tk": "Ekologiýa ýokary berkitmeli gaplamak tehnologiýalaryny işlep düzmek üçin YHY topary döredildi.",
+        "uz": "Ekologik yuqori mustahkam qadoqlash texnologiyalarini ishlab chiqish uchun TTF guruhi tuzildi."
+      }
+    },
+    {
+      "id": "milestone-2024",
+      "year": 2024,
+      "title": {
+        "zh": "出海中亚",
+        "en": "Central Asia Entry",
+        "ru": "Выход в Центральную Азию",
+        "kk": "Орталық Азияға шығу",
+        "ky": "Борбордук Азияга чыгуу",
+        "tg": "Вуруд ба Осиёи Марказӣ",
+        "tk": "Merkezi Aziýa girmek",
+        "uz": "Markaziy Osiyoga kirish"
+      },
+      "description": {
+        "zh": "践行全球化战略，进驻乌兹别克斯坦成立博新公司，深耕中亚腹地。",
+        "en": "Established Boxin Co. in Uzbekistan, penetrating Central Asian markets for cement and food packaging.",
+        "ru": "Основана компания Boxin в Узбекистане, проникновение на рынки цементной и пищевой упаковки.",
+        "kk": "Өзбекстанда Boxin компаниясы құрылды, цемент және тағам жабдықтау нарығына кіру.",
+        "ky": "Өзбекстанда Boxin компаниясы түзүлдү, цемент жана тамак жабдыктоо рыногуна кирүү.",
+        "tg": "Дар Ӯзбекистон ширкати Boxin таъсис ёфт, ба бозори бастабандии семент ва озуқаворӣ вуруд.",
+        "tk": "Özbekistanda Boxin kompaniýasy döredildi, semment we azyk gaplamak bazaryna girmek.",
+        "uz": "Ozbekistonda Boxin kompaniyasi tashkil etildi, sement va oziq-ovqat qadoqlash bozoriga kirish."
+      }
+    },
+    {
+      "id": "milestone-2025",
+      "year": 2025,
+      "title": {
+        "zh": "哈萨克布局",
+        "en": "Kazakhstan Expansion",
+        "ru": "Расширение в Казахстан",
+        "kk": "Қазақстанға кеңейту",
+        "ky": "Казакстанга кеңейтүү",
+        "tg": "Вусъат ба Қазоқистон",
+        "tk": "Gazagystana giňeldme",
+        "uz": "Qozogistonga kengaytirish"
+      },
+      "description": {
+        "zh": "设立东大公司，专攻水泥、化工高端定制包装，深度对接当地头部企业。",
+        "en": "Established Dongda Co. in Kazakhstan, focusing on high-end custom packaging for cement and chemicals.",
+        "ru": "Основана компания Dongda в Казахстане, высококачественная упаковка для цемента и химии.",
+        "kk": "Қазақстанда Dongda компаниясы құрылды, цемент және химия үшін жоғары сапалы жабдықтау.",
+        "ky": "Казакстанда Dongda компаниясы түзүлдү, цемент жана химия үчүн жогорку сапаттуу жабдыктоо.",
+        "tg": "Дар Қазоқистон ширкати Dongda таъсис ёфт, бастабандии баландсифати семент ва кимиё.",
+        "tk": "Gazagystanda Dongda kompaniýasy döredildi, semment we himiýa üçin ýokary hili gaplamak.",
+        "uz": "Qozogistonda Dongda kompaniyasi tashkil etildi, sement va kimyo uchun yuqori sifatli qadoqlash."
+      }
+    },
+    {
+      "id": "milestone-2026",
+      "year": 2026,
+      "title": {
+        "zh": "深耕全球",
+        "en": "Deepening Global Strategy",
+        "ru": "Углубление глобальной стратегии",
+        "kk": "Глобалды стратегияны тереңдету",
+        "ky": "Глобалдуу стратегияны тереңдетүү",
+        "tg": "Чуқуркунии стратегияи глобалӣ",
+        "tk": "Global strategiýany çuňlandyrmak",
+        "uz": "Global strategiyani chuqurlashtirish"
+      },
+      "description": {
+        "zh": "全面深耕中亚市场，锁定规模化经营，持续提升区域核心占有率。",
+        "en": "Scaling Central Asian operations, deepening core client matrix, and growing regional market share.",
+        "ru": "Масштабирование операций в Центральной Азии, рост региональной доли рынка.",
+        "kk": "Орталық Азиядағы операцияларды масштабтау, аймақтық нарық үлесін өсіру.",
+        "ky": "Борбордук Азиядагы операцияларды масштабтоо, аймактык рынок үлүшүн өстүрүү.",
+        "tg": "Масштабонӣ дар Осиёи Марказӣ, афзоиши ҳиссаи бозори минтақавӣ.",
+        "tk": "Merkezi Aziýada operasiýalary masshtablandyrmak, sebet bazar paýyny ösdürmek.",
+        "uz": "Markaziy Osiyoda operatsiyalarni masshtablashtirish, mintaqa bozor ulushini oshirish."
+      }
+    }
+  ]
+}

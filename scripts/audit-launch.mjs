@@ -71,8 +71,8 @@ check(html.includes("application/ld+json"), "Organization JSON-LD missing");
 check(html.includes("rel=\"icon\""), "Favicon link missing");
 check(html.includes("openLegalModal"), "Legal modal handler missing");
 check(headers.includes("Content-Security-Policy"), "CSP header missing");
-check(headers.includes("https://fonts.googleapis.com"), "CSP does not allow Google Fonts CSS");
-check(headers.includes("https://fonts.gstatic.com"), "CSP does not allow Google Fonts files");
+check(!headers.includes("https://fonts.googleapis.com") && !headers.includes("https://fonts.gstatic.com"), "CSP still permits third-party font delivery");
+check(headers.includes("font-src 'self';"), "CSP does not restrict fonts to same origin");
 
 const scripts = [...html.matchAll(/<script(?![^>]+application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/gi)]
   .map(match => match[1])

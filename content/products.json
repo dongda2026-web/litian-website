@@ -1,74 +1,1235 @@
 [
   {
     "id": "fibc-bulk-bags",
+    "aliases": [
+      "fibc",
+      "vacuum"
+    ],
     "code": "FIBC",
+    "kind": "product",
+    "family": "bulk",
+    "homepage": true,
+    "reviewStatus": "technical-approval-pending",
     "name": {
-      "zh": "集装袋 / 吨袋",
+      "zh": "集装袋（吨袋）",
       "en": "FIBC Bulk Bags",
-      "ru": "FIBC биг-бэги"
+      "ru": "Биг-бэги (МКР)"
     },
     "summary": {
-      "zh": "用于粉体、颗粒和大宗物流的重型集装袋。",
-      "en": "Heavy-duty bulk bags for powders, granules and high-volume logistics.",
-      "ru": "Прочные биг-бэги для порошков, гранул и крупнотоннажной логистики."
+      "zh": "面向大宗散料储运，围绕载重、吊装与装卸方式匹配袋体结构。",
+      "en": "Bulk packaging planned around the required load, lifting arrangement and filling or discharge method.",
+      "ru": "Упаковка сыпучих грузов с подбором конструкции под нагрузку, подъём, загрузку и выгрузку."
     },
     "image": "assets/img/products/cement-ton-bag.jpg",
-    "industries": ["cement", "chemicals", "grain", "mining", "logistics"],
-    "specs": ["500-2000 kg", "SF 5:1 / 6:1", "4-loop / 2-loop", "liner optional"],
-    "cmsStatus": "ready"
+    "industries": [
+      "cement",
+      "chemicals",
+      "agriculture",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "PP 编织袋体，吊带与内衬按需求评估",
+          "en": "PP woven body; loops and liner to be reviewed",
+          "ru": "Тканый PP; стропы и вкладыш по согласованию"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "吊装运输；进料、卸料口按工况确认",
+          "en": "Lifting transport; openings to be agreed",
+          "ru": "Подъём стропами; проёмы по согласованию"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "物料、目标载重、周转方式与目的地要求",
+          "en": "Contents, target load, reuse and destination requirements",
+          "ru": "Содержимое, нагрузка, повторное использование и требования рынка"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "capacity",
+        "type": "select",
+        "label": {
+          "zh": "需求载重",
+          "en": "Requested load",
+          "ru": "Требуемая нагрузка"
+        },
+        "opts": [
+          {
+            "v": "500",
+            "l": {
+              "zh": "500 kg",
+              "en": "500 kg",
+              "ru": "500 кг"
+            }
+          },
+          {
+            "v": "1000",
+            "l": {
+              "zh": "1000 kg",
+              "en": "1000 kg",
+              "ru": "1000 кг"
+            }
+          },
+          {
+            "v": "1500",
+            "l": {
+              "zh": "1500 kg",
+              "en": "1500 kg",
+              "ru": "1500 кг"
+            }
+          },
+          {
+            "v": "2000",
+            "l": {
+              "zh": "2000 kg",
+              "en": "2000 kg",
+              "ru": "2000 кг"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sling",
+        "type": "select",
+        "label": {
+          "zh": "需求吊带",
+          "en": "Requested lifting loops",
+          "ru": "Требуемые стропы"
+        },
+        "opts": [
+          {
+            "v": "4loop",
+            "l": {
+              "zh": "4 吊带",
+              "en": "4 loops",
+              "ru": "4 стропы"
+            }
+          },
+          {
+            "v": "2loop",
+            "l": {
+              "zh": "2 吊带",
+              "en": "2 loops",
+              "ru": "2 стропы"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "liner",
+        "type": "select",
+        "label": {
+          "zh": "内衬需求",
+          "en": "Liner requirement",
+          "ru": "Требования к вкладышу"
+        },
+        "opts": [
+          {
+            "v": "none",
+            "l": {
+              "zh": "不要求内衬",
+              "en": "No liner requested",
+              "ru": "Без вкладыша"
+            }
+          },
+          {
+            "v": "pe",
+            "l": {
+              "zh": "PE 内衬",
+              "en": "PE liner",
+              "ru": "PE вкладыш"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "discharge",
+        "type": "select",
+        "label": {
+          "zh": "装卸需求",
+          "en": "Filling / discharge request",
+          "ru": "Загрузка / выгрузка"
+        },
+        "opts": [
+          {
+            "v": "none",
+            "l": {
+              "zh": "无卸料口",
+              "en": "No discharge spout",
+              "ru": "Без разгрузочного патрубка"
+            }
+          },
+          {
+            "v": "bot",
+            "l": {
+              "zh": "底部卸料口",
+              "en": "Bottom discharge",
+              "ru": "Выгрузка снизу"
+            }
+          },
+          {
+            "v": "both",
+            "l": {
+              "zh": "顶部进料 + 底部卸料",
+              "en": "Top fill + bottom discharge",
+              "ru": "Загрузка сверху + выгрузка снизу"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "sample"
   },
   {
     "id": "valve-bags",
+    "aliases": [
+      "valve",
+      "laminated"
+    ],
     "code": "VB",
+    "kind": "product",
+    "family": "valve",
+    "homepage": true,
+    "reviewStatus": "technical-approval-pending",
     "name": {
       "zh": "阀口袋",
       "en": "Valve Bags",
       "ru": "Клапанные мешки"
     },
     "summary": {
-      "zh": "适配水泥、矿物和化工粉体的高效灌装包装。",
-      "en": "Efficient filling and reliable discharge for cement, minerals and chemicals.",
-      "ru": "Эффективное наполнение и стабильная выгрузка для цемента, минералов и химии."
+      "zh": "面向粉体灌装，以阀口结构、物料特性和现有灌装设备为选型依据。",
+      "en": "Powder packaging matched to valve design, material characteristics and existing filling equipment.",
+      "ru": "Упаковка порошков с подбором клапана под свойства материала и оборудование наполнения."
     },
     "image": "assets/img/products/cement-valve-bag.jpg",
-    "industries": ["cement", "minerals", "chemicals", "construction materials"],
-    "specs": ["10-50 kg", "70-120 gsm", "patent dosing control", "custom print"],
-    "cmsStatus": "ready"
+    "industries": [
+      "cement",
+      "chemicals",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "阀口袋体；覆膜与内衬按物料评估",
+          "en": "Valve body; lamination and liner subject to contents",
+          "ru": "Клапанный мешок; покрытие и вкладыш под материал"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "阀口灌装；需核对灌装嘴与封口方式",
+          "en": "Valve filling; nozzle and closure compatibility required",
+          "ru": "Наполнение через клапан; согласовать патрубок и закрытие"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "粉体性质、每袋重量、设备接口与防潮要求",
+          "en": "Powder properties, bag weight, interface and moisture needs",
+          "ru": "Свойства порошка, масса, оборудование и защита от влаги"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "size",
+        "type": "select",
+        "label": {
+          "zh": "每袋目标重量",
+          "en": "Target weight per bag",
+          "ru": "Целевая масса мешка"
+        },
+        "opts": [
+          {
+            "v": "s",
+            "l": {
+              "zh": "25 kg",
+              "en": "25 kg",
+              "ru": "25 кг"
+            }
+          },
+          {
+            "v": "m",
+            "l": {
+              "zh": "50 kg",
+              "en": "50 kg",
+              "ru": "50 кг"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "valve",
+        "type": "select",
+        "label": {
+          "zh": "阀口需求",
+          "en": "Valve requirement",
+          "ru": "Требования к клапану"
+        },
+        "opts": [
+          {
+            "v": "std",
+            "l": {
+              "zh": "标准阀口",
+              "en": "Standard valve",
+              "ru": "Стандартный клапан"
+            }
+          },
+          {
+            "v": "heat",
+            "l": {
+              "zh": "热封阀口",
+              "en": "Heat-seal valve",
+              "ru": "Термосварной клапан"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "layer",
+        "type": "select",
+        "label": {
+          "zh": "结构需求",
+          "en": "Construction request",
+          "ru": "Требуемая структура"
+        },
+        "opts": [
+          {
+            "v": "1",
+            "l": {
+              "zh": "PP 编织",
+              "en": "PP woven",
+              "ru": "Тканый PP"
+            }
+          },
+          {
+            "v": "2",
+            "l": {
+              "zh": "PP + PE 内衬",
+              "en": "PP + PE liner",
+              "ru": "PP + PE вкладыш"
+            }
+          },
+          {
+            "v": "3",
+            "l": {
+              "zh": "覆膜 + 内衬",
+              "en": "Lamination + liner",
+              "ru": "Ламинирование + вкладыш"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "sample"
   },
   {
     "id": "pp-woven-bags",
+    "aliases": [
+      "woven"
+    ],
     "code": "PP",
+    "kind": "product",
+    "family": "woven",
+    "homepage": true,
+    "reviewStatus": "technical-approval-pending",
     "name": {
       "zh": "PP 编织袋",
       "en": "PP Woven Bags",
-      "ru": "PP тканые мешки"
+      "ru": "Тканые PP мешки"
     },
     "summary": {
-      "zh": "服务农业、食品、化工和工业场景的通用编织包装。",
-      "en": "Versatile woven sacks for agriculture, food, chemicals and industrial use.",
-      "ru": "Универсальные мешки для сельского хозяйства, пищевой, химической и промышленной сфер."
+      "zh": "粮食、饲料与工业散料的包装方向，尺寸、克重、覆膜和印刷按需求匹配。",
+      "en": "Packaging for grain, feed and industrial materials, with dimensions, fabric weight, lamination and printing to be agreed.",
+      "ru": "Упаковка зерна, кормов и промышленных материалов с согласованием размеров, плотности, покрытия и печати."
     },
     "image": "assets/img/cases/case_04.jpg",
-    "industries": ["agriculture", "food", "fertilizer", "feed", "industrial"],
-    "specs": ["5-50 kg", "60-120 gsm", "moisture resistant", "multi-color print"],
-    "cmsStatus": "ready"
+    "industries": [
+      "agriculture",
+      "chemicals",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "PP 编织袋体，可提出覆膜与印刷需求",
+          "en": "PP woven body; lamination and printing on request",
+          "ru": "Тканый PP; покрытие и печать по запросу"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "开口装袋；封口方式按包装线确认",
+          "en": "Open-mouth filling; closure matched to the packaging line",
+          "ru": "Наполнение через открытый верх; закрытие под линию"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "物料、尺寸、每袋重量与运输环境",
+          "en": "Contents, dimensions, bag weight and transport conditions",
+          "ru": "Материал, размеры, масса и условия перевозки"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "size",
+        "type": "select",
+        "label": {
+          "zh": "需求尺寸",
+          "en": "Requested dimensions",
+          "ru": "Требуемые размеры"
+        },
+        "opts": [
+          {
+            "v": "s",
+            "l": {
+              "zh": "40 × 60 cm",
+              "en": "40 × 60 cm",
+              "ru": "40 × 60 см"
+            }
+          },
+          {
+            "v": "m",
+            "l": {
+              "zh": "50 × 80 cm",
+              "en": "50 × 80 cm",
+              "ru": "50 × 80 см"
+            }
+          },
+          {
+            "v": "l",
+            "l": {
+              "zh": "60 × 100 cm",
+              "en": "60 × 100 cm",
+              "ru": "60 × 100 см"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "gram",
+        "type": "select",
+        "label": {
+          "zh": "需求克重",
+          "en": "Requested fabric weight",
+          "ru": "Требуемая плотность"
+        },
+        "opts": [
+          {
+            "v": "60",
+            "l": {
+              "zh": "60 g/m²",
+              "en": "60 g/m²",
+              "ru": "60 г/м²"
+            }
+          },
+          {
+            "v": "80",
+            "l": {
+              "zh": "80 g/m²",
+              "en": "80 g/m²",
+              "ru": "80 г/м²"
+            }
+          },
+          {
+            "v": "100",
+            "l": {
+              "zh": "100 g/m²",
+              "en": "100 g/m²",
+              "ru": "100 г/м²"
+            }
+          },
+          {
+            "v": "120",
+            "l": {
+              "zh": "120 g/m²",
+              "en": "120 g/m²",
+              "ru": "120 г/м²"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lam",
+        "type": "select",
+        "label": {
+          "zh": "覆膜需求",
+          "en": "Lamination request",
+          "ru": "Требуемое покрытие"
+        },
+        "opts": [
+          {
+            "v": "no",
+            "l": {
+              "zh": "不覆膜",
+              "en": "No lamination",
+              "ru": "Без ламинирования"
+            }
+          },
+          {
+            "v": "bopp",
+            "l": {
+              "zh": "BOPP 覆膜",
+              "en": "BOPP lamination",
+              "ru": "BOPP ламинирование"
+            }
+          },
+          {
+            "v": "pe",
+            "l": {
+              "zh": "PE 覆膜",
+              "en": "PE lamination",
+              "ru": "PE ламинирование"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "customer-example"
+  },
+  {
+    "id": "non-woven-bags",
+    "aliases": [
+      "nonwoven",
+      "kraft"
+    ],
+    "code": "NW",
+    "kind": "product",
+    "family": "specialty",
+    "homepage": false,
+    "reviewStatus": "technical-approval-pending",
+    "name": {
+      "zh": "无纺布袋",
+      "en": "Non-woven Bags",
+      "ru": "Нетканые мешки"
+    },
+    "summary": {
+      "zh": "无纺布包装与防护需求，按用途确认尺寸、材料克重及印刷方案。",
+      "en": "Non-woven packaging and protection requests, reviewed for dimensions, fabric weight and printing.",
+      "ru": "Нетканая упаковка и защита с подбором размеров, плотности и печати под задачу."
+    },
+    "image": "assets/img/img_f6b39cf253.jpg",
+    "industries": [
+      "agriculture",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "无纺布袋体；克重与尺寸按用途评估",
+          "en": "Non-woven body; weight and dimensions reviewed for use",
+          "ru": "Нетканое полотно; плотность и размеры под задачу"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "开口结构与提手按需要确认",
+          "en": "Opening and handle requirements to be agreed",
+          "ru": "Проём и ручки по согласованию"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "用途、尺寸、内容物与印刷文件",
+          "en": "Use, dimensions, contents and artwork",
+          "ru": "Назначение, размеры, содержимое и макет"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "gram",
+        "type": "select",
+        "label": {
+          "zh": "需求克重",
+          "en": "Requested fabric weight",
+          "ru": "Требуемая плотность"
+        },
+        "opts": [
+          {
+            "v": "60",
+            "l": {
+              "zh": "60 g/m²",
+              "en": "60 g/m²",
+              "ru": "60 г/м²"
+            }
+          },
+          {
+            "v": "80",
+            "l": {
+              "zh": "80 g/m²",
+              "en": "80 g/m²",
+              "ru": "80 г/м²"
+            }
+          },
+          {
+            "v": "100",
+            "l": {
+              "zh": "100 g/m²",
+              "en": "100 g/m²",
+              "ru": "100 г/м²"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "size",
+        "type": "select",
+        "label": {
+          "zh": "需求尺寸",
+          "en": "Requested dimensions",
+          "ru": "Требуемые размеры"
+        },
+        "opts": [
+          {
+            "v": "s",
+            "l": {
+              "zh": "20 × 30 cm",
+              "en": "20 × 30 cm",
+              "ru": "20 × 30 см"
+            }
+          },
+          {
+            "v": "m",
+            "l": {
+              "zh": "30 × 40 cm",
+              "en": "30 × 40 cm",
+              "ru": "30 × 40 см"
+            }
+          },
+          {
+            "v": "l",
+            "l": {
+              "zh": "40 × 55 cm",
+              "en": "40 × 55 cm",
+              "ru": "40 × 55 см"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "production-reference"
+  },
+  {
+    "id": "aluminum-foil-bags",
+    "aliases": [
+      "foil"
+    ],
+    "code": "AL",
+    "kind": "product",
+    "family": "specialty",
+    "homepage": false,
+    "reviewStatus": "technical-approval-pending",
+    "name": {
+      "zh": "铝箔袋",
+      "en": "Aluminum Foil Bags",
+      "ru": "Алюминиевые пакеты"
+    },
+    "summary": {
+      "zh": "面向阻隔包装需求，复合层结构、封口方式与检测项目按内容物评估。",
+      "en": "Barrier packaging requests, with laminate structure, closure and testing reviewed for the contents.",
+      "ru": "Барьерная упаковка с согласованием слоёв, закрытия и испытаний под содержимое."
+    },
+    "image": "assets/img/img_d18da29a67.jpg",
+    "industries": [
+      "chemicals",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "含铝箔复合结构；层次与厚度需评估",
+          "en": "Foil laminate; layers and thickness require review",
+          "ru": "Ламинат с фольгой; слои и толщина по согласованию"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "装袋与封口工艺按设备确认",
+          "en": "Filling and sealing matched to equipment",
+          "ru": "Наполнение и запайка под оборудование"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "内容物、阻隔指标、封口与目的地要求",
+          "en": "Contents, barrier targets, closure and destination requirements",
+          "ru": "Содержимое, барьерные показатели, запайка и требования рынка"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "thickness",
+        "type": "select",
+        "label": {
+          "zh": "需求铝箔厚度",
+          "en": "Requested foil thickness",
+          "ru": "Требуемая толщина фольги"
+        },
+        "opts": [
+          {
+            "v": "7",
+            "l": {
+              "zh": "7 μm",
+              "en": "7 μm",
+              "ru": "7 мкм"
+            }
+          },
+          {
+            "v": "9",
+            "l": {
+              "zh": "9 μm",
+              "en": "9 μm",
+              "ru": "9 мкм"
+            }
+          },
+          {
+            "v": "12",
+            "l": {
+              "zh": "12 μm",
+              "en": "12 μm",
+              "ru": "12 мкм"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "seal",
+        "type": "select",
+        "label": {
+          "zh": "封口需求",
+          "en": "Closure requirement",
+          "ru": "Требуемое закрытие"
+        },
+        "opts": [
+          {
+            "v": "heat",
+            "l": {
+              "zh": "热封",
+              "en": "Heat seal",
+              "ru": "Термозапайка"
+            }
+          },
+          {
+            "v": "zipper",
+            "l": {
+              "zh": "拉链",
+              "en": "Zipper",
+              "ru": "Зиппер"
+            }
+          },
+          {
+            "v": "tear",
+            "l": {
+              "zh": "易撕口",
+              "en": "Tear notch",
+              "ru": "Насечка"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "production-reference"
+  },
+  {
+    "id": "custom-printed-bags",
+    "aliases": [
+      "custom"
+    ],
+    "code": "CP",
+    "kind": "product",
+    "family": "custom",
+    "homepage": false,
+    "reviewStatus": "technical-approval-pending",
+    "name": {
+      "zh": "定制印刷袋",
+      "en": "Custom Printed Bags",
+      "ru": "Мешки с индивидуальной печатью"
+    },
+    "summary": {
+      "zh": "围绕袋型、品牌图稿与包装线要求沟通定制方案，打样确认后再安排生产。",
+      "en": "Custom packaging discussed around bag type, artwork and packaging line, with samples agreed before production.",
+      "ru": "Индивидуальная упаковка под тип мешка, макет и линию; образец согласуется до производства."
+    },
+    "image": "assets/img/cases/case_01.jpg",
+    "industries": [
+      "cement",
+      "agriculture",
+      "chemicals",
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "选定袋型后匹配印刷与材料结构",
+          "en": "Printing and materials matched to the chosen bag",
+          "ru": "Печать и материалы под выбранный мешок"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "沿用基础袋型的包装线要求",
+          "en": "Filling requirements follow the base bag design",
+          "ru": "Наполнение по конструкции базового мешка"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "基础袋型、尺寸、品牌图稿与打样要求",
+          "en": "Base bag, dimensions, artwork and sample requirements",
+          "ru": "Базовый мешок, размеры, макет и образец"
+        }
+      }
+    ],
+    "configuration": [
+      {
+        "id": "substrate",
+        "type": "select",
+        "label": {
+          "zh": "基础袋型",
+          "en": "Base bag type",
+          "ru": "Базовый тип мешка"
+        },
+        "opts": [
+          {
+            "v": "wv",
+            "l": {
+              "zh": "PP 编织袋",
+              "en": "PP woven bag",
+              "ru": "Тканый PP мешок"
+            }
+          },
+          {
+            "v": "vb",
+            "l": {
+              "zh": "阀口袋",
+              "en": "Valve bag",
+              "ru": "Клапанный мешок"
+            }
+          },
+          {
+            "v": "al",
+            "l": {
+              "zh": "铝箔袋",
+              "en": "Foil bag",
+              "ru": "Пакет с фольгой"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "print",
+        "type": "select",
+        "label": {
+          "zh": "印刷需求",
+          "en": "Print requirement",
+          "ru": "Требования к печати"
+        },
+        "opts": [
+          {
+            "v": "1c",
+            "l": {
+              "zh": "单色",
+              "en": "One colour",
+              "ru": "Один цвет"
+            }
+          },
+          {
+            "v": "2c",
+            "l": {
+              "zh": "双色",
+              "en": "Two colours",
+              "ru": "Два цвета"
+            }
+          },
+          {
+            "v": "4c",
+            "l": {
+              "zh": "多色 / 图稿确认",
+              "en": "Multicolour / artwork review",
+              "ru": "Многоцветная / согласование макета"
+            }
+          },
+          {
+            "v": "review",
+            "l": {
+              "zh": "其他 / 需要技术建议",
+              "en": "Other / technical advice",
+              "ru": "Другое / консультация"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qty",
+        "type": "qty",
+        "label": {
+          "zh": "需求数量（只）",
+          "en": "Requested quantity (pcs)",
+          "ru": "Требуемое количество (шт.)"
+        },
+        "unit": "pcs",
+        "min": 1
+      }
+    ],
+    "mediaRole": "customer-example"
   },
   {
     "id": "materials-construction",
+    "aliases": [],
     "code": "MAT",
+    "kind": "technical",
+    "family": "technical",
+    "homepage": true,
+    "reviewStatus": "technical-approval-pending",
     "name": {
       "zh": "材料与结构",
       "en": "Materials & Construction",
       "ru": "Материалы и конструкция"
     },
     "summary": {
-      "zh": "PP 基材、内衬和复膜结构，用于强度、防潮与品牌呈现。",
-      "en": "Premium PP fabrics, liners and lamination for strength, barrier and branding.",
-      "ru": "PP ткани, вкладыши и ламинация для прочности, барьера и брендинга."
+      "zh": "材料、覆膜与内衬是袋型的技术维度，需结合内容物及使用条件确认。",
+      "en": "Materials, lamination and liners are technical choices within a bag design, reviewed against contents and use conditions.",
+      "ru": "Материалы, покрытие и вкладыши являются частью конструкции и подбираются под содержимое и условия."
     },
     "image": "assets/img/img_303d639a4a.jpg",
-    "industries": ["packaging materials", "barrier packaging", "custom engineering"],
-    "specs": ["Virgin PP", "UV stabilized", "lamination", "liner optional"],
-    "cmsStatus": "ready"
+    "industries": [
+      "industrial"
+    ],
+    "specs": [
+      {
+        "id": "structure",
+        "label": {
+          "zh": "结构方向",
+          "en": "Construction",
+          "ru": "Конструкция"
+        },
+        "value": {
+          "zh": "PP 编织、覆膜与内衬需求",
+          "en": "PP weave, lamination and liner requests",
+          "ru": "Тканый PP, ламинирование и вкладыши"
+        }
+      },
+      {
+        "id": "filling",
+        "label": {
+          "zh": "装卸方式",
+          "en": "Filling & handling",
+          "ru": "Загрузка и обращение"
+        },
+        "value": {
+          "zh": "与袋型和灌装方式共同确认",
+          "en": "Reviewed with bag type and filling",
+          "ru": "Согласуется с типом мешка и наполнением"
+        }
+      },
+      {
+        "id": "confirm",
+        "label": {
+          "zh": "需确认条件",
+          "en": "Required review",
+          "ru": "Условия согласования"
+        },
+        "value": {
+          "zh": "内容物、运输环境与合规文件需求",
+          "en": "Contents, transport and documentation needs",
+          "ru": "Содержимое, перевозка и необходимые документы"
+        }
+      }
+    ],
+    "configuration": [],
+    "mediaRole": "production-reference"
   }
 ]

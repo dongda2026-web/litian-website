@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import { schemaVersion, seedRecords } from '../cms/content-contract.mjs';
+const products = JSON.parse(await fs.readFile('content/products.json', 'utf8')), industries = JSON.parse(await fs.readFile('content/industries.json', 'utf8'));
+const history = JSON.parse(await fs.readFile('content/company-history.json', 'utf8'));
+const editorial = {insights: JSON.parse(await fs.readFile('content/insights.json', 'utf8')), resources: JSON.parse(await fs.readFile('content/resources.json', 'utf8'))};
+const profile = JSON.parse(await fs.readFile('content/company-profile.json', 'utf8'));
+const seed = { schema: schemaVersion, records: seedRecords(products, industries, history, editorial, profile) };
+const phpJson = JSON.stringify(seed).replaceAll('\\', '\\\\').replaceAll("'", "\\'");
+await fs.mkdir('cms/wordpress/history-candidate', {recursive: true});
+await fs.writeFile('cms/wordpress/history-candidate/seed.php', `<?php\n// Generated from validated content; never edit manually.\nif (!defined('ABSPATH')) { exit; }\nreturn json_decode('${phpJson}', true);\n`);
+process.stdout.write(`CMS schema generated for ${seed.records.length} records; no credentials.\n`);

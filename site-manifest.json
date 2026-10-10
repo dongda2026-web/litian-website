@@ -1,5 +1,5 @@
 {
-  "site_url": "https://china-litian.pages.dev",
+  "site_url": "https://cn-dongda.com/",
   "crawl_date": "2026-06-16 17:27:31",
   "pages": [
     "index.html"
@@ -32,5 +32,9 @@
     "assets/img/cases/case_04.jpg",
     "assets/img/cases/case_10.jpg",
     "assets/img/cases/case_01.jpg"
-  ]
+  ],
+  "source_url": "https://china-litian.pages.dev",
+  "site_name": "DongDa",
+  "release_id": "dongda-2026-10-09.1",
+  "package_version": "1.2.0-rc.1"
 }

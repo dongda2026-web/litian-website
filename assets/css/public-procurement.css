@@ -1,0 +1,17 @@
+.hnav-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hnav-card{min-width:0;text-decoration:none;letter-spacing:0}
+.hnav-card-title,.hnav-card-desc,.hnav-card-cta{min-width:0;overflow-wrap:anywhere;letter-spacing:0}
+.hnav-card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.rfq-flow{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rfq-step,.rfq-step>div,.rfq-summary>div{min-width:0}
+.rfq-step h3,.rfq-step p,.rfq-summary b,.rfq-summary span,[data-public-copy]{overflow-wrap:anywhere;letter-spacing:0}
+.rfq-summary .btn{flex-shrink:0;min-height:44px;white-space:normal;text-align:center}
+@media(max-width:1024px){.rfq-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.hnav-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.hnav-grid,.rfq-flow{grid-template-columns:minmax(0,1fr)}.hnav-card{padding:24px}.rfq-summary{align-items:stretch;flex-direction:column}.rfq-summary .btn{align-self:flex-start;max-width:100%}}
+.route-recovery{padding-top:64px;padding-bottom:80px;min-height:420px}
+.route-recovery h1{font-size:32px;line-height:1.2;letter-spacing:0;margin:0 0 16px;max-width:720px;overflow-wrap:anywhere}
+.route-recovery p{max-width:640px;font-size:16px;line-height:1.7;margin:0 0 28px}
+.route-recovery-actions{display:flex;flex-wrap:wrap;gap:12px}
+.route-recovery-actions .btn{min-height:44px;min-width:0;max-width:100%;white-space:normal;text-align:center;justify-content:center;letter-spacing:0}
+@media(max-width:600px){.route-recovery{padding-top:40px;padding-bottom:56px;min-height:380px}.route-recovery h1{font-size:28px}.route-recovery-actions{display:grid;grid-template-columns:minmax(0,1fr)}}

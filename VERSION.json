@@ -1,14 +1,50 @@
 {
-  "project": "litian-website",
-  "current_version": "1.1.0",
+  "project": "dongda-website",
+  "current_version": "1.2.0-rc.1",
   "version_history": [
-    {"version": "0.1.0", "date": "2026-06-16", "phase": "P0", "description": "项目初始化，品牌色系，信息汇总"},
-    {"version": "1.0.0", "date": "2026-06-20", "phase": "P1-P3", "description": "7 页 SPA，8 语言，AI 客服，Cloudflare Pages 部署"},
-    {"version": "1.1.0", "date": "2026-06-22", "phase": "P4-P5", "description": "安全加固，图片去重，SEO 完善，上线 SOP"}
+    {
+      "version": "0.1.0",
+      "date": "2026-06-16",
+      "phase": "P0",
+      "description": "项目初始化，品牌色系，信息汇总"
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-06-20",
+      "phase": "P1-P3",
+      "description": "7 页 SPA，8 语言，AI 客服，Cloudflare Pages 部署"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-06-22",
+      "phase": "P4-P5",
+      "description": "安全加固，图片去重，SEO 完善，上线 SOP"
+    },
+    {
+      "version": "1.2.0-rc.1",
+      "date": "2026-10-09",
+      "phase": "A39 + DongDa release",
+      "description": "统一DongDa名称，整理A1-A39源码与工程文档；生产发布审核、ICP备案及私有链路未完成。"
+    }
   ],
-  "engines_used": ["claude-code", "codex", "workbuddy"],
-  "phases_completed": ["P0", "P1", "P2", "P3", "P4", "P5"],
-  "files_delivered": [
+  "engines_used": [
+    "claude-code",
+    "codex",
+    "workbuddy"
+  ],
+  "release_id": "dongda-2026-10-09.1",
+  "release_status": "candidate-not-production",
+  "public_website_deployed": false,
+  "production_intake_verified": false,
+  "historical_phases_completed": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "historical_files_delivered": [
     "index.html",
     "_headers",
     "_redirects",

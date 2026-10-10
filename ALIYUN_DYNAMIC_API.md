@@ -1,40 +1,25 @@
-# Alibaba Cloud Dynamic API Handoff
+# DongDa 动态API交接与边界
 
-Date: 2026-10-02
+更新日期：2026-10-09。公众站当前端点未配置；后端源码及局部本地证据不代表生产链路已完成。
 
-This folder now includes a static-first website plus a safe starter for dynamic inquiry capture on Alibaba Cloud.
+## 当前设计
 
-## Files
+- 公众前端保持静态，`content/runtime-config.json`只配置经过验收的公开端点，不包含令牌或私密查询参数。
+- `POST /api/inquiries`由独立Node HTTP服务严格校验并提交私有持久SQLite事务，保存成功后返回对应回执。
+- ERP使用独立、固定组织/站点/路径的服务器身份；事务提交并返回匹配ACK后才能记录ERP受理。不得把普通sales lead接口直接当作同一合同。
+- 通知队列独立于ERP队列：网关接受不是收件箱投递。缺少真实收件/网关时保持待处理，不能伪报成功。
+- 历史Function Compute/Worker模板仅为适配参考；不能直接用无持久化模板替换目前的幂等/outbox协议或把SQLite放在FC临时盘。
 
-- `content/runtime-config.json`: public runtime endpoints for the static frontend.
-- `content/inquiry-schema.json`: lead payload contract shared by the frontend and backend template.
-- `aliyun/inquiry-function/inquiry-handler.mjs`: Node.js HTTP handler template for Function Compute or API Gateway style events.
-- `aliyun/inquiry-function/README.md`: setup, environment variables and test commands.
+## 安全合同
 
-## Recommended Flow
+使用服务端exact-key、枚举/ID、实际请求字节上限、反滥用与限流。管理员身份与公开询盘身份分离；浏览器操作使用HttpOnly会话、Origin及CSRF检查。网站服务凭据仅服务器持有，CORS不提供身份认证或租户隔离。
 
-1. Deploy the website package to OSS + CDN first.
-2. Deploy the inquiry handler as a Function Compute HTTP function.
-3. Configure environment variables on the function, not in frontend code.
-4. Test the function with the sample curl in `aliyun/inquiry-function/README.md`.
-5. Update `content/runtime-config.json` in OSS:
+Idempotency-Key必须在同一意图重试时保持稳定；内容冲突应409，不得生成假回执。客户文本、地址、设计内容与凭据不存入浏览器持久存储或监控日志。私有原件只能按当前员工/组织/归属权限读取，公开回执ID不是下载权限。
 
-   ```json
-   {
-     "endpoints": {
-       "inquiry": "https://your-api.example.com/inquiry",
-       "aiService": "https://your-api.example.com/ai-service"
-     }
-   }
-   ```
+## 接通前验收
 
-6. Purge CDN cache for `/content/runtime-config.json`.
-7. Submit a test inquiry from the website and confirm the backend receives the lead.
+在对应私有任务明确恢复后，验证：提交→事务保存→进程重启读回→丢失ACK重试→ERP精确ACK→权限/冲突/错误/通知状态。真实生产组织、持久盘、备份、身份、收件配置和同版业务验收不可用模拟fixture替代。
 
-## Security Rules
+端点接通是完整受控发布的一部分；不能通过单独改runtime-config或模板注入绕过内容/产物/权限审核。当前Docker、A12附件、真实CMS/ERP目标仍延期；公开上传默认关闭，不能据此说明自动启用。
 
-- Do not put API keys, email passwords, database passwords or bearer tokens in `runtime-config.json`.
-- Keep credentials in Function Compute environment variables.
-- Restrict `ALLOWED_ORIGINS` to the final production domain.
-- Add WAF, rate limiting or captcha before high-traffic public launch.
-- Keep the static mailto fallback until the API endpoint is fully verified.
+页面助手是本地关键词和草稿转入功能。AI模型服务、客户鉴权跟踪、真实通知投递等只有在实际接入并验证后才可宣称可用。

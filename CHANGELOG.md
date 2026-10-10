@@ -1,10 +1,18 @@
 # Changelog
 
-All notable changes to Litian Group Website are documented here.
+All notable changes to DongDa Website are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 Versioning: [Semantic Versioning](https://semver.org/)
 
 ---
+
+## [1.2.0-rc.1] — 2026-10-09
+
+- Consolidate A1–A39 source: product/RFQ/selection/search/resource/company pages, local fonts, content-addressed assets, truthful inquiry feedback, and isolated private service/CMS candidates.
+- Use DongDa for the package, release identity, current documentation and legacy lead adapter branding. Preserve historical company names, media filenames and compatibility aliases.
+- Add project architecture, engineering rules, module boundaries and evidence-scoped acceptance status.
+- This is a release candidate. Public production activation is blocked by content review, ICP/TLS and unverified production intake/ERP/notification requirements. Git synchronization and private OSS staging do not establish a working production system.
+- Keep prior release history below as historical records, not current test results.
 
 ## [1.1.0] — 2026-06-22
 

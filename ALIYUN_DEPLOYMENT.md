@@ -1,76 +1,33 @@
-# Alibaba Cloud Deployment Handoff
+# Alibaba Cloud 静态发布交接
 
-Date: 2026-10-02
+更新日期：2026-10-09。当前A39为私有待发布留档，未激活正式公开网站。以下是待执行流程与验收要求，不是已经部署的证明。
 
-## Current Recommended Path
+## 范围
 
-Deploy the current website as a static-first site:
+发布单位为一次通过审核的完整静态产物。不得将源码目录、CMS、私有服务、数据库、客户图稿或凭据上传为公开文件；私有静态留档也不能代替发布许可。
 
-- Build root: this folder
-- Build command: `npm run preflight:aliyun`
-- Upload web root: `dist/client`
-- Hosting target: Alibaba Cloud OSS static website hosting with Alibaba Cloud CDN in front
+## 发布前条件
 
-This keeps the corporate website fast and SEO-friendly while dynamic modules are added behind API endpoints.
+- 内容事实/案例/媒体与法律文案审核绑定当前来源，12类待审核记录真正完成。
+- 正式域名备案/接入、TLS、CDN及最小权限发布身份就绪。
+- 官网、ERP与既有财务/PWA路由有经确认的迁移和回滚方案，不能覆盖现有业务入口。
+- 在允许的隔离环境通过完整适用质量与浏览器/业务验收；当前私有目标延期不能通过只跑静态测试跳过。
 
-## Static Launch Steps
+## 完整产物交付
 
-1. Run the local gate:
+1. 独立候选中生成产物并记录源码、锁文件、公开文件清单及SHA256。
+2. 通过`preflight:aliyun`的前后发布审查和完整适用质量。`build:sites`会重建dist，不能原地覆盖已冻结产物。
+3. 上传到明确版本空间，复核每个文件及实际权限；未知写入结果先检查同一操作身份，不盲目重试。
+4. 在真实托管层落实301、真实404、HEAD/405与目录边界；不要把所有未知路径都返回首页200。
+5. 配置自定义域/TLS与缓存，检查实际浏览器行为。OSS默认HTML对象可能强制下载，200不等于站点可用。
+6. 完整受控切换并读回版本；回归旧会话资源、语言/路由/手机桌面及接单业务。
 
-   ```bash
-   npm run preflight:aliyun
-   ```
+## 缓存与资源
 
-2. Create or select an OSS bucket for the public website.
-3. Upload everything inside `dist/client` to the bucket root.
-4. Set `index.html` as the default index document.
-5. Add CDN in front of the bucket and bind the final domain.
-6. Configure HTTPS certificate on the CDN domain.
-7. Set cache rules:
-   - `index.html`: no-cache or very short TTL.
-   - `assets/*`, `img/*`, icons and images: long TTL.
-   - JSON content under `content/*`: short TTL during migration, then controlled by the CMS release process.
-8. Purge CDN cache after every production upload.
+只对完整hash且确实存在的JS/CSS、TXT和固定字体对象使用immutable。保留旧hash供旧页面使用；HTML/可变元数据和未版本化图片遵循生成规则，不能用全目录长缓存覆盖。检验真实压缩、Content-Length、MIME、SRI与安全响应头；不对带SRI的脚本做CDN内容改写。
 
-## Dynamic Upgrade Path
+## 回滚与状态报告
 
-Phase 1 is now implemented as a static-first baseline with structured content seeds.
+静态回滚切完整已审核版本，保留发布证据；服务回滚保留当前客户数据、私有原件与权限。分别报告本地构建、私有留档、公众激活、端点业务四个状态。没有同版云端及业务证据时，不写“已上线可接单”。
 
-Phase 2 should move these JSON files into a managed CMS or database:
-
-- `content/products.json`
-- `content/news.json`
-- `content/company.json`
-- `content/site-settings.json`
-- `content/content-index.json`
-- `content/runtime-config.json`
-
-Phase 3 should add backend services:
-
-- `/api/inquiry`: receive RFQ and inquiry forms.
-- `/api/ai-service`: receive AI assistant transcripts and lead intent.
-- `/api/products`: serve product catalog data.
-- `/api/news`: serve news and insights.
-
-`content/runtime-config.json` is the current bridge between static OSS hosting and future APIs. Keep endpoint values empty before the backend is live. After Function Compute or API Gateway is ready, update the JSON in OSS, purge CDN cache for `/content/runtime-config.json`, and confirm forms post to the configured endpoint.
-
-Phase 4 should connect operations:
-
-- Email or CRM delivery for sales leads.
-- Spam protection and rate limiting.
-- Admin authentication and audit logs.
-- OSS image upload and automatic WebP/AVIF derivatives.
-- Sitemap regeneration after content publish.
-- Content index regeneration after product, news or company updates.
-
-## Security Notes
-
-- Do not upload `.env` files.
-- Do not put SMTP passwords, database passwords or AI API keys in frontend JavaScript.
-- Use RAM users with least privilege for deployment.
-- Add server-side validation before sending any lead to email, CRM or AI services.
-- Enable WAF or equivalent rate limiting before exposing public dynamic APIs.
-
-## Rollback
-
-Keep a copy of the previously uploaded `dist/client` package. Static rollback is simply re-uploading the prior package and purging CDN cache.
+本轮仅整理交接说明，不新增云对象、不改变ACL/DNS/路由、不发布或自动重试备案。实际操作前重新验证所有时效性条件。

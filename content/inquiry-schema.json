@@ -1,12 +1,13 @@
 {
-  "schemaVersion": "2026-10-02",
-  "leadTypes": ["inquiry", "quote-calculator", "ai-customer-service"],
+  "schemaVersion": "2026-10-08-custom-v4",
+  "leadTypes": ["inquiry", "quote-calculator", "ai-customer-service", "multi-product-rfq", "sample-request"],
   "required": ["type", "company", "contact", "email", "product"],
   "optional": [
     "leadId",
     "phone",
     "productId",
     "quantity",
+    "quantityUnit",
     "specifications",
     "estimatedPrice",
     "notes",
@@ -16,7 +17,12 @@
     "transcript",
     "source",
     "website",
-    "honeypot"
+    "honeypot",
+    "items",
+    "destination",
+    "deliveryWindow",
+    "sampleRequest",
+    "customization"
   ],
   "limits": {
     "company": 120,
@@ -32,6 +38,14 @@
   },
   "fallback": {
     "salesEmail": "ynakobka@dongdaltd.com",
-    "localStorageKey": "dongda_inquiries"
+    "localStorageKey": "dongda_receipts",
+    "legacyLocalStorageKey": "dongda_inquiries",
+    "receiptsOnly": true
+  },
+  "reception": {
+    "requiredResponseFields": ["ok", "persisted", "leadId"],
+    "idempotencyHeader": "Idempotency-Key",
+    "leadIdPattern": "^DD-[A-Z0-9-]{8,80}$",
+    "successRequiresDurableCommit": true
   }
 }

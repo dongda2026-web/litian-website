@@ -1,0 +1,11 @@
+FROM dongda-pillow-toolchain:p12.3.0-f6200a729f19 AS pillow-toolchain
+# The trusted local preparer verifies this tag's full image ID before building; it is not a registry dependency.
+FROM python@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3
+# Local candidate uses only the already-installed, pinned Pillow closure, never the donor application.
+COPY --from=pillow-toolchain /usr/local/lib/python3.11/site-packages/PIL/ /usr/local/lib/python3.11/site-packages/PIL/
+COPY --from=pillow-toolchain /usr/local/lib/python3.11/site-packages/pillow.libs/ /usr/local/lib/python3.11/site-packages/pillow.libs/
+COPY --from=pillow-toolchain /usr/local/lib/python3.11/site-packages/pillow-12.3.0.dist-info/ /usr/local/lib/python3.11/site-packages/pillow-12.3.0.dist-info/
+COPY image-inspector.py image-broker.py /opt/image-inspector/
+USER 65534:65534
+WORKDIR /scratch
+ENTRYPOINT ["/usr/bin/env", "-i", "HOME=/scratch", "TMPDIR=/scratch", "PATH=/usr/local/bin:/usr/bin:/bin", "python", "-I", "-B", "/opt/image-inspector/image-broker.py"]

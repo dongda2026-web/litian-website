@@ -11,9 +11,9 @@
     "whatsappLink": "https://wa.me/77075590188"
   },
   "seo": {
-    "canonical": "https://china-litian.pages.dev/",
+    "canonical": "https://cn-dongda.com/",
     "title": "DongDa | Industrial Packaging Solutions",
-    "description": "Smart valve bags, FIBCs and woven bags with 500M+ annual capacity and export-ready supply."
+    "description": "Industrial packaging from DongDa: FIBC bulk bags, valve bags and woven packaging, with technical review for your requirements."
   },
   "deployment": {
     "target": "Alibaba Cloud OSS + CDN",

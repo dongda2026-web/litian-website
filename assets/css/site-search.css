@@ -1,0 +1,42 @@
+.site-search-entry{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:1px solid var(--bd);border-radius:6px;color:var(--g);background:#fff}
+.site-search-entry:hover{border-color:#16735b;background:#f3f7f5}
+.site-search-entry:focus-visible{outline:2px solid #16735b;outline-offset:3px}
+#nav-lang-btn,.nav-hamburger{min-height:44px;min-width:44px}
+@media(min-width:1441px){.nav-inner{gap:12px}.nav-logo-text span{display:none}.nav-logo-text strong{font-size:17px;letter-spacing:0}.nav-links button{font-size:14px;letter-spacing:0;padding:0 10px;height:52px}.nav-quote{font-size:13px;letter-spacing:0;padding:10px 16px}}
+.nav-overlay-links>.site-search-mobile{display:flex;align-items:center;min-height:52px;font-size:16px;color:var(--g);text-decoration:none;border-bottom:1px solid var(--bd)}
+#page-search{background:#fff;color:#202526;letter-spacing:0}
+.site-search-heading{padding-top:48px;padding-bottom:24px}
+.site-search-heading h1{font-size:36px;line-height:1.25;font-weight:650;margin:12px 0 0;letter-spacing:0;overflow-wrap:anywhere}
+.site-search-library{padding-bottom:64px}
+.site-search-filters{display:grid;grid-template-columns:minmax(200px,1fr) minmax(160px,230px) minmax(120px,160px) 44px 44px;align-items:end;gap:12px;padding:20px 0 24px;border-bottom:1px solid #dce2e2}
+.site-search-filters label{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:550;color:#44514d;min-width:0}
+.site-search-filters select,.site-search-field{width:100%;height:44px;border:1px solid #bfc9c5;border-radius:4px;background:white;color:#202526}
+.site-search-filters select{padding:0 10px;font:inherit;min-width:0}
+.site-search-field{display:flex;align-items:center;gap:10px;padding:0 12px}
+.site-search-field svg{flex-shrink:0;color:#596b62}
+.site-search-field input{width:100%;min-width:0;min-height:42px;border:0;outline:none;font:inherit;background:transparent;color:inherit}
+.site-search-field:focus-within{outline:2px solid #16735b;outline-offset:2px}
+.site-search-tool{width:44px;height:44px;display:grid;place-items:center;border:1px solid #bfc9c5;border-radius:4px;background:#fff;color:#314f40;cursor:pointer}
+.site-search-reset:disabled{opacity:.4;cursor:default}
+#site-search-count{font-size:13px;line-height:1.5;margin:20px 0;color:#5a655f}
+.site-search-row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid #dce2e2;max-width:1080px}
+.site-search-media{display:grid;place-items:center;align-self:start;background:#f3f5f4;aspect-ratio:14/11;width:112px;overflow:hidden}
+.site-search-media img{display:block;width:112px;height:88px;object-fit:contain}
+.site-search-media>svg{width:28px;height:28px;color:#68766e}
+.site-search-row-copy{min-width:0}
+.site-search-meta{font-size:12px;line-height:1.7;color:#69766e}
+.site-search-row h2{font-size:21px;line-height:1.45;font-weight:600;letter-spacing:0;margin:6px 0 8px;overflow-wrap:anywhere}
+.site-search-row h2 a{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:44px;text-decoration:none;color:#243a2d}
+.site-search-row h2 a:hover{color:#14694f}
+.site-search-row h2 svg{flex-shrink:0}
+.site-search-row p{font-size:15px;line-height:1.8;color:#5a655f;margin:0;max-width:850px;overflow-wrap:anywhere}
+#site-search-empty{padding:36px 0;max-width:760px}
+#site-search-empty h2{font-size:24px;line-height:1.4;letter-spacing:0}
+#site-search-empty p{font-size:16px;color:#5a655f;margin-top:12px}
+.site-search-alternatives{display:flex;gap:24px;flex-wrap:wrap;margin-top:24px}
+.site-search-alternatives a{display:flex;align-items:center;gap:12px;min-height:44px;color:#14694f;font-size:15px;text-decoration:none}
+.site-search-alternatives svg{flex-shrink:0}
+#page-search a:focus-visible,.site-search-tool:focus-visible,.site-search-filters select:focus-visible{outline:2px solid #16735b;outline-offset:3px}
+@media(min-width:1081px) and (max-width:1440px){.nav-links,.nav-right{display:none!important}.nav-hamburger{display:flex!important}.nav-lang-switch{display:flex}}
+@media(max-width:760px){.site-search-heading{padding-top:32px;padding-bottom:16px}.site-search-heading h1{font-size:30px}.site-search-filters{grid-template-columns:minmax(0,1fr) 44px 44px;gap:14px 10px}.site-search-filters label:first-child,.site-search-filters label:nth-child(2){grid-column:1/-1}.site-search-row{grid-template-columns:72px minmax(0,1fr);gap:16px;padding:20px 0}.site-search-media{width:72px;height:72px;aspect-ratio:1}.site-search-media img{width:72px;height:72px}.site-search-row h2{font-size:18px}.site-search-row p{font-size:14px}.site-search-row h2 a{gap:12px}.site-search-library{padding-bottom:48px}}
+@media(max-width:360px){.site-search-row{grid-template-columns:minmax(0,1fr);gap:10px}.site-search-media{display:none}.site-search-heading h1{font-size:28px}}

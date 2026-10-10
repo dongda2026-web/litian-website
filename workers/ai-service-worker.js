@@ -33,7 +33,7 @@ function assistantReply(payload) {
     ].join("\n\n");
   }
   return [
-    "Thank you for contacting Litian Group.",
+    "Thank you for contacting DongDa.",
     "Please share product type, quantity, specifications, destination and contact details so our sales team can prepare a quotation.",
     "We will respond as soon as possible."
   ].join("\n\n");
@@ -41,7 +41,7 @@ function assistantReply(payload) {
 
 function emailText(payload, autoReply) {
   return [
-    "New Litian AI customer-service lead",
+    "New DongDa AI customer-service lead",
     "",
     `Type: ${payload.type || "ai-customer-service"}`,
     `Language: ${payload.language || ""}`,
@@ -103,7 +103,7 @@ function normalizePayload(payload, request) {
   return {
     ...payload,
     type: payload.type || "website-lead",
-    source: "litian-website",
+    source: "dongda-website",
     received_at: new Date().toISOString(),
     request_url: request.url
   };
@@ -130,9 +130,9 @@ export default {
     }
 
     const salesEmail = env.SALES_TO_EMAIL || DEFAULT_SALES_EMAIL;
-    const fromEmail = env.SALES_FROM_EMAIL || `Litian Website <no-reply@${new URL(request.url).hostname}>`;
+    const fromEmail = env.SALES_FROM_EMAIL || `DongDa Website <no-reply@${new URL(request.url).hostname}>`;
     const reply = assistantReply(payload);
-    const subject = `Litian AI RFQ - ${payload.product || payload.company || "Website Lead"}`;
+    const subject = `DongDa AI RFQ - ${payload.product || payload.company || "Website Lead"}`;
 
     const salesResult = await sendResendEmail(env, {
       from: fromEmail,
@@ -146,7 +146,7 @@ export default {
       customerResult = await sendResendEmail(env, {
         from: fromEmail,
         to: [payload.email],
-        subject: "Litian Group received your inquiry",
+        subject: "DongDa received your inquiry",
         text: reply
       });
     }

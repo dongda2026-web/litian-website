@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.10.08-faq-v1",
+  "reviewStatus": "editorial-review-pending",
+  "technicalReviewer": null,
+  "entries": [
+    {"id":"request-information","topic":"procurement","source":{"type":"catalog-copy","key":"faqRequest"},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags","non-woven-bags","aluminum-foil-bags","custom-printed-bags"]},
+    {"id":"selection-not-approval","topic":"procurement","source":{"type":"catalog-copy","key":"faqSpec"},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags","non-woven-bags","aluminum-foil-bags","custom-printed-bags"]},
+    {"id":"multiple-configurations","topic":"procurement","source":{"type":"insight-faq","insightId":"prepare-packaging-rfq","index":0},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags","custom-printed-bags"]},
+    {"id":"rfq-price-confirmation","topic":"procurement","source":{"type":"insight-faq","insightId":"prepare-packaging-rfq","index":1},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags","custom-printed-bags"]},
+    {"id":"sample-approval","topic":"samples","source":{"type":"insight-faq","insightId":"plan-sample-request","index":0},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags"]},
+    {"id":"sample-address","topic":"samples","source":{"type":"insight-faq","insightId":"plan-sample-request","index":1},"productIds":["fibc-bulk-bags","valve-bags","pp-woven-bags"]},
+    {"id":"dimensions-confirmation","topic":"customization","source":{"type":"insight-faq","insightId":"describe-custom-packaging","index":0},"productIds":["custom-printed-bags","valve-bags","fibc-bulk-bags"]},
+    {"id":"artwork-requirements","topic":"customization","source":{"type":"insight-faq","insightId":"describe-custom-packaging","index":1},"productIds":["custom-printed-bags","valve-bags","fibc-bulk-bags"]}
+  ]
+}

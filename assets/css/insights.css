@@ -1,0 +1,58 @@
+#page-news,#page-insight-detail{background:#fff;color:#202526;letter-spacing:0}
+.insight-heading{padding-top:66px;padding-bottom:36px}
+.insight-heading h1{font-size:40px;line-height:1.2;font-weight:650;max-width:940px;margin:16px 0;overflow-wrap:anywhere;letter-spacing:0}
+.insight-heading>p{font-size:18px;line-height:1.65;max-width:760px;color:#596264;margin:0}
+.insight-library{padding-bottom:68px}
+.insight-filters{display:grid;grid-template-columns:minmax(200px,1fr) minmax(160px,240px) minmax(120px,170px) 44px;gap:16px;align-items:end;padding:24px 0;border-top:1px solid #dce2e2;border-bottom:1px solid #dce2e2}
+.insight-filters label{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:13px;color:#424d4d;font-weight:550}
+.insight-filters select,.insight-search-wrap{width:100%;height:44px;border:1px solid #bbc7c7;border-radius:4px;background:#fff;color:#202526}
+.insight-filters select{padding:0 10px;font:inherit;min-width:0}
+.insight-search-wrap{display:flex;align-items:center;gap:10px;padding:0 12px}
+.insight-search-wrap svg{flex-shrink:0;color:#626e6e}
+.insight-search-wrap input{width:100%;min-width:0;border:0;background:transparent;font:inherit;color:inherit;outline:none;height:100%}
+.insight-search-wrap:focus-within{outline:2px solid #16735b;outline-offset:2px}
+.insight-reset{width:44px;height:44px;display:grid;place-items:center;border:1px solid #bbc7c7;border-radius:4px;background:#fff;cursor:pointer;color:#263c37}
+.insight-reset:disabled{opacity:.4;cursor:default}
+#insight-count{margin:20px 0;font-size:13px;color:#596264}
+.insight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.insight-card{min-width:0;border:1px solid #dce2e2;border-radius:4px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.insight-card figure,.insight-toc figure{margin:0}
+.insight-card figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#f4f6f5;padding:18px}
+.insight-card figcaption,.insight-toc figcaption{padding:8px 12px;font-size:11px;line-height:1.4;color:#64706d;background:#f4f6f5}
+.insight-card-copy{padding:24px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.insight-meta{font-size:12px;line-height:1.6;color:#596264}
+.insight-card h2{font-size:22px;line-height:1.4;margin:12px 0;font-weight:600;letter-spacing:0;overflow-wrap:anywhere}
+.insight-card h2 a{display:block;color:#202526;text-decoration:none;min-height:44px}
+.insight-card h2 a:hover{color:#14634f}
+.insight-card p{font-size:15px;line-height:1.7;color:#596264;margin:0 0 24px}
+.insight-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:#14634f;font-size:14px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.insight-link svg{flex-shrink:0}
+.insight-card-copy>.insight-link{margin-top:auto}
+.insight-link:hover{text-decoration:underline}
+.insight-notice{font-size:13px;line-height:1.8;color:#616a68;padding-top:24px;border-top:1px solid #dce2e2;margin-top:36px}
+.insight-article-heading .ey{margin-top:28px}
+.insight-article-heading>.insight-meta{margin-top:20px}
+.insight-article{display:grid;grid-template-columns:minmax(200px,280px) minmax(0,740px);gap:64px;align-items:start;border-top:1px solid #dce2e2;padding-top:36px;padding-bottom:40px}
+.insight-toc{min-width:0}
+.insight-toc h2{font-size:14px;margin:0 0 12px;letter-spacing:0}
+.insight-toc ol{padding-left:18px;margin:0 0 32px}
+.insight-toc li{padding:5px 0;font-size:14px;line-height:1.6;color:#596264}
+.insight-toc a{color:#334941;text-decoration:none;display:inline-block;min-height:34px;overflow-wrap:anywhere}
+.insight-toc a:hover{text-decoration:underline}
+.insight-toc img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#f4f6f5;padding:18px}
+.insight-body{min-width:0}
+.insight-body section{margin-bottom:36px;scroll-margin-top:112px}
+.insight-body h2,.insight-related h2{font-size:24px;line-height:1.4;margin:0 0 16px;letter-spacing:0;overflow-wrap:anywhere}
+.insight-body p{font-size:17px;line-height:1.9;color:#45514e;margin:0;overflow-wrap:anywhere}
+.insight-body .insight-notice{font-size:13px;line-height:1.8;margin-top:28px}
+.insight-body details{border-bottom:1px solid #dce2e2;padding:16px 0}
+.insight-body summary{font-size:16px;line-height:1.65;cursor:pointer;font-weight:550;min-height:32px}
+.insight-body details p{font-size:15px;line-height:1.8;margin-top:12px}
+.insight-related{padding-top:32px;padding-bottom:64px;border-top:1px solid #dce2e2}
+.insight-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.insight-products a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:12px 0;border-bottom:1px solid #dce2e2;color:#263e36;text-decoration:none;font-size:15px;overflow-wrap:anywhere}
+.insight-products a svg{flex-shrink:0}
+.insight-next{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:28px}
+#page-news a:focus-visible,#page-insight-detail a:focus-visible,.insight-reset:focus-visible,.insight-filters select:focus-visible{outline:2px solid #16735b;outline-offset:3px}
+@media(max-width:1000px){.insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.insight-article{gap:32px;grid-template-columns:minmax(180px,230px) minmax(0,1fr)}.insight-filters{grid-template-columns:minmax(180px,1fr) minmax(150px,210px) minmax(110px,140px) 44px}}
+@media(max-width:680px){.insight-heading{padding-top:40px;padding-bottom:28px}.insight-heading h1{font-size:30px}.insight-heading>p{font-size:16px}.insight-filters{grid-template-columns:minmax(0,1fr) 44px;gap:14px}.insight-filters label:first-child{grid-column:1/-1}.insight-filters label:nth-child(2){grid-column:1/-1}.insight-grid{grid-template-columns:minmax(0,1fr);gap:20px}.insight-card h2{font-size:21px}.insight-card-copy{padding:20px}.insight-article{grid-template-columns:minmax(0,1fr);gap:24px}.insight-toc{display:grid;grid-template-columns:minmax(0,1fr)}.insight-toc figure{display:none}.insight-toc ol{margin-bottom:0}.insight-body h2,.insight-related h2{font-size:22px}.insight-body p{font-size:16px}.insight-products{grid-template-columns:minmax(0,1fr)}.insight-library{padding-bottom:48px}}

@@ -1,0 +1,25 @@
+{
+  "name": "@panzoom/panzoom",
+  "version": "4.6.2",
+  "license": "MIT",
+  "registry": "https://registry.npmjs.org/@panzoom%2fpanzoom/4.6.2",
+  "repository": "git+https://github.com/timmywil/panzoom.git",
+  "tarball": "https://registry.npmjs.org/@panzoom/panzoom/-/panzoom-4.6.2.tgz",
+  "integrity": "sha512-Zn3B5/hwa6eYIPRSKX0xf2clv8nviTX8AnAU5kU/EugiTDhG41ya2wlBqYrZJYCWQROr/5XkWObZhIkepi89qw==",
+  "tarballSha256": "5a42f4228d6c92cfc65b098293008c03501a7566e6a9c8bcf6100b19d2720c61",
+  "gitHead": "cb243f464ba87de754febdde1987ae851087ec30",
+  "files": [
+    {
+      "path": "assets/js/panzoom.js",
+      "size": 10125,
+      "sha256": "3ce354ef7b493efb62a4d4acaaf86fa2d6027eb629857a4e144041de1a112c1e"
+    },
+    {
+      "path": "assets/js/PANZOOM-LICENSE.txt",
+      "size": 1059,
+      "sha256": "db74524b3ab3853bcfc7300dade1f5e0176e59ed3c0cff43848a2c300091a22c"
+    }
+  ],
+  "scriptsExecuted": false,
+  "distributionModified": false
+}

@@ -1,5 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import '../assets/js/catalog-core.js';
+import '../assets/js/catalog-copy.js';
+import '../assets/js/product-page-core.js';
+import '../assets/js/industry-core.js';
+import '../assets/js/insight-core.js';
+import '../assets/js/faq-core.js';
 
 const root = process.cwd();
 const contentDir = join(root, "content");
@@ -21,36 +27,47 @@ function localizedText(value, fallback = "") {
 const settings = await readJson("site-settings.json");
 const products = await readJson("products.json");
 const company = await readJson("company.json");
-const news = await readJson("news.json");
+const insights = globalThis.DongDaInsights.create(await readJson('insights.json'),globalThis.DongDaCatalog.create(products));
+const industries = globalThis.DongDaIndustry.create(await readJson('industries.json'),globalThis.DongDaCatalog.create(products));
+const faqs=globalThis.DongDaFAQ.create(await readJson('faqs.json'),globalThis.DongDaCatalog.create(products),insights);
 
 const records = [];
+for (const entry of industries.entries) {
+  records.push({type:'industry',id:'industry:'+entry.id,slug:globalThis.DongDaIndustry.path(entry,'en'),languagePaths:Object.fromEntries(globalThis.DongDaIndustry.languages.map(language=>[language,globalThis.DongDaIndustry.path(entry,language)])),title:entry.name,summary:entry.summary,keywords:entry.productIds,indexable:false});
+}
 
 for (const product of products) {
   records.push({
     type: "product",
     id: `product:${product.id}`,
-    slug: `products#${product.id}`,
+    slug: product.kind === 'technical' ? `/#products` : globalThis.DongDaProductPage.path(product, 'en'),
+    languagePaths: product.kind === 'technical' ? {} : Object.fromEntries(globalThis.DongDaProductPage.languages.map(language => [language, globalThis.DongDaProductPage.path(product, language)])),
     title: product.name,
     summary: product.summary,
     image: product.image,
     keywords: compact([
       product.code,
       ...(product.industries || []),
-      ...(product.specs || [])
+      ...product.specs.flatMap(spec => Object.values(spec.value))
     ])
   });
 }
 
-for (const item of news.filter(entry => entry.status === "published")) {
+for (const item of insights.entries) {
   records.push({
-    type: "news",
-    id: `news:${item.id}`,
-    slug: `news#${item.id}`,
-    title: { en: item.title },
-    summary: { en: item.summary },
-    keywords: compact([item.category, item.date])
+    type: "insight",
+    id: `insight:${item.id}`,
+    slug: globalThis.DongDaInsights.path(item,'en'),
+    languagePaths: Object.fromEntries(globalThis.DongDaInsights.languages.map(language=>[language,globalThis.DongDaInsights.path(item,language)])),
+    title: item.title,
+    summary: item.summary,
+    keywords: compact([item.topic,...item.productIds]),
+    indexable: false,
+    reviewStatus: item.reviewStatus
   });
 }
+
+for(const entry of faqs.entries)records.push({type:'faq',id:'faq:'+entry.id,slug:globalThis.DongDaFAQ.path('en',entry.id),languagePaths:Object.fromEntries(globalThis.DongDaFAQ.languages.map(locale=>[locale,globalThis.DongDaFAQ.path(locale,entry.id)])),title:entry.question,summary:entry.answer,keywords:entry.productIds,indexable:false,reviewStatus:entry.reviewStatus});
 
 for (const base of company.bases) {
   records.push({
@@ -85,7 +102,10 @@ const index = {
   contacts: settings.contacts,
   counts: {
     products: products.length,
-    news: news.filter(entry => entry.status === "published").length,
+    industries: industries.entries.length,
+    news: 0,
+    insights: insights.entries.length,
+    faqs: faqs.entries.length,
     companyBases: company.bases.length,
     companyJourney: company.journey.length,
     records: records.length

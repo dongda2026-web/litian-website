@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "2026.10.09-company-profile-v1",
+  "id": "dongda-profile",
+  "reviewStatus": "legacy-pending",
+  "provenance": {
+    "source": "legacy-index-company",
+    "sourceSha256": "b1a470d3e660755f792f46059a44206c716eb19425477a3e4fea454445606bb3"
+  },
+  "copy": {
+    "ab_h1": {
+      "zh": "关于东大",
+      "en": "About DongDa",
+      "ru": "О компании DongDa",
+      "kk": "DongDa туралы",
+      "ky": "DongDa жөнүндө",
+      "tg": "Дар бораи DongDa",
+      "tk": "DongDa barada",
+      "uz": "DongDa haqida"
+    },
+    "ab_sub": {
+      "zh": "东大（成立于1991年）已从传统制造企业完成向全球化供应链核心节点的战略转型。",
+      "en": "Since 1991, DongDa has evolved from a traditional manufacturer into a global industrial packaging supply chain platform, delivering end-to-end solutions across Eurasia.",
+      "ru": "DongDa (осн. 1991) завершила трансформацию от традиционного производителя к глобальному узлу цепочки поставок упаковки.",
+      "kk": "DongDa (1991 жылы құрылды) дәстүрлі өндірушіден жаһандық қаптама тізбегінің хабына айналды.",
+      "ky": "DongDa (1991-жылы негизделди) заманбап өндүрүүчүдөн дүйнөлүк жеткирүү тизмегинин хабына айланды.",
+      "tg": "DongDa (таъсис 1991) аз истеҳсолкунандаи анъанавӣ ба маркази ҷаҳонии занҷири таъминот табдил ёфт.",
+      "tk": "DongDa (1991) adaty öndürijiden dünýä üpjünçilik zynjyrynyň merkezine öwrüldi.",
+      "uz": "DongDa (1991) an'anaviy ishlab chiqaruvchidan global ta'minot zanjiri markaziga aylandi."
+    },
+    "ab_ey": {
+      "zh": "企业概况",
+      "en": "Corporate Profile",
+      "ru": "О компании",
+      "kk": "Компания профилі",
+      "ky": "Компания профили",
+      "tg": "Профили ширкат",
+      "tk": "Kompaniýa profili",
+      "uz": "Kompaniya profili"
+    },
+    "ab_body": {
+      "zh": "东大创立于1991年，温州/上海为全球指挥中心，汇聚3000余名行业精英，统筹核心技术研发与全球资本调配。在新疆阿克苏建有1000亩智能化生产基地，乌兹别克斯坦撒马尔罕设有BOXIN博新本地化工厂，哈萨克斯坦阿斯塔纳设立东大贸易区域服务中心。",
+      "en": "Founded in 1991, DongDa is headquartered in Wenzhou/Shanghai with a workforce of 3,000+. The Group operates Industry 4.0 smart factories in Xinjiang Aksu (China) and Samarkand (Uzbekistan, via subsidiary BOXIN), with a regional service centre in Astana, Kazakhstan (Dongda Trade). Recognised Tier-1 supplier to CUCC, Conch Cement, VICAT and other global cement leaders.",
+      "ru": "Основана в 1991 году. Штаб-квартира в Вэньчжоу/Шанхае (3000+ специалистов). Умные заводы в Аксу и Самарканде (BOXIN). Региональный хаб в Астане (Dongda Trade). Поставщик 1-го эшелона для CUCC, Conch, VICAT.",
+      "kk": "DongDa 1991 жылы құрылды. Штаб-пәтері Вэньчжоу/Шанхайда (3000+ маман). Аксу мен Самарқандта зауыттар (BOXIN). Астанадағы аймақтық хаб (Dongda Trade). CUCC, Conch, VICAT Tier 1 жеткізушісі.",
+      "ky": "DongDa 1991-жылы негизделди. Штаб-пәтери Вэньчжоу/Шанхайда. Аксу жана Самаркандда заводдор. CUCC, Conch, VICAT Tier 1 жеткирүүчүсү.",
+      "tg": "DongDa соли 1991 таъсис ёфт. Дафтари марказӣ Вэньчжоу/Шанхай. Заводҳо дар Аксу ва Самарқанд. Таъминкунандаи Tier 1 барои CUCC, Conch, VICAT.",
+      "tk": "DongDa 1991-nji ýylda esaslandyryldy. Merkezi Wenzhou/Şanhaý. Aksu we Samarkantta zawodlar. CUCC, Conch, VICAT Tier 1 üpjünçisi.",
+      "uz": "DongDa 1991-yilda tashkil etilgan. Shtab-kvartirasi Wenzhou/Shanxayda. Aksu va Samarqandda zavodlar. CUCC, Conch, VICAT Tier 1 ta'minotchisi."
+    },
+    "ab_cap_e": {
+      "zh": "核心能力",
+      "en": "Core Competencies",
+      "ru": "Ключевые компетенции",
+      "kk": "Негізгі құзыреттер",
+      "ky": "Негизги компетенциялар",
+      "tg": "Салоҳиятҳои асосӣ",
+      "tk": "Esasy ukyplar",
+      "uz": "Asosiy kompetensiyalar"
+    },
+    "company_atlas_ey": {
+      "zh": "企业信息",
+      "en": "Company Information",
+      "ru": "Информация о компании",
+      "kk": "Company Information",
+      "ky": "Company Information",
+      "tg": "Company Information",
+      "tk": "Company Information",
+      "uz": "Company Information"
+    },
+    "company_atlas_h": {
+      "zh": "围绕包装、材料与区域服务构建的制造集团",
+      "en": "A manufacturing group built around packaging, materials and regional service",
+      "ru": "Производственная группа вокруг упаковки, материалов и регионального сервиса",
+      "kk": "A manufacturing group built around packaging, materials and regional service",
+      "ky": "A manufacturing group built around packaging, materials and regional service",
+      "tg": "A manufacturing group built around packaging, materials and regional service",
+      "tk": "A manufacturing group built around packaging, materials and regional service",
+      "uz": "A manufacturing group built around packaging, materials and regional service"
+    },
+    "company_atlas_p": {
+      "zh": "东大通过中国总部、新疆阿克苏、撒马尔罕和阿斯塔纳协同产品工程、智能制造与跨境交付。下方企业概况与发展历程帮助采购方在询价前理解产能、治理和长期可靠性。",
+      "en": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote.",
+      "ru": "DongDa координирует инженерию, умное производство и трансграничные поставки через штаб в Китае, Аксу, Самарканд и Астану. Профиль и история ниже помогают оценить мощность, управление и надёжность.",
+      "kk": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote.",
+      "ky": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote.",
+      "tg": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote.",
+      "tk": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote.",
+      "uz": "DongDa coordinates product engineering, smart manufacturing and cross-border delivery from China HQ, Xinjiang Aksu, Samarkand and Astana. The company profile and journey below help buyers understand capacity, governance and long-term reliability before requesting a quote."
+    },
+    "journey_ey": {
+      "zh": "发展历程",
+      "en": "Company Journey",
+      "ru": "История компании",
+      "kk": "Company Journey",
+      "ky": "Company Journey",
+      "tg": "Company Journey",
+      "tk": "Company Journey",
+      "uz": "Company Journey"
+    },
+    "journey_h": {
+      "zh": "从本地制造到欧亚供应链网络的四个阶段",
+      "en": "Four stages from local manufacturing to a Eurasian supply network",
+      "ru": "Четыре этапа от локального производства к евразийской сети",
+      "kk": "Four stages from local manufacturing to a Eurasian supply network",
+      "ky": "Four stages from local manufacturing to a Eurasian supply network",
+      "tg": "Four stages from local manufacturing to a Eurasian supply network",
+      "tk": "Four stages from local manufacturing to a Eurasian supply network",
+      "uz": "Four stages from local manufacturing to a Eurasian supply network"
+    },
+    "journey_1_t": {
+      "zh": "工业基础",
+      "en": "Industrial foundation",
+      "ru": "Промышленная база",
+      "kk": "Industrial foundation",
+      "ky": "Industrial foundation",
+      "tg": "Industrial foundation",
+      "tk": "Industrial foundation",
+      "uz": "Industrial foundation"
+    },
+    "journey_1_p": {
+      "zh": "从拉丝与塑编包装起步，逐步建立国内销售网络。",
+      "en": "Started from wire drawing and woven packaging, then expanded the domestic sales network.",
+      "ru": "Старт с вытяжки нити и тканой упаковки, затем развитие продаж в Китае.",
+      "kk": "Started from wire drawing and woven packaging, then expanded the domestic sales network.",
+      "ky": "Started from wire drawing and woven packaging, then expanded the domestic sales network.",
+      "tg": "Started from wire drawing and woven packaging, then expanded the domestic sales network.",
+      "tk": "Started from wire drawing and woven packaging, then expanded the domestic sales network.",
+      "uz": "Started from wire drawing and woven packaging, then expanded the domestic sales network."
+    },
+    "journey_2_t": {
+      "zh": "规模化与多元化",
+      "en": "Scale and diversification",
+      "ru": "Масштаб и диверсификация",
+      "kk": "Scale and diversification",
+      "ky": "Scale and diversification",
+      "tg": "Scale and diversification",
+      "tk": "Scale and diversification",
+      "uz": "Scale and diversification"
+    },
+    "journey_2_p": {
+      "zh": "建设更大生产基地，形成包装印刷、纺织和新材料能力。",
+      "en": "Built larger production bases, packaging printing, textile and new material capabilities.",
+      "ru": "Крупные базы, печать упаковки, текстиль и новые материалы.",
+      "kk": "Built larger production bases, packaging printing, textile and new material capabilities.",
+      "ky": "Built larger production bases, packaging printing, textile and new material capabilities.",
+      "tg": "Built larger production bases, packaging printing, textile and new material capabilities.",
+      "tk": "Built larger production bases, packaging printing, textile and new material capabilities.",
+      "uz": "Built larger production bases, packaging printing, textile and new material capabilities."
+    },
+    "journey_3_t": {
+      "zh": "智能制造",
+      "en": "Smart manufacturing",
+      "ru": "Умное производство",
+      "kk": "Smart manufacturing",
+      "ky": "Smart manufacturing",
+      "tg": "Smart manufacturing",
+      "tk": "Smart manufacturing",
+      "uz": "Smart manufacturing"
+    },
+    "journey_3_p": {
+      "zh": "推进包装文化、循环经济和智能化生产系统。",
+      "en": "Launched packaging culture, circular economy and intelligent production systems.",
+      "ru": "Культура упаковки, циркулярная экономика и интеллектуальные производственные системы.",
+      "kk": "Launched packaging culture, circular economy and intelligent production systems.",
+      "ky": "Launched packaging culture, circular economy and intelligent production systems.",
+      "tg": "Launched packaging culture, circular economy and intelligent production systems.",
+      "tk": "Launched packaging culture, circular economy and intelligent production systems.",
+      "uz": "Launched packaging culture, circular economy and intelligent production systems."
+    },
+    "journey_4_t": {
+      "zh": "中亚拓展",
+      "en": "Central Asia expansion",
+      "ru": "Расширение в Центральной Азии",
+      "kk": "Central Asia expansion",
+      "ky": "Central Asia expansion",
+      "tg": "Central Asia expansion",
+      "tk": "Central Asia expansion",
+      "uz": "Central Asia expansion"
+    },
+    "journey_4_p": {
+      "zh": "布局乌兹别克斯坦和哈萨克斯坦节点，服务区域水泥与化工客户。",
+      "en": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers.",
+      "ru": "Узбекистан и Казахстан для обслуживания цементных и химических клиентов региона.",
+      "kk": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers.",
+      "ky": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers.",
+      "tg": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers.",
+      "tk": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers.",
+      "uz": "Established Uzbekistan and Kazakhstan nodes to serve regional cement and chemical buyers."
+    },
+    "panorama_label": {
+      "zh": "东大总部园区",
+      "en": "DongDa Headquarters",
+      "ru": "Штаб-квартира DongDa",
+      "kk": "DongDa бас кеңсесі",
+      "ky": "DongDa башкы кеңсеси",
+      "tg": "Сарварзиши DongDa",
+      "tk": "DongDa baş ofisi",
+      "uz": "DongDa bosh ofisi"
+    },
+    "panorama_cap": {
+      "zh": "温州 · 阿克苏 · 撒马尔罕 — 三大制造基地，一体化全球供应链",
+      "en": "Wenzhou · Aksu · Samarkand — Three manufacturing bases, one global supply chain",
+      "ru": "Вэньчжоу · Аксу · Самарканд — Три производственные базы, единая глобальная цепочка поставок",
+      "kk": "Уэньчжоу · Аксу · Самарқанд — Үш өндіріс базасы, бірыңғай жаһандық жеткізу тізбегі",
+      "ky": "Уэньчжоу · Аксу · Самарканд — Үч өндүрүш база, бирдиктүү дүйнөлүк жеткирүү тизмеги",
+      "tg": "Вэньчжоу · Аксу · Самарқанд — Се базаи истеҳсолӣ, як занҷири таъминоти ҷаҳонӣ",
+      "tk": "Wenzhou · Aksu · Samarkand — Üç önümçilik bazasy, bir dünýä üpjünçilik zynjyry",
+      "uz": "Wenzhou · Aksu · Samarqand — Uch ishlab chiqarish bazasi, bitta global ta'minot zanjiri"
+    },
+    "ab_pl_e": {
+      "zh": "战略支柱",
+      "en": "Strategic Pillars",
+      "ru": "Четыре стратегических столпа",
+      "kk": "Төрт стратегиялық тіректер",
+      "ky": "Төрт стратегиялык тиреек",
+      "tg": "Чор рукни стратегӣ",
+      "tk": "Dört strategik sütün",
+      "uz": "To'rtta strategik ustun"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "cap-1",
+      "marker": "01",
+      "text": {
+        "zh": "国家专利（CN 115990956 B）——精细化自动定量混料，批次质量一致性达国际先进水平",
+        "en": "National patent (CN 115990956 B) — precision auto-dosing, batch quality consistency at international advanced level",
+        "ru": "Нац. патент (CN 115990956 B) — точное автодозирование, однородность партий на международном уровне"
+      }
+    },
+    {
+      "id": "cap-2",
+      "marker": "02",
+      "text": {
+        "zh": "年产能超5亿条，新疆阿克苏与乌兹别克斯坦撒马尔罕双基地布局",
+        "en": "500M+ annual capacity across dual bases: Aksu (China) & Samarkand (Uzbekistan)",
+        "ru": "500 млн+ единиц/год: базы в Аксу (КНР) и Самарканде (Узбекистан)"
+      }
+    },
+    {
+      "id": "cap-3",
+      "marker": "03",
+      "text": {
+        "zh": "1991年创立，30余年高分子复合材料混配工艺深耕经验",
+        "en": "Founded 1991 — 30+ years polymer composite blending expertise",
+        "ru": "Основана в 1991 году — 30+ лет технологий смешивания полимерных композитов"
+      }
+    },
+    {
+      "id": "cap-4",
+      "marker": "04",
+      "text": {
+        "zh": "阀口袋·集装袋（FIBC）·编织袋·无纺布，全品类覆盖化工建材粮食",
+        "en": "Full range: valve bags, FIBCs, woven bags, non-woven fabric for chemicals, construction and grain",
+        "ru": "Полный ассортимент: клапанные мешки, биг-бэги, тканые, нетканые — химия, стройка, зерно"
+      }
+    },
+    {
+      "id": "cap-5",
+      "marker": "05",
+      "text": {
+        "zh": "哈萨克斯坦阿斯塔纳枢纽，深度辐射中亚及一带一路沿线市场",
+        "en": "Astana (Kazakhstan) hub serving Central Asia & Belt and Road markets",
+        "ru": "Центр в Астане (Казахстан) — охват ЦА и рынков «Пояса и пути»"
+      }
+    }
+  ],
+  "pillars": [
+    {
+      "id": "pillar-1",
+      "code": {
+        "zh": "专利",
+        "en": "PATENT",
+        "ru": "ПАТЕНТ"
+      },
+      "tag": {
+        "zh": "技术创新",
+        "en": "Tech Innovation",
+        "ru": "Инновации"
+      },
+      "title": {
+        "zh": "国家专利智能化生产",
+        "en": "National Patent Smart Production",
+        "ru": "Нац. патент умного производства"
+      },
+      "desc": {
+        "zh": "国家专利（CN 115990956 B）——精细化自动定量混料技术，确保每批次物理性能高度统一，提升生产效率，优化原材料利用率，降低生产浪费。",
+        "en": "National patent (CN 115990956 B) — precision auto-dosing technology ensures highly consistent physical performance batch-to-batch, improves production efficiency and optimises raw material utilisation.",
+        "ru": "Нац. патент (CN 115990956 B) — точное автодозирование: однородность партий, эффективность производства, оптимизация сырья."
+      }
+    },
+    {
+      "id": "pillar-2",
+      "code": {
+        "zh": "材料",
+        "en": "MATERIAL",
+        "ru": "МАТЕРИАЛ"
+      },
+      "tag": {
+        "zh": "材料科学",
+        "en": "Material Science",
+        "ru": "Материаловедение"
+      },
+      "title": {
+        "zh": "高分子复合混配工艺",
+        "en": "Polymer Composite Blending",
+        "ru": "Полимерные композиты"
+      },
+      "desc": {
+        "zh": "深耕高分子复合材料混配工艺，科学配方改良显著增强机械强度，针对高寒、高热、强紫外线等极端环境提升耐候性，使产品完美胜任跨国物流严苛需求。",
+        "en": "Deep expertise in polymer composite blending. Scientific formula improvements significantly enhance mechanical strength; R&D targets extreme cold, heat and UV environments for cross-border logistics demands.",
+        "ru": "Экспертиза в смешивании полимерных композитов. Научные улучшения прочности и стойкости к экстремальным условиям для трансграничной логистики."
+      }
+    },
+    {
+      "id": "pillar-3",
+      "code": {
+        "zh": "中亚",
+        "en": "C.ASIA",
+        "ru": "ЦА"
+      },
+      "tag": {
+        "zh": "战略布局",
+        "en": "Strategic Footprint",
+        "ru": "Стратегия"
+      },
+      "title": {
+        "zh": "丝路核心区双基地枢纽",
+        "en": "Silk Road Dual-Base Hub",
+        "ru": "Двойные базы Шёлкового пути"
+      },
+      "desc": {
+        "zh": "坐落于丝绸之路经济带核心区新疆，新疆阿克苏与撒马尔罕双生产基地，阿斯塔纳销售中心辐射中亚及一带一路沿线市场，极速响应定制需求。",
+        "en": "Located in Xinjiang — core of the Silk Road Economic Belt. Dual bases (Aksu + Samarkand), Astana hub radiating across Central Asia and Belt and Road markets with fast-response custom service.",
+        "ru": "В ядре Шёлкового пути — Синьцзян. Двойные базы (Аксу + Самарканд), центр в Астане для ЦА и рынков «Пояса и пути», быстрый ответ на заказы."
+      }
+    },
+    {
+      "id": "pillar-4",
+      "code": {
+        "zh": "共赢",
+        "en": "WIN-WIN",
+        "ru": "ВЗАИМН."
+      },
+      "tag": {
+        "zh": "服务理念",
+        "en": "Service Culture",
+        "ru": "Культура сервиса"
+      },
+      "title": {
+        "zh": "\"创新驱动，品质至上\"",
+        "en": "\"Innovation-driven, Quality First\"",
+        "ru": "«Инновации и качество»"
+      },
+      "desc": {
+        "zh": "秉持\"创新驱动、品质至上\"初心，力争成为全球工业包装领域最值得信赖的合作伙伴。与葛洲坝西里等行业头部企业深度合作，实现互利共赢。",
+        "en": "Committed to Innovation-driven, Quality First, striving to be the most trusted global industrial packaging partner. Deep cooperation with Gezhouba Xili and other leading enterprises for win-win outcomes.",
+        "ru": "Принцип «Инновации и качество»: стать самым надёжным мировым партнёром по упаковке. Глубокое сотрудничество с «Гэчжоуба Сили» — взаимная выгода."
+      }
+    }
+  ],
+  "protected": {
+    "brand": "DongDa",
+    "facts": [
+      {
+        "id": "company_fact_1",
+        "value": "1991"
+      },
+      {
+        "id": "company_fact_2",
+        "value": "3,000+"
+      },
+      {
+        "id": "company_fact_3",
+        "value": "500M+"
+      },
+      {
+        "id": "company_fact_4",
+        "value": "30+"
+      }
+    ],
+    "periods": [
+      "1987-1997",
+      "2001-2017",
+      "2019-2023",
+      "2024-2026"
+    ],
+    "image": "assets/img/factory_panorama.jpg"
+  }
+}

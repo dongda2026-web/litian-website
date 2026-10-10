@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "2026.10.08-publication-review-v1",
+  "claims": [
+    {
+      "id": "company-profile",
+      "contentSha256": "20908d88e2f1f555dd4a2e6138267baca9d1c940ed4fa01a21c5638a573e05ee",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "company-history",
+      "contentSha256": "fc69d82d248f593823a2c40fbe75ac42583d70f44ccddcecdc6a070ee3621bdc",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "global-footprint",
+      "contentSha256": "944859ae31461a7aef71d5e7196a404c6ffbf2b8e61321bf4b5b50f3393825e9",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "quality-certificates",
+      "contentSha256": "3994cbf5838f5b70c93fc5017bc4a51807c3fd57c7dce8c3de042b7e56ca199f",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "sustainability",
+      "contentSha256": "b96d2e3ad6fe950fe019f42e1721dae584ec0905ff6eeb985923896a3fa50567",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "factory",
+      "contentSha256": "0c56e815c19d5ba6025f12ff9585f8a44bddbd5de0e2389c065b945d03240d67",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "customer-display",
+      "contentSha256": "6ab07a7c406ea3e16e16f44724fe3a288af5b6734b67e5c90c9e523b4b1c4fb6",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "service-channels",
+      "contentSha256": "1ba0d2eef8d5f18795a01f46446f6818d6cb2e1d66cc6c22ded931f78e870bbd",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "legal-policy",
+      "contentSha256": "8e2a163641f8e118d91e61e73adb9cbce5367ddc6403a570f08be00a60cd91b4",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "assistant-copy",
+      "contentSha256": "551713f95ae8ed3a8bd7d22a6b008398d95696eb44131738ab77075c29862214",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "public-content",
+      "contentSha256": "c50c7e6dc8efa2c390a92eee9d870c3c909ceac237637fba15d01a153b33a3ed",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    },
+    {
+      "id": "media-rights",
+      "contentSha256": "4d5a27f026ed7eb1e015a7e2bf720297a56b5b6392df47f4641fe79d436aa440",
+      "status": "pending",
+      "owner": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "validUntil": null,
+      "evidence": []
+    }
+  ]
+}

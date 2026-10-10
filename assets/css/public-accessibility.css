@@ -1,0 +1,29 @@
+.skip-main{position:fixed;left:16px;top:12px;z-index:12000;padding:12px 20px;background:#fff;color:#183e53;border:2px solid #183e53;transform:translateY(-160%);font-size:14px;font-weight:700}
+.skip-main:focus{transform:none}
+body{padding-bottom:var(--dd-consent-height,0px)}
+html{scroll-padding-bottom:var(--dd-consent-height,0px)}
+.footer-legal a{scroll-margin-bottom:var(--dd-consent-height,0px)}
+.ai-widget{bottom:calc(20px + var(--dd-consent-height,0px))!important;pointer-events:none}
+.ai-widget :is(.ai-fab,.ai-panel){pointer-events:auto}
+.back-to-top{right:94px;bottom:calc(20px + var(--dd-consent-height,0px));display:grid;place-items:center}
+.back-to-top svg{width:22px;height:22px;pointer-events:none}
+:where(a,button,input,select,textarea,summary,[role="button"]):focus-visible{outline:3px solid #a32725;outline-offset:4px}
+dialog.dd-modal{margin:0;border:0;padding:0;width:100%;height:100dvh;max-width:none;max-height:none;color:inherit}
+dialog.dd-modal:not([open]),[hidden]{display:none!important}
+dialog.dd-modal::backdrop{background:transparent}
+dialog.nav-overlay[open]{overflow-y:auto;overscroll-behavior:contain;transform:none}
+.nav-logo{text-decoration:none;color:inherit}
+.nav-overlay-head .dd-close,.lbx-btn,.product-sheet-close,.ai-close{display:grid;place-items:center;min-width:44px;min-height:44px}
+.dd-close{width:44px;height:44px;border:1px solid #d6dce0;background:#fff;color:#183e53;border-radius:4px;cursor:pointer;flex:none}
+.dd-close svg,.lbx-btn svg,.product-sheet-close svg,.ai-close svg{width:22px;height:22px;pointer-events:none}
+.nav-lang-switch .nl-menu button{min-height:44px}
+.privacy-modal[open]{display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);padding:20px;box-sizing:border-box}
+.dd-policy-body{background:#fff;width:min(560px,100%);padding:28px;max-height:calc(100dvh - 40px);overflow-y:auto;border-radius:8px;box-sizing:border-box;position:relative}
+.dd-policy-body h3{margin:0 52px 20px 0;font-size:20px;color:var(--bk)}
+.dd-policy-body p{font-size:14px;line-height:1.8;color:var(--mu);overflow-wrap:anywhere}
+.dd-policy-body .dd-close{position:absolute;top:16px;right:16px}
+.case-card{display:block;width:100%;border:0;padding:0;text-align:left;font:inherit;color:inherit}
+.page.on :is(h1,[tabindex="-1"]):focus{outline:none}
+#ai-panel[hidden]{display:none!important}
+@media(max-width:480px){.dd-policy-body{padding:24px 20px}.dd-policy-body h3{font-size:18px}.privacy-modal[open]{padding:12px}.dd-policy-body{max-height:calc(100dvh - 24px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}dialog.dd-modal,.ai-panel,.ai-fab,.skip-main{transition:none!important;animation:none!important}}

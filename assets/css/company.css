@@ -1,0 +1,28 @@
+.company-history-entry{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--navy);font-weight:650;font-size:14px;text-decoration:none;letter-spacing:0;border-bottom:1px solid currentColor;max-width:100%;overflow-wrap:anywhere}
+.company-history-entry svg{width:20px;height:20px;flex:none}
+.company-journey .series-head{display:flex;flex-wrap:wrap;gap:24px}
+#page-about .about-2col{grid-template-columns:repeat(2,minmax(0,1fr))}
+#page-about .about-2col>div,#page-about .cap-t{min-width:0;overflow-wrap:anywhere}
+.company-history-hero{position:relative;isolation:isolate;min-height:330px;display:flex;align-items:flex-end;background:#171b1c;color:#fff;padding:36px 0 44px}
+.company-history-hero>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.company-history-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(0,0,0,.53)}
+.company-history-hero .W{width:100%;position:relative}
+.company-crumb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;margin-bottom:64px;letter-spacing:0}
+.company-crumb a{color:#fff;text-decoration:underline;text-underline-offset:4px;min-height:32px;display:inline-flex;align-items:center}
+.company-wordmark{font-size:15px;font-weight:650;margin-bottom:12px;letter-spacing:0}
+.company-history-hero h1{font-size:44px;line-height:1.15;font-weight:650;margin:0;letter-spacing:0;overflow-wrap:anywhere;max-width:900px}
+.company-history-content{padding-top:36px;padding-bottom:80px}
+.company-history-tools{display:flex;align-items:center;flex-wrap:wrap;gap:14px;border-bottom:1px solid #d9dfde;padding-bottom:24px}
+.company-history-tools label{font-size:14px;font-weight:650;letter-spacing:0}
+.company-history-tools select{font:inherit;font-size:14px;min-height:44px;border:1px solid #84928e;border-radius:4px;background:#fff;padding:8px 32px 8px 12px;color:#1b3029;max-width:100%}
+.company-history-tools p{margin-left:auto;color:#50625b;font-size:13px;letter-spacing:0}
+.company-history-note{font-size:13px;line-height:1.65;color:#596861;max-width:800px;margin:20px 0 8px;letter-spacing:0}
+.company-milestone{display:grid;grid-template-columns:140px minmax(0,1fr);gap:40px;padding:34px 0;border-bottom:1px solid #d9dfde;scroll-margin-top:155px}
+.company-year{font-size:34px;font-weight:600;line-height:1.2;color:#235848;text-decoration:none;letter-spacing:0;width:max-content;max-width:100%}
+.company-year:hover{text-decoration:underline;text-underline-offset:6px}
+.company-milestone h2{font-size:22px;line-height:1.4;font-weight:650;color:#202a25;margin:0 0 10px;letter-spacing:0;overflow-wrap:anywhere}
+.company-milestone p{font-size:15px;line-height:1.85;max-width:760px;margin:0;color:#53635b;letter-spacing:0;overflow-wrap:anywhere}
+.company-history-content>.company-history-entry{margin-top:32px}
+@media(max-width:900px){#page-about .about-2col{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:768px){.company-history-hero{min-height:300px;padding-bottom:32px}.company-history-hero h1{font-size:34px}.company-crumb{margin-bottom:48px}.company-milestone{grid-template-columns:90px minmax(0,1fr);gap:24px;padding:28px 0}.company-year{font-size:27px}.company-milestone h2{font-size:19px}.company-history-content{padding-top:24px;padding-bottom:64px}}
+@media(max-width:480px){.company-history-hero h1{font-size:30px}.company-history-tools{gap:10px}.company-history-tools p{width:100%;margin:2px 0 0}.company-history-tools select{flex:1;min-width:0}.company-milestone{grid-template-columns:64px minmax(0,1fr);gap:18px}.company-year{font-size:23px}.company-milestone h2{font-size:18px}.company-milestone p{font-size:14px}.company-history-note{font-size:12px}}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cement",
+    "publication": "review-pending",
+    "name": {"en":"Cement & Building Materials Packaging","zh":"水泥与建材包装","ru":"Упаковка для цемента и стройматериалов"},
+    "summary": {"en":"Compare valve bags and bulk bags for powder filling, handling and delivery. Share your material and filling-line requirements before confirming the bag structure.","zh":"围绕粉体灌装、搬运与交付，对比阀口袋和集装袋。选型前先明确物料与灌装设备要求，再确认袋型结构。","ru":"Сравните клапанные мешки и биг-бэги для фасовки, перемещения и доставки порошков. Перед выбором конструкции укажите материал и требования линии фасовки."},
+    "heroProductId": "valve-bags",
+    "productIds": ["valve-bags", "fibc-bulk-bags", "custom-printed-bags"],
+    "requirements": [
+      {"title":{"en":"Material & filling","zh":"物料与灌装","ru":"Материал и фасовка"},"body":{"en":"Specify the material, target fill weight, filling equipment and valve interface. Equipment compatibility needs separate confirmation.","zh":"注明物料、单袋灌装重量、灌装设备和阀口接口；设备兼容性需单独确认。","ru":"Укажите материал, массу наполнения, оборудование и интерфейс клапана. Совместимость с оборудованием согласуется отдельно."}},
+      {"title":{"en":"Dust & storage","zh":"粉尘与储存","ru":"Пыль и хранение"},"body":{"en":"Describe dust-control needs, moisture exposure and storage conditions. Request appropriate material and closure review.","zh":"说明粉尘控制、潮湿暴露与储存条件，提出基材和封口要求供技术确认。","ru":"Опишите требования к пылеобразованию, влажности и хранению для согласования материала и закрытия мешка."}},
+      {"title":{"en":"Handling & printing","zh":"搬运与印刷","ru":"Перемещение и печать"},"body":{"en":"Share pallet, stacking and transport conditions, plus print artwork and destination labeling requirements.","zh":"提供托盘、堆码与运输条件，以及印刷图稿和目的地标签要求。","ru":"Укажите паллетирование, штабелирование, перевозку, макет печати и требования к маркировке в месте доставки."}}
+    ]
+  },
+  {
+    "id": "chemicals",
+    "publication": "review-pending",
+    "name": {"en":"Chemicals & Minerals Packaging","zh":"化工与矿物包装","ru":"Упаковка для химических и минеральных материалов"},
+    "summary": {"en":"Start with material properties and handling conditions, then compare bulk, valve and woven bag structures. Suitability and any regulated requirements must be assessed for the actual material.","zh":"从物料特性与作业条件出发，对比集装袋、阀口袋和编织袋结构。适配性及相关监管要求应针对实际物料单独评估。","ru":"Начните со свойств материала и условий обращения, затем сравните биг-бэги, клапанные и тканые мешки. Пригодность и нормативные требования оцениваются для конкретного материала."},
+    "heroProductId": "fibc-bulk-bags",
+    "productIds": ["fibc-bulk-bags", "valve-bags", "pp-woven-bags"],
+    "requirements": [
+      {"title":{"en":"Material properties","zh":"物料特性","ru":"Свойства материала"},"body":{"en":"Identify the material, physical form and relevant safety information. Do not assume chemical compatibility from a product-family name.","zh":"说明物料名称、形态和相关安全资料；不能仅凭袋型名称推定化学兼容性。","ru":"Укажите материал, физическую форму и сведения о безопасности. Название серии не подтверждает химическую совместимость."}},
+      {"title":{"en":"Liner & closure","zh":"内衬与封口","ru":"Вкладыш и закрытие"},"body":{"en":"Describe moisture, contamination and leakage concerns so liner, fabric and closure options can be reviewed.","zh":"说明防潮、污染和泄漏方面的需求，供确认内衬、基布与封口方案。","ru":"Опишите требования к влаге, загрязнению и утечкам для согласования вкладыша, ткани и закрытия."}},
+      {"title":{"en":"Safety & destination","zh":"安全与目的地","ru":"Безопасность и место доставки"},"body":{"en":"Identify the applicable transport and site requirements. Dangerous-goods or electrostatic-safety suitability requires separate evidence; it is not implied here.","zh":"注明运输与作业场所要求。危险品或静电安全适用性需独立证据确认，本页面不作此类承诺。","ru":"Укажите требования перевозки и площадки. Пригодность для опасных грузов или электростатическая безопасность требуют отдельного подтверждения."}}
+    ]
+  },
+  {
+    "id": "agriculture",
+    "publication": "review-pending",
+    "name": {"en":"Agriculture & Feed Packaging","zh":"农业与饲料包装","ru":"Упаковка для сельского хозяйства и кормов"},
+    "summary": {"en":"Compare woven bags and bulk bags for your agricultural material, filling method and distribution route. Hygiene and contact requirements depend on the contents and destination.","zh":"按农业物料、灌装方式与配送路径，对比编织袋和集装袋。卫生及接触要求需结合包装内容物和目的地确认。","ru":"Сравните тканые мешки и биг-бэги с учётом материала, способа фасовки и маршрута доставки. Гигиенические требования зависят от содержимого и места назначения."},
+    "heroProductId": "fibc-bulk-bags",
+    "productIds": ["pp-woven-bags", "fibc-bulk-bags", "custom-printed-bags"],
+    "requirements": [
+      {"title":{"en":"Contents & hygiene","zh":"内容物与卫生","ru":"Содержимое и гигиена"},"body":{"en":"Specify the contents and required cleanliness. Food-contact or feed compliance is not established by a sample image or family name.","zh":"注明内容物与洁净要求；样品图片或产品系列名称不代表食品接触或饲料合规证明。","ru":"Укажите содержимое и требования к чистоте. Фото образца или название серии не подтверждают соответствие для пищевых продуктов или кормов."}},
+      {"title":{"en":"Storage & ventilation","zh":"储存与透气","ru":"Хранение и вентиляция"},"body":{"en":"Describe moisture exposure, storage duration and ventilation needs before requesting fabric or liner options.","zh":"说明潮湿暴露、储存时间和透气需求，再提出基布或内衬选项。","ru":"Опишите воздействие влаги, срок хранения и потребность в вентиляции перед выбором ткани или вкладыша."}},
+      {"title":{"en":"Pack size & distribution","zh":"包装规格与配送","ru":"Размер упаковки и доставка"},"body":{"en":"Share fill weight, bag quantity, handling method and print/label information for the destination market.","zh":"提供单袋重量、需求数量、搬运方式及目的市场的印刷和标签信息。","ru":"Укажите массу наполнения, количество мешков, способ перемещения, печать и маркировку для рынка назначения."}}
+    ]
+  },
+  {
+    "id": "industrial",
+    "publication": "review-pending",
+    "name": {"en":"Bulk Handling & Logistics Packaging","zh":"大宗搬运与物流包装","ru":"Упаковка для перевозки сыпучих грузов"},
+    "summary": {"en":"Compare bulk and woven bags around loading, lifting, discharge and storage. Confirm the handling plan and material requirements before choosing a configuration.","zh":"围绕装料、起吊、卸料与储存，对比集装袋和编织袋。选型前先确认搬运方案与物料要求。","ru":"Сравните биг-бэги и тканые мешки по загрузке, подъёму, выгрузке и хранению. Перед выбором согласуйте план перемещения и требования материала."},
+    "heroProductId": "fibc-bulk-bags",
+    "productIds": ["fibc-bulk-bags", "pp-woven-bags", "custom-printed-bags"],
+    "requirements": [
+      {"title":{"en":"Loading & lifting","zh":"装料与起吊","ru":"Загрузка и подъём"},"body":{"en":"Share material density, target fill weight and lifting equipment. Lifting arrangements and test requirements need technical confirmation.","zh":"提供物料密度、目标灌装重量和起吊设备；吊装方式与测试要求需技术确认。","ru":"Укажите плотность материала, массу наполнения и подъёмное оборудование. Схема подъёма и испытания согласуются технически."}},
+      {"title":{"en":"Discharge & storage","zh":"卸料与储存","ru":"Выгрузка и хранение"},"body":{"en":"Describe the discharge method, indoor/outdoor storage and weather exposure when discussing spout and liner options.","zh":"讨论卸料口与内衬时，说明卸料方式、室内外储存及天气暴露条件。","ru":"При выборе выпускного патрубка и вкладыша опишите выгрузку, хранение в помещении или на улице и погодные воздействия."}},
+      {"title":{"en":"Route & handling plan","zh":"路线与搬运方案","ru":"Маршрут и схема перемещения"},"body":{"en":"Specify the transport route, pallet arrangement and handling sequence. Do not infer reusable or stacking performance without approval.","zh":"注明运输路线、托盘方式和搬运步骤；未经确认，不能推定重复使用或堆码性能。","ru":"Укажите маршрут, паллетирование и последовательность перемещения. Повторное использование и штабелирование не подразумеваются без подтверждения."}}
+    ]
+  }
+]

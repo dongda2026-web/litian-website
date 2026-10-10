@@ -1,0 +1,45 @@
+name: dongda-website-cms-local
+services:
+  database:
+    image: mariadb:11.4@sha256:1292844148b311e4ed4300022a996d39083f415a963e970cf47cad1b3b18e3a6
+    environment:
+      MARIADB_DATABASE: dongda_cms
+      MARIADB_USER: dongda_cms
+      MARIADB_PASSWORD: ${CMS_DB_PASSWORD:?Private local configuration required}
+      MARIADB_ROOT_PASSWORD: ${CMS_DB_ROOT_PASSWORD:?Private local configuration required}
+    volumes:
+      - database:/var/lib/mysql
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [cms]
+  wordpress:
+    image: wordpress:7.1.3-php8.3-apache@sha256:8ecd8d8e374167ea22235acf30f80d1165b82f07ffa5bcef90c1cad8f7be251f
+    depends_on:
+      database:
+        condition: service_healthy
+    ports: ["127.0.0.1:4192:80"]
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_NAME: dongda_cms
+      WORDPRESS_DB_USER: dongda_cms
+      WORDPRESS_DB_PASSWORD: ${CMS_DB_PASSWORD}
+      DONGDA_CMS_BRIDGE_KEY: ${CMS_BRIDGE_KEY:?Private local configuration required}
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'local');
+        define('DISALLOW_FILE_EDIT', true);
+        define('DONGDA_CMS_BRIDGE_KEY', getenv('DONGDA_CMS_BRIDGE_KEY'));
+        define('DONGDA_CMS_BRIDGE_URL', 'http://host.docker.internal:4193');
+    volumes:
+      - wordpress:/var/www/html
+      - ./dongda-content:/var/www/html/wp-content/plugins/dongda-content:ro
+    networks: [cms, admin]
+networks:
+  cms:
+    internal: true
+  admin:
+volumes:
+  database:
+  wordpress:

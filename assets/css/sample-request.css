@@ -1,0 +1,24 @@
+#page-sample [hidden]{display:none!important}
+body:has(#page-sample.on) :is(#ai-widget,#backToTop){display:none!important}
+.sample-wrap{padding-top:48px;padding-bottom:72px;letter-spacing:0}
+.sample-heading{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:36px}
+.sample-heading h1{font-size:36px;line-height:1.25;letter-spacing:0}
+.sample-heading p{color:var(--mu);margin-top:12px;max-width:540px}
+.sample-layout{display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:64px;align-items:start}
+.sample-product-image{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#f4f7f8;margin-bottom:20px}
+.sample-aside h2{font-size:23px;line-height:1.4;letter-spacing:0;overflow-wrap:anywhere}
+.sample-aside p{line-height:1.7;color:var(--mu);margin-top:16px}
+.sample-media-note{font-size:13px}
+.sample-fields{border:0;padding:0;margin:0;min-width:0}
+.sample-section{border:0;border-top:1px solid var(--bd);padding:24px 0 8px;margin:0 0 20px;min-width:0}
+.sample-section legend{font-size:19px;font-weight:600;padding-right:16px;letter-spacing:0}
+.sample-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.sample-wide{grid-column:1/-1}
+.sample-ack{display:flex;align-items:start;gap:12px;line-height:1.6;margin-bottom:24px;font-size:14px}
+.sample-ack input{width:20px;height:20px;flex:0 0 20px;margin-top:2px;accent-color:var(--g)}
+.sample-ack:has([aria-invalid=true]){color:#a12f25}
+#sample-submit,#sample-new{min-height:48px;white-space:normal;letter-spacing:0;overflow-wrap:anywhere}
+#sample-reference{font-size:22px;line-height:1.5;letter-spacing:0;overflow-wrap:anywhere}
+#sample-receipt p{color:var(--mu);margin:16px 0 24px;line-height:1.7}
+@media(max-width:980px){.sample-layout{grid-template-columns:minmax(0,1fr);gap:32px}.sample-aside{max-width:620px}.sample-product-image{max-width:320px}.sample-heading h1{font-size:30px}}
+@media(max-width:480px){.sample-wrap{padding-top:28px}.sample-heading{flex-direction:column;gap:16px;margin-bottom:28px}.sample-grid{grid-template-columns:minmax(0,1fr)}.sample-layout{gap:24px}}

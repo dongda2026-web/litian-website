@@ -1,28 +1,17 @@
+# Optional historical host; Alibaba Cloud remains the current delivery target.
+# Keep the existing service handle to avoid creating a second service on sync.
+# Template only: no Render service has been changed or verified by this release.
 services:
   - type: web
     name: litian-website
     runtime: static
-    buildCommand: null
-    staticPublishPath: ./
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    autoDeployTrigger: 'off'
+    buildCommand: npm ci && npm run preflight:aliyun
+    staticPublishPath: ./dist/client
     headers:
-      - path: /*
-        name: Strict-Transport-Security
-        value: max-age=31536000; includeSubDomains; preload
-      - path: /*
-        name: X-Frame-Options
-        value: SAMEORIGIN
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
-      - path: /assets/*
+      - path: /*
         name: Cache-Control
-        value: public, max-age=31536000, immutable
-    envVars:
-      - key: LITIAN_INQUIRY_ENDPOINT
-        value: https://litian-worker.dongdaltd.workers.dev/inquiry
-      - key: LITIAN_AI_ENDPOINT
-        value: https://litian-worker.dongdaltd.workers.dev/ai-service
+        value: no-store

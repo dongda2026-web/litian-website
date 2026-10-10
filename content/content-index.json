@@ -3,7 +3,7 @@
   "site": {
     "name": "DongDa",
     "legalName": "DongDa",
-    "canonical": "https://china-litian.pages.dev/",
+    "canonical": "https://cn-dongda.com/",
     "targetHosting": "Alibaba Cloud OSS + CDN"
   },
   "contacts": {
@@ -12,180 +12,718 @@
     "whatsappLink": "https://wa.me/77075590188"
   },
   "counts": {
-    "products": 4,
-    "news": 3,
+    "products": 7,
+    "industries": 4,
+    "news": 0,
+    "insights": 3,
+    "faqs": 8,
     "companyBases": 4,
     "companyJourney": 4,
-    "records": 15
+    "records": 30
   },
   "records": [
     {
-      "type": "product",
-      "id": "product:fibc-bulk-bags",
-      "slug": "products#fibc-bulk-bags",
+      "type": "industry",
+      "id": "industry:cement",
+      "slug": "/en/industries/cement/",
+      "languagePaths": {
+        "en": "/en/industries/cement/",
+        "zh": "/zh/industries/cement/",
+        "ru": "/ru/industries/cement/"
+      },
       "title": {
-        "zh": "集装袋 / 吨袋",
-        "en": "FIBC Bulk Bags",
-        "ru": "FIBC биг-бэги"
+        "en": "Cement & Building Materials Packaging",
+        "zh": "水泥与建材包装",
+        "ru": "Упаковка для цемента и стройматериалов"
       },
       "summary": {
-        "zh": "用于粉体、颗粒和大宗物流的重型集装袋。",
-        "en": "Heavy-duty bulk bags for powders, granules and high-volume logistics.",
-        "ru": "Прочные биг-бэги для порошков, гранул и крупнотоннажной логистики."
+        "en": "Compare valve bags and bulk bags for powder filling, handling and delivery. Share your material and filling-line requirements before confirming the bag structure.",
+        "zh": "围绕粉体灌装、搬运与交付，对比阀口袋和集装袋。选型前先明确物料与灌装设备要求，再确认袋型结构。",
+        "ru": "Сравните клапанные мешки и биг-бэги для фасовки, перемещения и доставки порошков. Перед выбором конструкции укажите материал и требования линии фасовки."
+      },
+      "keywords": [
+        "valve-bags",
+        "fibc-bulk-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "titleText": "Cement & Building Materials Packaging",
+      "summaryText": "Compare valve bags and bulk bags for powder filling, handling and delivery. Share your material and filling-line requirements before confirming the bag structure."
+    },
+    {
+      "type": "industry",
+      "id": "industry:chemicals",
+      "slug": "/en/industries/chemicals/",
+      "languagePaths": {
+        "en": "/en/industries/chemicals/",
+        "zh": "/zh/industries/chemicals/",
+        "ru": "/ru/industries/chemicals/"
+      },
+      "title": {
+        "en": "Chemicals & Minerals Packaging",
+        "zh": "化工与矿物包装",
+        "ru": "Упаковка для химических и минеральных материалов"
+      },
+      "summary": {
+        "en": "Start with material properties and handling conditions, then compare bulk, valve and woven bag structures. Suitability and any regulated requirements must be assessed for the actual material.",
+        "zh": "从物料特性与作业条件出发，对比集装袋、阀口袋和编织袋结构。适配性及相关监管要求应针对实际物料单独评估。",
+        "ru": "Начните со свойств материала и условий обращения, затем сравните биг-бэги, клапанные и тканые мешки. Пригодность и нормативные требования оцениваются для конкретного материала."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags"
+      ],
+      "indexable": false,
+      "titleText": "Chemicals & Minerals Packaging",
+      "summaryText": "Start with material properties and handling conditions, then compare bulk, valve and woven bag structures. Suitability and any regulated requirements must be assessed for the actual material."
+    },
+    {
+      "type": "industry",
+      "id": "industry:agriculture",
+      "slug": "/en/industries/agriculture/",
+      "languagePaths": {
+        "en": "/en/industries/agriculture/",
+        "zh": "/zh/industries/agriculture/",
+        "ru": "/ru/industries/agriculture/"
+      },
+      "title": {
+        "en": "Agriculture & Feed Packaging",
+        "zh": "农业与饲料包装",
+        "ru": "Упаковка для сельского хозяйства и кормов"
+      },
+      "summary": {
+        "en": "Compare woven bags and bulk bags for your agricultural material, filling method and distribution route. Hygiene and contact requirements depend on the contents and destination.",
+        "zh": "按农业物料、灌装方式与配送路径，对比编织袋和集装袋。卫生及接触要求需结合包装内容物和目的地确认。",
+        "ru": "Сравните тканые мешки и биг-бэги с учётом материала, способа фасовки и маршрута доставки. Гигиенические требования зависят от содержимого и места назначения."
+      },
+      "keywords": [
+        "pp-woven-bags",
+        "fibc-bulk-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "titleText": "Agriculture & Feed Packaging",
+      "summaryText": "Compare woven bags and bulk bags for your agricultural material, filling method and distribution route. Hygiene and contact requirements depend on the contents and destination."
+    },
+    {
+      "type": "industry",
+      "id": "industry:industrial",
+      "slug": "/en/industries/industrial/",
+      "languagePaths": {
+        "en": "/en/industries/industrial/",
+        "zh": "/zh/industries/industrial/",
+        "ru": "/ru/industries/industrial/"
+      },
+      "title": {
+        "en": "Bulk Handling & Logistics Packaging",
+        "zh": "大宗搬运与物流包装",
+        "ru": "Упаковка для перевозки сыпучих грузов"
+      },
+      "summary": {
+        "en": "Compare bulk and woven bags around loading, lifting, discharge and storage. Confirm the handling plan and material requirements before choosing a configuration.",
+        "zh": "围绕装料、起吊、卸料与储存，对比集装袋和编织袋。选型前先确认搬运方案与物料要求。",
+        "ru": "Сравните биг-бэги и тканые мешки по загрузке, подъёму, выгрузке и хранению. Перед выбором согласуйте план перемещения и требования материала."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "pp-woven-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "titleText": "Bulk Handling & Logistics Packaging",
+      "summaryText": "Compare bulk and woven bags around loading, lifting, discharge and storage. Confirm the handling plan and material requirements before choosing a configuration."
+    },
+    {
+      "type": "product",
+      "id": "product:fibc-bulk-bags",
+      "slug": "/en/products/fibc-bulk-bags/",
+      "languagePaths": {
+        "en": "/en/products/fibc-bulk-bags/",
+        "zh": "/zh/products/fibc-bulk-bags/",
+        "ru": "/ru/products/fibc-bulk-bags/"
+      },
+      "title": {
+        "zh": "集装袋（吨袋）",
+        "en": "FIBC Bulk Bags",
+        "ru": "Биг-бэги (МКР)"
+      },
+      "summary": {
+        "zh": "面向大宗散料储运，围绕载重、吊装与装卸方式匹配袋体结构。",
+        "en": "Bulk packaging planned around the required load, lifting arrangement and filling or discharge method.",
+        "ru": "Упаковка сыпучих грузов с подбором конструкции под нагрузку, подъём, загрузку и выгрузку."
       },
       "image": "assets/img/products/cement-ton-bag.jpg",
       "keywords": [
         "FIBC",
         "cement",
         "chemicals",
-        "grain",
-        "mining",
-        "logistics",
-        "500-2000 kg",
-        "SF 5:1 / 6:1",
-        "4-loop / 2-loop",
-        "liner optional"
+        "agriculture",
+        "industrial",
+        "PP 编织袋体，吊带与内衬按需求评估",
+        "PP woven body; loops and liner to be reviewed",
+        "Тканый PP; стропы и вкладыш по согласованию",
+        "吊装运输；进料、卸料口按工况确认",
+        "Lifting transport; openings to be agreed",
+        "Подъём стропами; проёмы по согласованию",
+        "物料、目标载重、周转方式与目的地要求",
+        "Contents, target load, reuse and destination requirements",
+        "Содержимое, нагрузка, повторное использование и требования рынка"
       ],
       "titleText": "FIBC Bulk Bags",
-      "summaryText": "Heavy-duty bulk bags for powders, granules and high-volume logistics."
+      "summaryText": "Bulk packaging planned around the required load, lifting arrangement and filling or discharge method."
     },
     {
       "type": "product",
       "id": "product:valve-bags",
-      "slug": "products#valve-bags",
+      "slug": "/en/products/valve-bags/",
+      "languagePaths": {
+        "en": "/en/products/valve-bags/",
+        "zh": "/zh/products/valve-bags/",
+        "ru": "/ru/products/valve-bags/"
+      },
       "title": {
         "zh": "阀口袋",
         "en": "Valve Bags",
         "ru": "Клапанные мешки"
       },
       "summary": {
-        "zh": "适配水泥、矿物和化工粉体的高效灌装包装。",
-        "en": "Efficient filling and reliable discharge for cement, minerals and chemicals.",
-        "ru": "Эффективное наполнение и стабильная выгрузка для цемента, минералов и химии."
+        "zh": "面向粉体灌装，以阀口结构、物料特性和现有灌装设备为选型依据。",
+        "en": "Powder packaging matched to valve design, material characteristics and existing filling equipment.",
+        "ru": "Упаковка порошков с подбором клапана под свойства материала и оборудование наполнения."
       },
       "image": "assets/img/products/cement-valve-bag.jpg",
       "keywords": [
         "VB",
         "cement",
-        "minerals",
         "chemicals",
-        "construction materials",
-        "10-50 kg",
-        "70-120 gsm",
-        "patent dosing control",
-        "custom print"
+        "industrial",
+        "阀口袋体；覆膜与内衬按物料评估",
+        "Valve body; lamination and liner subject to contents",
+        "Клапанный мешок; покрытие и вкладыш под материал",
+        "阀口灌装；需核对灌装嘴与封口方式",
+        "Valve filling; nozzle and closure compatibility required",
+        "Наполнение через клапан; согласовать патрубок и закрытие",
+        "粉体性质、每袋重量、设备接口与防潮要求",
+        "Powder properties, bag weight, interface and moisture needs",
+        "Свойства порошка, масса, оборудование и защита от влаги"
       ],
       "titleText": "Valve Bags",
-      "summaryText": "Efficient filling and reliable discharge for cement, minerals and chemicals."
+      "summaryText": "Powder packaging matched to valve design, material characteristics and existing filling equipment."
     },
     {
       "type": "product",
       "id": "product:pp-woven-bags",
-      "slug": "products#pp-woven-bags",
+      "slug": "/en/products/pp-woven-bags/",
+      "languagePaths": {
+        "en": "/en/products/pp-woven-bags/",
+        "zh": "/zh/products/pp-woven-bags/",
+        "ru": "/ru/products/pp-woven-bags/"
+      },
       "title": {
         "zh": "PP 编织袋",
         "en": "PP Woven Bags",
-        "ru": "PP тканые мешки"
+        "ru": "Тканые PP мешки"
       },
       "summary": {
-        "zh": "服务农业、食品、化工和工业场景的通用编织包装。",
-        "en": "Versatile woven sacks for agriculture, food, chemicals and industrial use.",
-        "ru": "Универсальные мешки для сельского хозяйства, пищевой, химической и промышленной сфер."
+        "zh": "粮食、饲料与工业散料的包装方向，尺寸、克重、覆膜和印刷按需求匹配。",
+        "en": "Packaging for grain, feed and industrial materials, with dimensions, fabric weight, lamination and printing to be agreed.",
+        "ru": "Упаковка зерна, кормов и промышленных материалов с согласованием размеров, плотности, покрытия и печати."
       },
       "image": "assets/img/cases/case_04.jpg",
       "keywords": [
         "PP",
         "agriculture",
-        "food",
-        "fertilizer",
-        "feed",
+        "chemicals",
         "industrial",
-        "5-50 kg",
-        "60-120 gsm",
-        "moisture resistant",
-        "multi-color print"
+        "PP 编织袋体，可提出覆膜与印刷需求",
+        "PP woven body; lamination and printing on request",
+        "Тканый PP; покрытие и печать по запросу",
+        "开口装袋；封口方式按包装线确认",
+        "Open-mouth filling; closure matched to the packaging line",
+        "Наполнение через открытый верх; закрытие под линию",
+        "物料、尺寸、每袋重量与运输环境",
+        "Contents, dimensions, bag weight and transport conditions",
+        "Материал, размеры, масса и условия перевозки"
       ],
       "titleText": "PP Woven Bags",
-      "summaryText": "Versatile woven sacks for agriculture, food, chemicals and industrial use."
+      "summaryText": "Packaging for grain, feed and industrial materials, with dimensions, fabric weight, lamination and printing to be agreed."
+    },
+    {
+      "type": "product",
+      "id": "product:non-woven-bags",
+      "slug": "/en/products/non-woven-bags/",
+      "languagePaths": {
+        "en": "/en/products/non-woven-bags/",
+        "zh": "/zh/products/non-woven-bags/",
+        "ru": "/ru/products/non-woven-bags/"
+      },
+      "title": {
+        "zh": "无纺布袋",
+        "en": "Non-woven Bags",
+        "ru": "Нетканые мешки"
+      },
+      "summary": {
+        "zh": "无纺布包装与防护需求，按用途确认尺寸、材料克重及印刷方案。",
+        "en": "Non-woven packaging and protection requests, reviewed for dimensions, fabric weight and printing.",
+        "ru": "Нетканая упаковка и защита с подбором размеров, плотности и печати под задачу."
+      },
+      "image": "assets/img/img_f6b39cf253.jpg",
+      "keywords": [
+        "NW",
+        "agriculture",
+        "industrial",
+        "无纺布袋体；克重与尺寸按用途评估",
+        "Non-woven body; weight and dimensions reviewed for use",
+        "Нетканое полотно; плотность и размеры под задачу",
+        "开口结构与提手按需要确认",
+        "Opening and handle requirements to be agreed",
+        "Проём и ручки по согласованию",
+        "用途、尺寸、内容物与印刷文件",
+        "Use, dimensions, contents and artwork",
+        "Назначение, размеры, содержимое и макет"
+      ],
+      "titleText": "Non-woven Bags",
+      "summaryText": "Non-woven packaging and protection requests, reviewed for dimensions, fabric weight and printing."
+    },
+    {
+      "type": "product",
+      "id": "product:aluminum-foil-bags",
+      "slug": "/en/products/aluminum-foil-bags/",
+      "languagePaths": {
+        "en": "/en/products/aluminum-foil-bags/",
+        "zh": "/zh/products/aluminum-foil-bags/",
+        "ru": "/ru/products/aluminum-foil-bags/"
+      },
+      "title": {
+        "zh": "铝箔袋",
+        "en": "Aluminum Foil Bags",
+        "ru": "Алюминиевые пакеты"
+      },
+      "summary": {
+        "zh": "面向阻隔包装需求，复合层结构、封口方式与检测项目按内容物评估。",
+        "en": "Barrier packaging requests, with laminate structure, closure and testing reviewed for the contents.",
+        "ru": "Барьерная упаковка с согласованием слоёв, закрытия и испытаний под содержимое."
+      },
+      "image": "assets/img/img_d18da29a67.jpg",
+      "keywords": [
+        "AL",
+        "chemicals",
+        "industrial",
+        "含铝箔复合结构；层次与厚度需评估",
+        "Foil laminate; layers and thickness require review",
+        "Ламинат с фольгой; слои и толщина по согласованию",
+        "装袋与封口工艺按设备确认",
+        "Filling and sealing matched to equipment",
+        "Наполнение и запайка под оборудование",
+        "内容物、阻隔指标、封口与目的地要求",
+        "Contents, barrier targets, closure and destination requirements",
+        "Содержимое, барьерные показатели, запайка и требования рынка"
+      ],
+      "titleText": "Aluminum Foil Bags",
+      "summaryText": "Barrier packaging requests, with laminate structure, closure and testing reviewed for the contents."
+    },
+    {
+      "type": "product",
+      "id": "product:custom-printed-bags",
+      "slug": "/en/products/custom-printed-bags/",
+      "languagePaths": {
+        "en": "/en/products/custom-printed-bags/",
+        "zh": "/zh/products/custom-printed-bags/",
+        "ru": "/ru/products/custom-printed-bags/"
+      },
+      "title": {
+        "zh": "定制印刷袋",
+        "en": "Custom Printed Bags",
+        "ru": "Мешки с индивидуальной печатью"
+      },
+      "summary": {
+        "zh": "围绕袋型、品牌图稿与包装线要求沟通定制方案，打样确认后再安排生产。",
+        "en": "Custom packaging discussed around bag type, artwork and packaging line, with samples agreed before production.",
+        "ru": "Индивидуальная упаковка под тип мешка, макет и линию; образец согласуется до производства."
+      },
+      "image": "assets/img/cases/case_01.jpg",
+      "keywords": [
+        "CP",
+        "cement",
+        "agriculture",
+        "chemicals",
+        "industrial",
+        "选定袋型后匹配印刷与材料结构",
+        "Printing and materials matched to the chosen bag",
+        "Печать и материалы под выбранный мешок",
+        "沿用基础袋型的包装线要求",
+        "Filling requirements follow the base bag design",
+        "Наполнение по конструкции базового мешка",
+        "基础袋型、尺寸、品牌图稿与打样要求",
+        "Base bag, dimensions, artwork and sample requirements",
+        "Базовый мешок, размеры, макет и образец"
+      ],
+      "titleText": "Custom Printed Bags",
+      "summaryText": "Custom packaging discussed around bag type, artwork and packaging line, with samples agreed before production."
     },
     {
       "type": "product",
       "id": "product:materials-construction",
-      "slug": "products#materials-construction",
+      "slug": "/#products",
+      "languagePaths": {},
       "title": {
         "zh": "材料与结构",
         "en": "Materials & Construction",
         "ru": "Материалы и конструкция"
       },
       "summary": {
-        "zh": "PP 基材、内衬和复膜结构，用于强度、防潮与品牌呈现。",
-        "en": "Premium PP fabrics, liners and lamination for strength, barrier and branding.",
-        "ru": "PP ткани, вкладыши и ламинация для прочности, барьера и брендинга."
+        "zh": "材料、覆膜与内衬是袋型的技术维度，需结合内容物及使用条件确认。",
+        "en": "Materials, lamination and liners are technical choices within a bag design, reviewed against contents and use conditions.",
+        "ru": "Материалы, покрытие и вкладыши являются частью конструкции и подбираются под содержимое и условия."
       },
       "image": "assets/img/img_303d639a4a.jpg",
       "keywords": [
         "MAT",
-        "packaging materials",
-        "barrier packaging",
-        "custom engineering",
-        "Virgin PP",
-        "UV stabilized",
-        "lamination",
-        "liner optional"
+        "industrial",
+        "PP 编织、覆膜与内衬需求",
+        "PP weave, lamination and liner requests",
+        "Тканый PP, ламинирование и вкладыши",
+        "与袋型和灌装方式共同确认",
+        "Reviewed with bag type and filling",
+        "Согласуется с типом мешка и наполнением",
+        "内容物、运输环境与合规文件需求",
+        "Contents, transport and documentation needs",
+        "Содержимое, перевозка и необходимые документы"
       ],
       "titleText": "Materials & Construction",
-      "summaryText": "Premium PP fabrics, liners and lamination for strength, barrier and branding."
+      "summaryText": "Materials, lamination and liners are technical choices within a bag design, reviewed against contents and use conditions."
     },
     {
-      "type": "news",
-      "id": "news:central-asia-expansion-2025",
-      "slug": "news#central-asia-expansion-2025",
+      "type": "insight",
+      "id": "insight:prepare-packaging-rfq",
+      "slug": "/en/insights/prepare-packaging-rfq/",
+      "languagePaths": {
+        "en": "/en/insights/prepare-packaging-rfq/",
+        "zh": "/zh/insights/prepare-packaging-rfq/",
+        "ru": "/ru/insights/prepare-packaging-rfq/"
+      },
       "title": {
-        "en": "Dongda Kazakhstan deepens Central Asia footprint"
+        "en": "Prepare a packaging RFQ",
+        "zh": "如何整理包装询价需求",
+        "ru": "Подготовка запроса на упаковку"
       },
       "summary": {
-        "en": "The Astana service hub supports strategic procurement cooperation with cement and chemical enterprises across Kazakhstan and Uzbekistan."
+        "en": "Separate product configurations, quantities and delivery requirements before discussing a quotation.",
+        "zh": "先分别整理产品配置、数量与交付要求，再沟通报价。",
+        "ru": "Разделите конфигурации, количества и требования к доставке до обсуждения цены."
       },
       "keywords": [
-        "Market Expansion",
-        "2025"
+        "procurement",
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags",
+        "custom-printed-bags"
       ],
-      "titleText": "Dongda Kazakhstan deepens Central Asia footprint",
-      "summaryText": "The Astana service hub supports strategic procurement cooperation with cement and chemical enterprises across Kazakhstan and Uzbekistan."
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Prepare a packaging RFQ",
+      "summaryText": "Separate product configurations, quantities and delivery requirements before discussing a quotation."
     },
     {
-      "type": "news",
-      "id": "news:samarkand-expansion-2024",
-      "slug": "news#samarkand-expansion-2024",
+      "type": "insight",
+      "id": "insight:plan-sample-request",
+      "slug": "/en/insights/plan-sample-request/",
+      "languagePaths": {
+        "en": "/en/insights/plan-sample-request/",
+        "zh": "/zh/insights/plan-sample-request/",
+        "ru": "/ru/insights/plan-sample-request/"
+      },
       "title": {
-        "en": "Samarkand production base expansion completed"
+        "en": "Plan a sample request",
+        "zh": "样品申请前需要准备什么",
+        "ru": "Подготовка заявки на образцы"
       },
       "summary": {
-        "en": "New automated lines strengthen dual-base production and support global demand for industrial packaging."
+        "en": "Define the purpose of a sample and keep sample units separate from planned purchase volume.",
+        "zh": "明确样品用途，将样品数量与预计采购量分开记录。",
+        "ru": "Определите цель образца и отделите количество образцов от объёма закупки."
       },
       "keywords": [
-        "Capacity Growth",
-        "2024"
+        "samples",
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags"
       ],
-      "titleText": "Samarkand production base expansion completed",
-      "summaryText": "New automated lines strengthen dual-base production and support global demand for industrial packaging."
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Plan a sample request",
+      "summaryText": "Define the purpose of a sample and keep sample units separate from planned purchase volume."
     },
     {
-      "type": "news",
-      "id": "news:valve-bag-certification-2023",
-      "slug": "news#valve-bag-certification-2023",
+      "type": "insight",
+      "id": "insight:describe-custom-packaging",
+      "slug": "/en/insights/describe-custom-packaging/",
+      "languagePaths": {
+        "en": "/en/insights/describe-custom-packaging/",
+        "zh": "/zh/insights/describe-custom-packaging/",
+        "ru": "/ru/insights/describe-custom-packaging/"
+      },
       "title": {
-        "en": "High-strength valve bags pass cement industry certification"
+        "en": "Describe a custom packaging brief",
+        "zh": "如何说明定制包装要求",
+        "ru": "Как описать требования к упаковке"
       },
       "summary": {
-        "en": "The valve bag line supports stable bulk supply for cement and mineral powder customers."
+        "en": "Make dimensions, units and printing requests clear while keeping technical approval separate.",
+        "zh": "写清尺寸、单位与印刷请求，将需求说明与技术批准分开。",
+        "ru": "Ясно укажите размеры, единицы и печать, отделив требования от технического одобрения."
       },
       "keywords": [
-        "Product",
-        "2023"
+        "customization",
+        "custom-printed-bags",
+        "valve-bags",
+        "fibc-bulk-bags"
       ],
-      "titleText": "High-strength valve bags pass cement industry certification",
-      "summaryText": "The valve bag line supports stable bulk supply for cement and mineral powder customers."
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Describe a custom packaging brief",
+      "summaryText": "Make dimensions, units and printing requests clear while keeping technical approval separate."
+    },
+    {
+      "type": "faq",
+      "id": "faq:request-information",
+      "slug": "/en/faq/#question-request-information",
+      "languagePaths": {
+        "en": "/en/faq/#question-request-information",
+        "zh": "/zh/faq/#question-request-information",
+        "ru": "/ru/faq/#question-request-information"
+      },
+      "title": {
+        "en": "What should I include in a request?",
+        "zh": "询价需要提供哪些信息？",
+        "ru": "Что указать в запросе?"
+      },
+      "summary": {
+        "en": "Describe the contents, filling and handling method, requested quantity and destination for technical and sales review.",
+        "zh": "请说明包装物料、填充和搬运方式、需求数量及目的地，技术与销售团队据此确认方案。",
+        "ru": "Укажите содержимое, способ наполнения и перемещения, количество и место доставки для технического согласования."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags",
+        "non-woven-bags",
+        "aluminum-foil-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "What should I include in a request?",
+      "summaryText": "Describe the contents, filling and handling method, requested quantity and destination for technical and sales review."
+    },
+    {
+      "type": "faq",
+      "id": "faq:selection-not-approval",
+      "slug": "/en/faq/#question-selection-not-approval",
+      "languagePaths": {
+        "en": "/en/faq/#question-selection-not-approval",
+        "zh": "/zh/faq/#question-selection-not-approval",
+        "ru": "/ru/faq/#question-selection-not-approval"
+      },
+      "title": {
+        "en": "Are selection values confirmed specifications?",
+        "zh": "选型值是否为正式产品规格？",
+        "ru": "Являются ли выбранные параметры утверждёнными?"
+      },
+      "summary": {
+        "en": "Selection values record your requirements. Final construction, testing, price and schedule are subject to the agreed technical proposal and quotation.",
+        "zh": "选型值用于记录您的需求；最终结构、测试、价格和交期以双方确认的技术方案与报价为准。",
+        "ru": "Выбранные значения фиксируют требования. Конструкция, испытания, цена и срок определяются согласованным предложением."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags",
+        "non-woven-bags",
+        "aluminum-foil-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Are selection values confirmed specifications?",
+      "summaryText": "Selection values record your requirements. Final construction, testing, price and schedule are subject to the agreed technical proposal and quotation."
+    },
+    {
+      "type": "faq",
+      "id": "faq:multiple-configurations",
+      "slug": "/en/faq/#question-multiple-configurations",
+      "languagePaths": {
+        "en": "/en/faq/#question-multiple-configurations",
+        "zh": "/zh/faq/#question-multiple-configurations",
+        "ru": "/ru/faq/#question-multiple-configurations"
+      },
+      "title": {
+        "en": "Can one product series have several RFQ lines?",
+        "zh": "同一系列可以有多项询价吗？",
+        "ru": "Можно ли добавить несколько строк одной серии?"
+      },
+      "summary": {
+        "en": "Yes. Different sizes or configurations should remain separate, with an independent quantity for each line.",
+        "zh": "可以。不同尺寸或配置应分别列项，每项保留独立数量。",
+        "ru": "Да. Разные размеры или конфигурации указывайте отдельно, с собственным количеством."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Can one product series have several RFQ lines?",
+      "summaryText": "Yes. Different sizes or configurations should remain separate, with an independent quantity for each line."
+    },
+    {
+      "type": "faq",
+      "id": "faq:rfq-price-confirmation",
+      "slug": "/en/faq/#question-rfq-price-confirmation",
+      "languagePaths": {
+        "en": "/en/faq/#question-rfq-price-confirmation",
+        "zh": "/zh/faq/#question-rfq-price-confirmation",
+        "ru": "/ru/faq/#question-rfq-price-confirmation"
+      },
+      "title": {
+        "en": "Does submitting an RFQ confirm a price?",
+        "zh": "提交询价后是否已经确认价格？",
+        "ru": "Подтверждает ли запрос цену?"
+      },
+      "summary": {
+        "en": "No. Specifications, pricing and delivery terms require separate review and commercial confirmation.",
+        "zh": "没有。规格、价格与交付条件须另行审核并进行商务确认。",
+        "ru": "Нет. Характеристики, цена и условия поставки проверяются и согласуются отдельно."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags",
+        "custom-printed-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Does submitting an RFQ confirm a price?",
+      "summaryText": "No. Specifications, pricing and delivery terms require separate review and commercial confirmation."
+    },
+    {
+      "type": "faq",
+      "id": "faq:sample-approval",
+      "slug": "/en/faq/#question-sample-approval",
+      "languagePaths": {
+        "en": "/en/faq/#question-sample-approval",
+        "zh": "/zh/faq/#question-sample-approval",
+        "ru": "/ru/faq/#question-sample-approval"
+      },
+      "title": {
+        "en": "Is a recorded sample request approved?",
+        "zh": "申请记录成功是否代表已批准？",
+        "ru": "Означает ли запись заявки одобрение?"
+      },
+      "summary": {
+        "en": "No. Approval, availability, charges and dispatch require separate confirmation.",
+        "zh": "不是。批准、可提供情况、费用与寄送须分别确认。",
+        "ru": "Нет. Одобрение, наличие, оплата и отправка подтверждаются отдельно."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Is a recorded sample request approved?",
+      "summaryText": "No. Approval, availability, charges and dispatch require separate confirmation."
+    },
+    {
+      "type": "faq",
+      "id": "faq:sample-address",
+      "slug": "/en/faq/#question-sample-address",
+      "languagePaths": {
+        "en": "/en/faq/#question-sample-address",
+        "zh": "/zh/faq/#question-sample-address",
+        "ru": "/ru/faq/#question-sample-address"
+      },
+      "title": {
+        "en": "Where should I enter the delivery address?",
+        "zh": "收件地址应填写在哪里？",
+        "ru": "Где указать адрес доставки?"
+      },
+      "summary": {
+        "en": "Use the sample request form. Keep private recipient information out of public resource files.",
+        "zh": "请填写在样品申请表中，不要将私人收件信息写入公开资料文件。",
+        "ru": "В форме заявки. Не включайте личные данные получателя в публичные файлы."
+      },
+      "keywords": [
+        "fibc-bulk-bags",
+        "valve-bags",
+        "pp-woven-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Where should I enter the delivery address?",
+      "summaryText": "Use the sample request form. Keep private recipient information out of public resource files."
+    },
+    {
+      "type": "faq",
+      "id": "faq:dimensions-confirmation",
+      "slug": "/en/faq/#question-dimensions-confirmation",
+      "languagePaths": {
+        "en": "/en/faq/#question-dimensions-confirmation",
+        "zh": "/zh/faq/#question-dimensions-confirmation",
+        "ru": "/ru/faq/#question-dimensions-confirmation"
+      },
+      "title": {
+        "en": "Are requested dimensions already approved?",
+        "zh": "填写的尺寸是否已经获批准？",
+        "ru": "Утверждены ли указанные размеры?"
+      },
+      "summary": {
+        "en": "No. They are buyer requirements until the construction and specification are reviewed and confirmed.",
+        "zh": "不是。在结构与规格审核确认前，这些数值仅为采购方要求。",
+        "ru": "Нет. До проверки и подтверждения конструкции это требования покупателя."
+      },
+      "keywords": [
+        "custom-printed-bags",
+        "valve-bags",
+        "fibc-bulk-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Are requested dimensions already approved?",
+      "summaryText": "No. They are buyer requirements until the construction and specification are reviewed and confirmed."
+    },
+    {
+      "type": "faq",
+      "id": "faq:artwork-requirements",
+      "slug": "/en/faq/#question-artwork-requirements",
+      "languagePaths": {
+        "en": "/en/faq/#question-artwork-requirements",
+        "zh": "/zh/faq/#question-artwork-requirements",
+        "ru": "/ru/faq/#question-artwork-requirements"
+      },
+      "title": {
+        "en": "Can I begin without an artwork file?",
+        "zh": "没有图稿文件能否先沟通？",
+        "ru": "Можно ли начать без файла макета?"
+      },
+      "summary": {
+        "en": "Yes. Describe your needs in the existing inquiry form and agree the private file handoff separately.",
+        "zh": "可以。先通过现有询盘表说明需求，再另行确认私密文件交接方式。",
+        "ru": "Да. Опишите требования в форме запроса и отдельно согласуйте приватную передачу файла."
+      },
+      "keywords": [
+        "custom-printed-bags",
+        "valve-bags",
+        "fibc-bulk-bags"
+      ],
+      "indexable": false,
+      "reviewStatus": "editorial-review-pending",
+      "titleText": "Can I begin without an artwork file?",
+      "summaryText": "Yes. Describe your needs in the existing inquiry form and agree the private file handoff separately."
     },
     {
       "type": "company-base",

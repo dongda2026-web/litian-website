@@ -1,0 +1,37 @@
+#page-quote .pg-hero{padding:28px 0!important;background:none!important;color:var(--bk);border-bottom:1px solid var(--bd)}
+#page-quote .pg-hero::before,#page-quote .pg-hero::after{display:none!important}
+#page-quote .pg-hero h1{font-size:32px;line-height:1.25;color:var(--bk);letter-spacing:0}
+#page-quote .pg-hero .lead{font-size:16px;line-height:1.6;color:var(--mu)}
+#page-quote .pg-hero .breadcrumb,#page-quote .pg-hero .breadcrumb *{color:var(--mu)!important;letter-spacing:0}
+#page-quote .breadcrumb{margin-bottom:12px}
+#page-quote .quote-wrap{padding:40px var(--px) 64px}
+#page-quote .quote-grid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px}
+#page-quote .quote-grid>div{min-width:0}
+#page-quote .q-panel{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important}
+#page-quote .q-steps{margin-bottom:28px}
+#page-quote #q-spec-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+#page-quote #q-spec-fields>.catalog-config-note{grid-column:1/-1;margin-bottom:0}
+#page-quote .q-field{margin-bottom:0;min-width:0}
+#page-quote .q-field label{letter-spacing:0;text-transform:none}
+#page-quote .q-field input,#page-quote .q-field select{min-width:0;min-height:48px}
+#page-quote .q-result-card{background:transparent!important;border:0!important;border-left:1px solid var(--bd)!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important}
+#page-quote .q-price-main{background:transparent;padding:0;color:var(--bk)}
+#page-quote .q-price-num{color:var(--bk)}
+#page-quote .q-price-label,#page-quote .q-price-range{color:var(--mu);letter-spacing:0}
+#page-quote .q-confirm-table{display:table;table-layout:fixed}
+#page-quote .q-confirm-table td{vertical-align:top;overflow-wrap:anywhere;padding:10px 12px 10px 0}
+@media(max-width:900px){#page-quote .quote-grid{grid-template-columns:minmax(0,1fr);gap:32px}#page-quote .q-result-card{border-left:0!important;border-top:1px solid var(--bd)!important;padding:24px 0}#page-quote .quote-wrap{padding-top:28px}}
+@media(max-width:480px){#page-quote .pg-hero h1{font-size:28px}#page-quote #q-spec-fields{grid-template-columns:minmax(0,1fr)}}
+.customization-details{grid-column:1/-1;border-top:1px solid var(--bd,#d8dcdf);margin-top:16px;padding-top:16px;min-width:0;letter-spacing:0}
+.customization-details summary{display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;min-height:44px;overflow-wrap:anywhere;list-style:none}
+.customization-details summary svg{width:18px;height:18px;flex:none}
+.customization-details[open] summary{margin-bottom:16px}
+.customization-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;min-width:0}
+.customization-field{min-width:0}
+.customization-field label{display:block;font-size:14px;font-weight:600;line-height:1.5;margin-bottom:8px;overflow-wrap:anywhere}
+.customization-field input,.customization-field select{box-sizing:border-box;display:block;width:100%;min-width:0;min-height:46px;padding:10px 12px;border:1px solid #cbd0d4;border-radius:4px;background:#fff;color:#263238;font:inherit;letter-spacing:0}
+.customization-field input[aria-invalid=true]{border-color:#a52424;outline:1px solid #a52424}
+.customization-grid .customization-advice{grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;min-height:44px;font-size:14px;line-height:1.5;margin:0}
+.customization-advice input{width:20px;height:20px;flex:none;margin:0;accent-color:#983e32}
+.customization-review{font-size:13px;line-height:1.7;color:#58656d;margin-top:12px;overflow-wrap:anywhere}
+@media(max-width:480px){.customization-grid{grid-template-columns:minmax(0,1fr);gap:16px}.customization-details summary{font-size:15px}.customization-field input,.customization-field select{min-height:48px}}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>东大 DongDa | 询盘工作台</title>
+  <link rel="stylesheet" href="/admin/workspace.css">
+  <script src="/admin/workspace.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin" aria-label="东大询盘工作台"><img src="/admin/logo.png" alt="东大 DongDa"><strong>DongDa</strong></a>
+    <div class="heading"><h1>询盘工作台</h1><span id="environment" class="environment" hidden>本机测试</span></div>
+    <div id="session-tools" class="session-tools" hidden>
+      <span id="channel-status" class="channel-status">通知未配置</span>
+      <button id="logout" class="icon-button" title="退出登录" aria-label="退出登录"><span data-icon="LogOut"></span></button>
+    </div>
+  </header>
+  <main>
+    <section id="login-view" class="login-view" aria-labelledby="login-heading">
+      <div class="login-panel">
+        <span class="login-icon" data-icon="LockKeyhole"></span>
+        <h2 id="login-heading">销售工作台登录</h2>
+        <form id="login-form">
+          <label for="admin-token">管理凭据</label>
+          <input id="admin-token" name="token" type="password" autocomplete="off" required maxlength="256">
+          <button class="primary" id="login-button" type="submit">登录</button>
+        </form>
+        <button class="primary" id="preview-login" type="button" hidden>进入测试工作台</button>
+        <p id="login-status" class="feedback" role="status" aria-live="polite">正在连接…</p>
+      </div>
+    </section>
+    <section id="workspace" class="workspace" hidden>
+      <nav class="workspace-tabs" aria-label="工作台视图">
+        <button id="inbox-tab" type="button" aria-current="page"><span data-icon="Inbox"></span>询盘收件箱</button>
+        <button id="monitor-tab" type="button"><span data-icon="Activity"></span>运营监控</button>
+      </nav>
+      <div id="inbox-view">
+      <div class="metrics" aria-label="全部询盘概况">
+        <div><span>全部询盘</span><strong id="metric-total">0</strong></div>
+        <div><span>新询盘</span><strong id="metric-new">0</strong></div>
+        <div><span>待通知</span><strong id="metric-pending">0</strong></div>
+        <div><span>通知失败</span><strong id="metric-failed">0</strong></div>
+      </div>
+      <div class="work-grid">
+        <section id="list-pane" class="list-pane" aria-labelledby="list-heading">
+          <div class="list-heading"><h2 id="list-heading">询盘收件箱</h2><button id="refresh-list" class="icon-button" title="刷新询盘" aria-label="刷新询盘"><span data-icon="RefreshCw"></span></button></div>
+          <form id="filter-form" class="filters">
+            <div class="search-field"><label class="sr-only" for="search">搜索询盘</label><span data-icon="Search"></span><input id="search" type="search" placeholder="公司、邮箱、产品或编号" maxlength="120"><button class="icon-button" type="submit" title="搜索" aria-label="搜索"><span data-icon="ArrowRight"></span></button></div>
+            <div class="filter-row">
+              <div><label class="sr-only" for="status-filter">跟进状态</label><select id="status-filter"><option value="">全部跟进状态</option value="new">新询盘</option><option value="contacted">已联系</option><option value="qualified">需求已确认</option><option value="quoted">已报价</option><option value="closed">已关闭</option></select></div>
+              <div><label class="sr-only" for="notification-filter">通知状态</label><select id="notification-filter"><option value="">全部通知状态</option><option value="pending">待通知</option><option value="sending">网关处理中</option><option value="failed">通知失败</option><option value="accepted">网关已接收</option></select></div>
+              <button id="reset-filters" class="text-button" type="button">清空筛选</button>
+            </div>
+          </form>
+          <p id="list-status" class="feedback" role="status" aria-live="polite"></p>
+          <div id="table-region" class="table-region" aria-busy="false">
+            <table><caption class="sr-only">已保存的询盘</caption><thead><tr><th scope="col">公司 / 产品</th><th scope="col">跟进</th><th scope="col">通知</th><th scope="col" class="date-cell">收到时间</th></tr></thead><tbody id="inquiry-rows"></tbody></table>
+            <div id="list-empty" class="empty" hidden><span data-icon="Inbox"></span><h3 id="empty-heading">暂无询盘</h3></div>
+          </div>
+          <div class="pagination"><span id="result-count">0 条询盘</span><div><button id="previous-page" class="icon-button" title="上一页" aria-label="上一页" disabled><span data-icon="ArrowLeft"></span></button><span id="page-number">1</span><button id="next-page" class="icon-button" title="下一页" aria-label="下一页" disabled><span data-icon="ArrowRight"></span></button></div></div>
+        </section>
+        <aside id="detail-pane" class="detail-pane" aria-label="询盘详情">
+          <button id="detail-return" class="icon-button detail-back" title="返回询盘列表" aria-label="返回询盘列表"><span data-icon="ArrowLeft"></span></button>
+          <div id="detail-placeholder" class="empty"><span data-icon="Inbox"></span><h2>询盘详情</h2></div>
+          <p id="detail-status" class="feedback" role="status" aria-live="polite"></p>
+          <div id="detail-content"></div>
+        </aside>
+      </div>
+      </div>
+      <section id="monitor-view" class="monitor-view" aria-labelledby="monitor-heading" hidden>
+        <div class="monitor-heading"><div><h2 id="monitor-heading">询盘运营监控</h2><p id="monitor-period" class="muted"></p></div><div class="monitor-controls"><label class="sr-only" for="monitor-range">统计周期</label><select id="monitor-range"><option value="7">最近 7 天</option><option value="30">最近 30 天</option><option value="90">最近 90 天</option></select><button id="refresh-monitor" class="icon-button" title="刷新监控" aria-label="刷新监控"><span data-icon="RefreshCw"></span></button></div></div>
+        <p id="monitor-status" class="feedback" role="status" aria-live="polite"></p>
+        <div id="monitor-data" aria-busy="false" hidden>
+          <div class="metrics monitor-metrics" aria-label="周期内业务结果">
+            <div><span>真实收单</span><strong id="monitor-received">0</strong></div>
+            <div><span>ERP 确认入库</span><strong id="monitor-crm">0</strong></div>
+            <div><span>通知网关接收</span><strong id="monitor-notification">0</strong></div>
+            <div><span>通道失败 / 阻断</span><strong id="monitor-failed">0</strong></div>
+          </div>
+          <section class="monitor-section" aria-labelledby="queues-heading"><h3 id="queues-heading">当前全部队列</h3><div id="monitor-queues" class="monitor-queues"></div></section>
+          <div class="monitor-columns">
+            <section class="monitor-section" aria-labelledby="trend-heading"><h3 id="trend-heading">每日业务结果 · UTC</h3><p class="muted">按各自保存或确认日期统计，三列不是同一批询盘的转化率。</p><div class="monitor-trend"><table><thead><tr><th scope="col">日期</th><th scope="col">收单</th><th scope="col">ERP</th><th scope="col">网关</th></tr></thead><tbody id="monitor-daily"></tbody></table></div></section>
+            <section class="monitor-section" aria-labelledby="operations-heading"><h3 id="operations-heading">接收接口与处理记录</h3><dl id="monitor-service" class="monitor-facts"></dl><h3 class="monitor-subheading">询盘类型</h3><dl id="monitor-types" class="monitor-facts"></dl><h3 class="monitor-subheading">本地首次状态推进</h3><dl id="monitor-progress" class="monitor-facts"></dl><p class="muted">仅反映本地记录，不等于客户已收到回复；ERP 跟进尚未读回。</p></section>
+          </div>
+          <section class="monitor-section" aria-labelledby="failures-heading"><h3 id="failures-heading">失败与阻断记录</h3><p id="monitor-failures-empty" class="muted" hidden>本周期尚无已记录的失败或阻断。</p><div class="monitor-failure-scroll"><table class="monitor-failures-table"><thead><tr><th scope="col">环节</th><th scope="col">状态</th><th scope="col">原因</th><th scope="col">次数</th></tr></thead><tbody id="monitor-failures"></tbody></table></div></section>
+          <footer class="monitor-footer"><p id="monitor-observation" class="muted"></p><p class="muted">通知接收不等于邮件送达。访客来源与转化漏斗未接入。</p></footer>
+        </div>
+      </section>
+    </section>
+  </main>
+  <template id="detail-template">
+    <div class="detail-heading"><h2 data-field="company" tabindex="-1"></h2><button class="icon-button detail-refresh" title="重新载入详情" aria-label="重新载入详情"><span data-icon="RefreshCw"></span></button></div>
+    <div class="receipt"><span data-field="id"></span><time data-field="receivedAt"></time></div>
+    <section class="detail-section"><h3>联系人</h3><dl class="contact-data"><div><dt>姓名</dt><dd data-field="contact"></dd></div><div><dt>邮箱</dt><dd><a data-field="email"></a></dd></div><div><dt>电话</dt><dd data-field="phone"></dd></div><div><dt>语言</dt><dd data-field="language"></dd></div></dl></section>
+    <section class="detail-section"><h3>采购需求</h3><dl class="request-data"><div><dt>产品</dt><dd data-field="product"></dd></div><div><dt>数量</dt><dd data-field="quantity"></dd></div><div><dt>规格</dt><dd class="multiline" data-field="specifications"></dd></div><div><dt>备注</dt><dd class="multiline" data-field="notes"></dd></div></dl></section>
+    <section class="detail-section notification-section"><div><h3>主系统接入</h3><span data-field="crm" class="badge"></span></div><p data-field="crmInfo" class="muted multiline"></p><button class="secondary crm-retry-button" type="button"><span data-icon="RefreshCw"></span>重试同步</button><p class="feedback crm-retry-status" role="status"></p></section>
+    <section class="detail-section notification-section"><div><h3>销售通知</h3><span data-field="notification" class="badge"></span></div><p data-field="notificationInfo" class="muted"></p><button class="secondary retry-button" type="button"><span data-icon="RefreshCw"></span>重新加入通知队列</button><p class="feedback retry-status" role="status"></p></section>
+    <section class="detail-section"><h3>更新跟进</h3><form class="followup-form"><div class="followup-fields"><div><label for="followup-owner">负责人</label><input id="followup-owner" name="owner" maxlength="120" autocomplete="off" placeholder="未分配"></div><div><label for="followup-status">跟进状态</label><select id="followup-status" name="status"><option value="new">新询盘</option><option value="contacted">已联系</option><option value="qualified">需求已确认</option><option value="quoted">已报价</option><option value="closed">已关闭</option></select></div></div><label for="followup-note">跟进记录</label><textarea id="followup-note" name="note" rows="3" maxlength="2000"></textarea><p class="feedback save-status" role="status" aria-live="polite"></p><button class="primary save-button" type="submit" disabled><span data-icon="Save"></span>保存跟进</button></form></section>
+    <section class="detail-section history-section"><h3>跟进历史</h3><ol class="history"></ol><p class="history-empty muted">暂无跟进记录</p></section>
+  </template>
+  <noscript>请启用 JavaScript 以登录询盘工作台。</noscript>
+</body>
+</html>

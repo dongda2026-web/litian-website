@@ -1,0 +1,6 @@
+:is(.rv,.rv-title,.rv-body,.rv-num,.fade-in-up,.reveal,.reveal-left,.reveal-right,.reveal-img-wrapper){opacity:1;transform:none;will-change:auto}
+.dd-motion-pending:not(.in):not(.visible):not(.is-visible){opacity:0;transform:translateY(16px);will-change:opacity,transform}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  :is(.rv,.rv-title,.rv-body,.rv-num,.fade-in-up,.reveal,.reveal-left,.reveal-right,.reveal-img-wrapper,.dd-motion-pending){opacity:1!important;transform:none!important;will-change:auto!important}
+}
